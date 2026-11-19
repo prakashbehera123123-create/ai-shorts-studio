@@ -8,6 +8,7 @@ from pathlib import Path
 from studio.config import load_config
 from studio.errors import ContractError, StudioError, TransitionError
 from studio.manifest import COLUMNS
+from tests.script_fixtures import write_valid
 from studio.production import REQUIRED_FILES, create_production, set_status, validate_production
 
 CFG = load_config()
@@ -62,11 +63,11 @@ class ProductionTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "no scenes"):
             set_status(folder, CFG, "SCRIPT_READY", now=NOW)
 
-        sb_path = folder / "storyboard.json"
-        sb = json.loads(sb_path.read_text(encoding="utf-8"))
-        sb["scenes"] = [{"id": 1, "start_seconds": 0, "end_seconds": 30, "narration": "n", "on_screen_text": "t",
-                         "visual_type": "generated_graphic", "source_ids": ["S1"]}]
-        sb_path.write_text(json.dumps(sb), encoding="utf-8")
+        write_valid(folder)
+        (folder / "fact_check.md").unlink()
+        with self.assertRaisesRegex(ContractError, "fact_check"):
+            set_status(folder, CFG, "SCRIPT_READY", now=NOW)
+        write_valid(folder)
         set_status(folder, CFG, "SCRIPT_READY", now=NOW)
 
         with self.assertRaisesRegex(ContractError, "no assets"):

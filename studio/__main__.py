@@ -10,9 +10,12 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from .config import load_config
+from .config import ProductionConfig, load_config
 from .errors import ContractError, StudioError
 from .production import create_production, parse_day, set_status, validate_production
+from .script import check_fact_check, check_script
+from .research import load_research_config, load_research_file, select_topics, validate_research
+from .shortlist import DEFAULT_BACKLOG, DEFAULT_RESEARCH_ROOT, apply_selection, prior_titles
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -32,7 +35,52 @@ def build_parser() -> argparse.ArgumentParser:
     st.add_argument("folder", type=Path)
     st.add_argument("--set", dest="target", default=None)
     st.add_argument("--note", default="")
+
+    sc = sub.add_parser("script", help="check script.md, storyboard.json and fact_check.md")
+    sc.add_argument("folders", nargs="+", type=Path)
+
+    rs = sub.add_parser("research", help="validate, score and select researched topics")
+    rsub = rs.add_subparsers(dest="research_command", required=True)
+    init = rsub.add_parser("init", help="create research/YYYY-MM-DD/candidates.json skeleton")
+    init.add_argument("--date", default=None, help="YYYY-MM-DD (default: today)")
+    for name, help_text in (("check", "validate and dry-run selection (writes nothing)"),
+                            ("apply", "create briefs/sources for selected topics and update backlog")):
+        sp = rsub.add_parser(name, help=help_text)
+        sp.add_argument("file", type=Path)
     return p
+
+
+def _research(args: argparse.Namespace, cfg: ProductionConfig) -> int:
+    rcfg = load_research_config()
+    if args.research_command == "init":
+        day = parse_day(args.date) if args.date else date.today()
+        path = DEFAULT_RESEARCH_ROOT / day.isoformat() / "candidates.json"
+        if path.exists():
+            raise StudioError(f"Already exists: {path}")
+        path.parent.mkdir(parents=True)
+        skeleton = {"research_date": day.isoformat(), "window_days": rcfg.window_days, "candidates": []}
+        path.write_text(json.dumps(skeleton, indent=2) + "\n", encoding="utf-8")
+        print(f"Created {path}")
+        return 0
+
+    data = load_research_file(args.file)
+    day = parse_day(str(data.get("research_date", "")))
+    if day > date.today():
+        raise StudioError(f"research_date {day} is in the future")
+    errors, warnings = validate_research(data, rcfg, cfg.languages, day)
+    if errors:
+        raise ContractError(errors)
+    decisions = select_topics(data, rcfg, day, prior_titles(DEFAULT_BACKLOG, cfg.production_root))
+    if args.research_command == "check":
+        print(json.dumps({
+            "warnings": warnings,
+            "ranking": [{"id": d.id, "score": d.score, "selected": d.selected, "reasons": d.reasons}
+                        for d in sorted(decisions, key=lambda x: (-x.score, x.id))],
+        }, indent=2))
+        return 0
+    summary = apply_selection(decisions, warnings, day, cfg, rcfg, args.file)
+    print(json.dumps(summary, indent=2))
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -50,6 +98,18 @@ def main(argv: list[str] | None = None) -> int:
                 problems = validate_production(folder, cfg)
                 print(json.dumps({"folder": str(folder), "valid": not problems, "problems": problems}, indent=2))
                 failed = failed or bool(problems)
+            return 1 if failed else 0
+        if args.command == "research":
+            return _research(args, cfg)
+        if args.command == "script":
+            failed = False
+            for folder in args.folders:
+                rep = check_script(folder, cfg)
+                fact = check_fact_check(folder, rep.claims) if rep.claims else []
+                out = rep.as_dict() | {"folder": folder.name, "fact_check_problems": fact}
+                out["ok"] = not rep.errors and not fact
+                print(json.dumps(out, indent=2))
+                failed = failed or not out["ok"]
             return 1 if failed else 0
         if args.command == "status":
             if args.target is None:

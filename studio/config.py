@@ -21,6 +21,9 @@ class ProductionConfig:
     default_target_duration: float
     min_words: int
     max_words: int
+    min_wpm: float
+    target_wpm: float
+    max_wpm: float
     languages: tuple[str, ...]
     max_videos_per_day: int
     production_root: Path
@@ -57,6 +60,9 @@ def load_config(path: Path | None = None) -> ProductionConfig:
             default_target_duration=float(_require(data, "duration_seconds.default_target")),
             min_words=int(_require(data, "script_words.min")),
             max_words=int(_require(data, "script_words.max")),
+            min_wpm=float(_require(data, "narration_wpm.min")),
+            target_wpm=float(_require(data, "narration_wpm.target")),
+            max_wpm=float(_require(data, "narration_wpm.max")),
             languages=tuple(str(x) for x in _require(data, "languages")),  # type: ignore[union-attr]
             max_videos_per_day=int(_require(data, "max_videos_per_day")),
             production_root=PROJECT_ROOT / str(_require(data, "production_root")),
@@ -70,6 +76,8 @@ def load_config(path: Path | None = None) -> ProductionConfig:
         raise ConfigError("Require 0 < duration min <= default_target <= max")
     if not 0 < cfg.min_words <= cfg.max_words:
         raise ConfigError("Require 0 < script_words.min <= max")
+    if not 0 < cfg.min_wpm <= cfg.target_wpm <= cfg.max_wpm:
+        raise ConfigError("Require 0 < narration_wpm min <= target <= max")
     if not cfg.languages:
         raise ConfigError("At least one language must be configured")
     return cfg

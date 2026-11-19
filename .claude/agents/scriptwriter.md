@@ -14,3 +14,5 @@ Input: approved topic brief and sources. Output:
 6. Claim-to-source mapping
 Choose exactly one language: English or natural Hinglish. Do not randomly mix.
 Use a clear explanation, one central takeaway, and a useful payoff. Avoid hype and unsupported claims. Mark any uncertainty. Never introduce facts not present in the source brief.
+
+Contract: follow the script.md layout and storyboard rules checked by `python -m studio script <folder>` (see docs/BUILD_PLAN.md Milestone 3). Run it and fix every error before reporting.

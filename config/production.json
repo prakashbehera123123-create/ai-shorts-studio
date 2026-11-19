@@ -15,6 +15,11 @@
     "min": 100,
     "max": 160
   },
+  "narration_wpm": {
+    "min": 130,
+    "target": 165,
+    "max": 200
+  },
   "languages": ["English", "Hinglish"],
   "max_videos_per_day": 2,
   "production_root": "production"

@@ -124,6 +124,10 @@ def _gate_problems(folder: Path, cfg: ProductionConfig, stage: Status) -> list[s
         problems.extend(exc.problems)
     if storyboard is not None and storyboard.get("video_id") != folder.name:
         problems.append(f"storyboard video_id '{storyboard.get('video_id')}' != folder '{folder.name}'")
+    if storyboard is not None and stage.rank >= Status.SCRIPT_READY.rank:
+        from .script import script_gate_problems  # local import avoids a cycle
+
+        problems.extend(script_gate_problems(folder, cfg))
     try:
         read_manifest(folder / "assets" / "manifest.csv", require_rows=stage.rank >= Status.ASSETS_READY.rank)
     except ContractError as exc:

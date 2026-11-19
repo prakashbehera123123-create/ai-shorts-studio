@@ -16,10 +16,19 @@ RENDERED needs `render/*.mp4`. No PUBLISHED/UPLOADED/SCHEDULED state exists.
 ## Milestone 2 — Research and editorial workflow
 Implement `/research-topics` and `/produce-daily-shorts` skills. Research 8–12 candidates, cite primary sources, score them, select at most two.
 Acceptance: no unsupported claims; output includes source URLs and publication/access dates.
+Implemented in `studio/research.py` + `studio/shortlist.py`, rules in `config/research.json`, contract in
+`templates/research-candidates.example.json`. CLI: `python -m studio research init|check <file>|apply <file>`.
+Code enforces source fields/dates, primary-source + 7-day window for news, weighted scoring, duplicate and
+low-evidence rejection, max 2 selections. Claim truthfulness still depends on the agent's spot-checks.
 
 ## Milestone 3 — Script and storyboard
 Generate concise scripts and scene-level storyboard JSON.
 Acceptance: script fits target runtime; language is consistently English or Hinglish; every factual claim has source mapping.
+Implemented in `studio/script.py`; CLI `python -m studio script <folder>`. Checks: 100–160 spoken words,
+estimated runtime at 165 wpm within 25–55s, single language, every claim row cites S ids that exist in
+sources.md, every spoken number appears in a mapped claim, storyboard narration equals the spoken text
+word-for-word, per-scene pace ≤ 200 wpm, and `fact_check.md` has a verdict for every claim with none
+unsupported. The SCRIPT_READY gate enforces all of this.
 
 ## Milestone 4 — Deterministic render
 Create local voiceover, captions, graphics and FFmpeg composition.

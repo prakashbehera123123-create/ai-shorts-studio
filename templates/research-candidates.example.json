@@ -1,0 +1,31 @@
+{
+  "research_date": "2026-01-08",
+  "window_days": 7,
+  "candidates": [
+    {
+      "id": "C01",
+      "title": "EXAMPLE: Placeholder tool adds structured tool calling",
+      "summary": "Placeholder. Max 60 words describing what happened or the core idea, using only what the sources state.",
+      "bucket": "ai-tools-releases",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Placeholder. Why a 0-5 year AI engineer should care.",
+      "visual_angle": "Placeholder. One clear visual idea (diagram, self-captured demo).",
+      "hook": "Placeholder hook that the video actually pays off.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 4, "evidence": 5, "visual": 3, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": ["Placeholder: attribute vendor-stated comparisons to the vendor."],
+      "sources": [
+        {
+          "url": "https://example.com/release-notes",
+          "publisher": "Example Vendor (official release notes)",
+          "published": "2026-01-06",
+          "accessed": "2026-01-08",
+          "kind": "primary",
+          "claim": "Placeholder: the exact claim this page supports."
+        }
+      ]
+    }
+  ]
+}

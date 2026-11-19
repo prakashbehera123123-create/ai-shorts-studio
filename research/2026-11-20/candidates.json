@@ -1,0 +1,139 @@
+{
+  "research_date": "2026-11-20",
+  "window_days": 7,
+  "candidates": [
+    {
+      "id": "C01",
+      "title": "GitHub Copilot Evals: testing your skills, agents and MCP tools",
+      "summary": "GitHub changelog dated Nov 17, 2026: Copilot Evals is in public preview for Copilot Individual, Business and Enterprise plans. It lets users create repeatable evals for a skill, custom agent or MCP tool, and compare runs from before and after a customization change. Users approve each run before it starts.",
+      "bucket": "developer-workflows",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Developers building agent setups with skills and MCP tools need a way to check whether changes actually help; this is a concrete tool for that.",
+      "visual_angle": "Self-made diagram of the eval loop: create eval, approve run, compare before/after. No imitation of GitHub UI.",
+      "hook": "GitHub just added a way to test your Copilot skills and MCP tools like code.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 4, "evidence": 5, "visual": 3, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": ["Page says to install it in VS Code, Copilot CLI or the Copilot app; do not claim more surfaces.", "Public preview: say so explicitly."],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview", "publisher": "GitHub (changelog)", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "Copilot Evals is in public preview for Copilot Individual, Business and Enterprise plans; an eval is a repeatable test for a skill, custom agent or MCP tool; compare runs before and after a customization change; you approve each run before it starts; installable in VS Code, Copilot CLI or the GitHub Copilot app."}
+      ]
+    },
+    {
+      "id": "C02",
+      "title": "GPT-6.2 Astra vs Sol: which one for which job",
+      "summary": "OpenAI API changelog entry dated Nov 17, 2026: use GPT-6.2 Astra for demanding reasoning and coding tasks, or GPT-6.2 Sol for everyday coding and agent workflows. The entry states tool calling requires the Responses API.",
+      "bucket": "llm-engineering",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Engineers choosing a model for coding agents need to know the split between the two variants and the API requirement for tool calling.",
+      "visual_angle": "Two-column comparison card (Astra vs Sol) with the Responses API requirement shown as a flow arrow; no vendor logos.",
+      "hook": "OpenAI split GPT-6.2 into two models, and tool calling needs the Responses API.",
+      "scores": {"freshness": 5, "relevance": 5, "usefulness": 4, "evidence": 4, "visual": 3, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": ["No benchmark claims are sourced; do not state which model is better beyond OpenAI's stated use cases.", "Check pricing/availability on the model pages before scripting if mentioned."],
+      "sources": [
+        {"url": "https://developers.openai.com/api/docs/changelog", "publisher": "OpenAI (API changelog)", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "Entry dated Nov 17: GPT-6.2 Astra for demanding reasoning and coding tasks, GPT-6.2 Sol for everyday coding and agent workflows; tool calling requires the Responses API."}
+      ]
+    },
+    {
+      "id": "C03",
+      "title": "Background completion windows: 30 to 40 percent cheaper tokens",
+      "summary": "OpenAI API changelog entry dated Nov 17, 2026: developers can choose a two-hour or eight-hour background completion window in the Responses API public beta. Model token rates are 30% lower than Standard for the two-hour window and 40% lower for the eight-hour window.",
+      "bucket": "llm-engineering",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Developers running batch-style jobs can trade latency for lower cost; the trade-off is the useful takeaway.",
+      "visual_angle": "Self-made bar chart of relative token rate: Standard 100, two-hour 70, eight-hour 60, labelled with source and date.",
+      "hook": "If your AI job can wait two hours, OpenAI's API now charges less for it.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 4, "evidence": 4, "visual": 4, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": ["Public beta. Single changelog source; check Responses API docs before scripting."],
+      "sources": [
+        {"url": "https://developers.openai.com/api/docs/changelog", "publisher": "OpenAI (API changelog)", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "Entry dated Nov 17: choose a two-hour or eight-hour background completion window in the Responses API public beta; model token rates 30% lower than Standard for two-hour and 40% lower for eight-hour."}
+      ]
+    },
+    {
+      "id": "C04",
+      "title": "GPT-Live-1.1 standby: voice sessions that pause when idle",
+      "summary": "OpenAI API changelog entry dated Nov 19, 2026: GPT-Live-1.1 improves pronunciation, accent consistency and transcription in multilingual voice conversations. Standby for GPT-Live-1 and GPT-Live-1.1 WebRTC sessions pauses inference during inactivity and resumes when someone speaks.",
+      "bucket": "ai-tools-releases",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Developers building voice agents care about idle cost and multilingual accuracy.",
+      "visual_angle": "Self-made session timeline: speaking, silence triggers standby, speech resumes inference.",
+      "hook": "A voice AI session can now pause its inference while nobody is talking.",
+      "scores": {"freshness": 5, "relevance": 3, "usefulness": 3, "evidence": 4, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [],
+      "sources": [
+        {"url": "https://developers.openai.com/api/docs/changelog", "publisher": "OpenAI (API changelog)", "published": "2026-11-19", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "Entry dated Nov 19: GPT-Live-1.1 improves pronunciation, accent consistency and transcription in multilingual voice conversations; standby for GPT-Live-1 and 1.1 WebRTC sessions pauses inference during inactivity and resumes when someone speaks."}
+      ]
+    },
+    {
+      "id": "C05",
+      "title": "Gemini 4 Neon arrives in GitHub Copilot",
+      "summary": "GitHub changelog dated Nov 18, 2026: Gemini 4 Neon is generally available in GitHub Copilot for Pro+, Max, Business and Enterprise users. Per Google, its quality is close to Gemini 4 Carbon at a lower token cost per task. Rollout is gradual.",
+      "bucket": "ai-tools-releases",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Developers choosing a model in their IDE want to know what is on their plan and what the vendor claims about cost.",
+      "visual_angle": "Self-made card listing plans and the vendor-stated comparison, clearly attributed.",
+      "hook": "Gemini 4 Neon is now in GitHub Copilot, and Google says it costs less per task than Carbon.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 3, "evidence": 4, "visual": 3, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": ["Cost and quality comparison is vendor-stated; attribute to Google."],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot", "publisher": "GitHub (changelog)", "published": "2026-11-18", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "Gemini 4 Neon is generally available in GitHub Copilot for Pro+, Max, Business and Enterprise users; per Google, quality close to Gemini 4 Carbon at lower token cost per task; rollout is gradual."}
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "OpenAI's free CSAM image classifier for approved organizations",
+      "summary": "OpenAI API changelog entry dated Nov 16, 2026: approved organizations can use the OpenAI CSAM Image Classifier at no cost to help prioritize images for human review. It returns separate signals for potential CSAM and potential AI-generated CSAM.",
+      "bucket": "responsible-ai",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Developers on trust and safety or platform teams may use such classifiers; focus on the human-review workflow.",
+      "visual_angle": "Abstract flow diagram: queue, classifier signals, human review. No imagery of harmful content.",
+      "hook": "OpenAI made a child-safety image classifier free for approved organizations.",
+      "scores": {"freshness": 4, "relevance": 2, "usefulness": 2, "evidence": 4, "visual": 2, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": ["Sensitive subject; keep strictly to what the entry states."],
+      "sources": [
+        {"url": "https://developers.openai.com/api/docs/changelog", "publisher": "OpenAI (API changelog)", "published": "2026-11-16", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "Entry dated Nov 16: approved organizations can use the OpenAI CSAM Image Classifier at no cost to help prioritize images for human review; separate signals for potential CSAM and potential AI-generated CSAM."}
+      ]
+    },
+    {
+      "id": "C07",
+      "title": "MCP goes stateless: what changed in the 2026-07-28 spec",
+      "summary": "MCP blog post dated Jul 28, 2026: MCP is moving from a bidirectional stateful protocol to a request/response stateless protocol. Any request can land on any server instance behind a plain round-robin load balancer. Roots, Sampling and Logging are deprecated but keep working for at least twelve months.",
+      "bucket": "agentic-ai-mcp",
+      "language": "English",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Anyone building or hosting MCP servers needs to know why session handling and scaling assumptions changed.",
+      "visual_angle": "Self-made before/after diagram: sticky stateful session vs stateless requests across a load balancer.",
+      "hook": "MCP dropped its stateful session model, so any server instance can take any request.",
+      "scores": {"freshness": 1, "relevance": 4, "usefulness": 4, "evidence": 5, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": ["Evergreen: published Jul 28, 2026, outside the news window; do not frame as new."],
+      "sources": [
+        {"url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/", "publisher": "Model Context Protocol blog", "published": "2026-07-28", "accessed": "2026-11-20", "kind": "primary",
+         "claim": "MCP is moving from a bidirectional stateful protocol to a request/response stateless protocol; any request can land on any server instance behind a plain round-robin load balancer; Roots, Sampling and Logging are deprecated but keep working for at least twelve months."}
+      ]
+    }
+  ]
+}
