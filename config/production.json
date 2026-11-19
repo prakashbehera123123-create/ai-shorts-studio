@@ -1,0 +1,21 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "container": "mp4"
+  },
+  "duration_seconds": {
+    "min": 25,
+    "max": 55,
+    "default_target": 40
+  },
+  "script_words": {
+    "min": 100,
+    "max": 160
+  },
+  "languages": ["English", "Hinglish"],
+  "max_videos_per_day": 2,
+  "production_root": "production"
+}

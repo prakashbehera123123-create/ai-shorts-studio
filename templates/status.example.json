@@ -1,0 +1,10 @@
+{
+  "video_id": "YYYY-MM-DD-topic-slug",
+  "status": "RESEARCHED",
+  "updated_at": "2026-01-01T00:00:00+00:00",
+  "human_review_required": true,
+  "published": false,
+  "history": [
+    {"status": "RESEARCHED", "at": "2026-01-01T00:00:00+00:00", "note": "created"}
+  ]
+}

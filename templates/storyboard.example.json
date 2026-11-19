@@ -1,0 +1,18 @@
+{
+  "video_id": "YYYY-MM-DD-topic-slug",
+  "language": "English",
+  "target_duration_seconds": 40,
+  "format": "9:16",
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0,
+      "end_seconds": 3,
+      "narration": "Opening hook goes here.",
+      "on_screen_text": "Short hook",
+      "visual_type": "generated_graphic",
+      "visual_description": "One clear visual idea, high contrast, mobile readable.",
+      "source_ids": []
+    }
+  ]
+}
