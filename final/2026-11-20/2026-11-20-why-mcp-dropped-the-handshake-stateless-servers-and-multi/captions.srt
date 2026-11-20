@@ -1,0 +1,152 @@
+1
+00:00:00,000 --> 00:00:02,600
+MCP deleted its own handshake.
+
+2
+00:00:02,600 --> 00:00:03,677
+The July 2026 spec
+
+3
+00:00:03,677 --> 00:00:04,923
+removes the handshake.
+
+4
+00:00:04,923 --> 00:00:05,830
+It also removes
+
+5
+00:00:05,830 --> 00:00:07,167
+the session ID.
+
+6
+00:00:07,167 --> 00:00:07,890
+So how does
+
+7
+00:00:07,890 --> 00:00:10,057
+a server know who's asking?
+
+8
+00:00:10,067 --> 00:00:11,345
+A session works like
+
+9
+00:00:11,345 --> 00:00:12,380
+a hotel key card,
+
+10
+00:00:12,380 --> 00:00:13,476
+good for one room.
+
+11
+00:00:13,476 --> 00:00:14,937
+Now every request shows
+
+12
+00:00:14,937 --> 00:00:16,100
+a passport.
+
+13
+00:00:16,100 --> 00:00:17,390
+Inside are its protocol
+
+14
+00:00:17,390 --> 00:00:18,411
+version and client
+
+15
+00:00:18,411 --> 00:00:19,467
+capabilities.
+
+16
+00:00:19,467 --> 00:00:20,668
+A wrong version gets
+
+17
+00:00:20,668 --> 00:00:22,833
+an unsupported version error.
+
+18
+00:00:22,833 --> 00:00:24,227
+Need state across calls?
+
+19
+00:00:24,227 --> 00:00:25,330
+The server creates
+
+20
+00:00:25,330 --> 00:00:26,899
+a handle. The client passes
+
+21
+00:00:26,899 --> 00:00:27,770
+it as a normal
+
+22
+00:00:27,770 --> 00:00:29,133
+tool argument.
+
+23
+00:00:29,133 --> 00:00:30,642
+Illustrative: a tool needs
+
+24
+00:00:30,642 --> 00:00:32,259
+the user to choose.
+
+25
+00:00:32,259 --> 00:00:33,120
+The server returns
+
+26
+00:00:33,120 --> 00:00:34,800
+an input required result.
+
+27
+00:00:34,800 --> 00:00:35,840
+Then the client sends
+
+28
+00:00:35,840 --> 00:00:36,927
+the same request again,
+
+29
+00:00:36,927 --> 00:00:38,233
+with the answers.
+
+30
+00:00:38,233 --> 00:00:40,342
+Roots, sampling and logging
+
+31
+00:00:40,342 --> 00:00:41,287
+are deprecated,
+
+32
+00:00:41,287 --> 00:00:42,733
+but still work.
+
+33
+00:00:42,733 --> 00:00:44,671
+So each request explains
+
+34
+00:00:44,671 --> 00:00:46,939
+itself. State becomes explicit
+
+35
+00:00:46,939 --> 00:00:47,699
+handles.
+
+36
+00:00:47,699 --> 00:00:49,700
+Questions become a retry loop.
+
+37
+00:00:49,700 --> 00:00:51,110
+Would you miss the handshake?
+
+38
+00:00:51,110 --> 00:00:52,133
+Tell me below.
+

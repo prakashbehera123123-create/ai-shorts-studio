@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- AI Shorts Studio "hyperframes" scene wrapper: mounts one registry block, scaled into the 1080x670 visual zone.
+     Copy to production/<id>/assets/hf/scene_NN/, put the block in compositions/, set its id, duration and scale. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=670" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 670px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 670px; overflow: hidden; background: transparent; }
+      /* 1920x1080 block scaled by 0.5625 -> 1080x607.5, centred vertically in the 670 px band */
+      #blk-frame { position: absolute; left: 0; top: 31px; width: 1920px; height: 1080px;
+                   transform: scale(0.5625); transform-origin: 0 0; border-radius: 40px; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1080" data-height="670">
+      <div id="blk-frame" data-layout-allow-overflow>
+        <div id="code-typing" data-composition-id="code-typing" data-composition-src="compositions/code-typing.html"
+             data-start="0" data-duration="6" data-track-index="0" data-track-kind="graphics"
+             data-width="1920" data-height="1080"></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

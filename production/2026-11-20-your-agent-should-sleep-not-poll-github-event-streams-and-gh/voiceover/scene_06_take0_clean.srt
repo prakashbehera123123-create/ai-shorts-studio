@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:04,320
+In the CLI GH event, listen takes a full request link.
+
+1
+00:00:04,320 --> 00:00:06,880
+Add the events you want, like a submitted review.
+

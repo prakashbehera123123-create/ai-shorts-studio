@@ -1,0 +1,1 @@
+One. Tool calling requires the Responses API.

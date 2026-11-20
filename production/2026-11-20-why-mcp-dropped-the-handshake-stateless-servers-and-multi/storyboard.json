@@ -1,0 +1,505 @@
+{
+  "schema_version": 2,
+  "video_id": "2026-11-20-why-mcp-dropped-the-handshake-stateless-servers-and-multi",
+  "language": "English",
+  "target_duration_seconds": 50,
+  "format": "9:16",
+  "creative": {
+    "central_question": "No handshake, no session: how does an MCP server know who is asking?",
+    "payoff": "Each request explains itself; cross-call state becomes explicit server-minted handles; server questions become a retry loop.",
+    "visual_motif": "A cyan request dot carrying its passport through each scene; it returns resolved in the payoff.",
+    "music": "none (voice only)",
+    "palette": "channel default (see docs/CREATIVE_PRODUCTION_STANDARD.md)"
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0,
+      "end_seconds": 2.5,
+      "beat": "hook",
+      "narration": "MCP deleted its own handshake.",
+      "on_screen_text": "MCP deleted its handshake",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "headline words punch in on voice stress; a cyan request dot enters from the left; slow 3% push-in",
+      "visual_description": "Headline in the question zone with a single cyan request dot on the dark gradient.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "deleted"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "MCP deleted",
+          "its handshake"
+        ],
+        "accent": "handshake",
+        "cues": [
+          "MCP",
+          "deleted",
+          "handshake"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "start_seconds": 2.5,
+      "end_seconds": 7.5,
+      "beat": "tension",
+      "narration": "The July 2026 spec removes the handshake. It also removes the session ID.",
+      "on_screen_text": "Handshake and session: removed",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "cut",
+      "motion": "two rows draw on in narration order; the first row turns dashed amber and a removed tag pops in",
+      "visual_description": "Two stacked rows (initialize handshake, Mcp-Session-Id) with a cyan 'removed' tag.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "removes"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "stack",
+        "rows": [
+          "initialize handshake",
+          "Mcp-Session-Id"
+        ],
+        "mark": 0,
+        "tag": "removed",
+        "cues": [
+          "spec",
+          "handshake",
+          "session"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "start_seconds": 7.5,
+      "end_seconds": 10.5,
+      "beat": "tension",
+      "narration": "So how does a server know who's asking?",
+      "on_screen_text": "Who is asking?",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "question words punch in; the request dot pulses once at the end of the word asking",
+      "visual_description": "Large question headline in the question zone, request dot beneath.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "asking"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Who is",
+          "asking?"
+        ],
+        "accent": "asking",
+        "cues": [
+          "how",
+          "know",
+          "asking"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "start_seconds": 10.5,
+      "end_seconds": 17,
+      "beat": "explanation",
+      "narration": "A session works like a hotel key card, good for one room. Now every request shows a passport.",
+      "on_screen_text": "Key card vs passport",
+      "visual_type": "generated_graphic",
+      "visual_form": "split_screen",
+      "transition_in": "push",
+      "motion": "left panel (key card, one room) draws on first, then the right panel (passport) slides in on the word passport",
+      "visual_description": "Two halves: left muted 'Key card' tile, right active 'Passport' tile; metaphor labels only.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "passport"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "split",
+        "left": {
+          "title": "Key card",
+          "items": [
+            "Good for one room"
+          ]
+        },
+        "right": {
+          "title": "Passport",
+          "tone": "active",
+          "items": [
+            "Shown on every request"
+          ]
+        },
+        "cues": [
+          "session",
+          "one",
+          "passport"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "start_seconds": 17,
+      "end_seconds": 20,
+      "beat": "explanation",
+      "narration": "Inside are its protocol version and client capabilities.",
+      "on_screen_text": "Every request shows its passport",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "cut",
+      "motion": "request card pops in, then the protocolVersion field highlights, then clientCapabilities",
+      "visual_description": "Own unbranded request card titled 'Every request' with two metadata fields, first highlighted.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "protocol"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "panel",
+        "title": "Every request",
+        "fields": [
+          [
+            "_meta",
+            "io.modelcontextprotocol/protocolVersion"
+          ],
+          [
+            "_meta",
+            "io.modelcontextprotocol/clientCapabilities"
+          ]
+        ],
+        "highlight": 0,
+        "cues": [
+          "Inside",
+          "protocol",
+          "capabilities"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "start_seconds": 20,
+      "end_seconds": 23.2,
+      "beat": "explanation",
+      "narration": "A wrong version gets an unsupported version error.",
+      "on_screen_text": "Wrong version = error",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "push",
+      "motion": "request dot travels to a fork; the right branch lights coral on the word error",
+      "visual_description": "Request node forks into a matching branch and a coral UnsupportedProtocolVersionError branch.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "wrong"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "fork",
+        "from": "Request",
+        "branches": [
+          {
+            "label": "Version matches",
+            "tone": "success"
+          },
+          {
+            "label": "UnsupportedProtocolVersionError",
+            "tone": "failure"
+          }
+        ],
+        "cues": [
+          "wrong",
+          "unsupported",
+          "error"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "start_seconds": 23.2,
+      "end_seconds": 29.7,
+      "beat": "explanation",
+      "narration": "Need state across calls? The server creates a handle. The client passes it as a normal tool argument.",
+      "on_screen_text": "State = explicit handles",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "zoom_through",
+      "motion": "nodes draw on in narration order; request dot carries the handle from server to the next tool call",
+      "visual_description": "Three generic nodes: server mints a handle, client passes it, tool call; motif dot travels along.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "handle"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Server mints a handle",
+            "tone": "input"
+          },
+          {
+            "label": "Client passes it as an argument"
+          },
+          {
+            "label": "Next tool call",
+            "tone": "success"
+          }
+        ],
+        "cues": [
+          "state",
+          "mints",
+          "passes",
+          "tool"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "start_seconds": 29.7,
+      "end_seconds": 35.3,
+      "beat": "example",
+      "narration": "Illustrative: a tool needs the user to choose. The server returns an input required result.",
+      "on_screen_text": "Illustrative: input required",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "cut",
+      "motion": "request dot reaches the server node; result node pops in with resultType input_required",
+      "visual_description": "Two nodes: a tool needing a user choice and a result labelled input_required; ILLUSTRATIVE badge on.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "choose"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "flow",
+        "illustrative": true,
+        "nodes": [
+          {
+            "label": "Tool needs a user choice",
+            "tone": "input"
+          },
+          {
+            "label": "resultType: input_required",
+            "tone": "active"
+          }
+        ],
+        "cues": [
+          "tool",
+          "choose",
+          "returns",
+          "input"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "start_seconds": 35.3,
+      "end_seconds": 38.7,
+      "beat": "example",
+      "narration": "Then the client sends the same request again, with the answers.",
+      "on_screen_text": "Illustrative: retry with answers",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "cut",
+      "motion": "retry card pops in; the inputResponses field highlights as the word answers lands",
+      "visual_description": "Own unbranded retry card with the same request plus an inputResponses field; ILLUSTRATIVE badge on.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "retries"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "panel",
+        "illustrative": true,
+        "title": "Retry",
+        "fields": [
+          [
+            "request",
+            "same as before"
+          ],
+          [
+            "inputResponses",
+            "the user's answers"
+          ]
+        ],
+        "highlight": 1,
+        "cues": [
+          "client",
+          "retries",
+          "answers"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "start_seconds": 38.7,
+      "end_seconds": 42.1,
+      "beat": "context",
+      "narration": "Roots, sampling and logging are deprecated, but still work.",
+      "on_screen_text": "Deprecated, still work",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "crossfade",
+      "motion": "three rows tick in; amber deprecated tags pop on each as they are named",
+      "visual_description": "Checklist of Roots, Sampling, Logging with amber 'deprecated' tags and source chip.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "deprecated"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Roots",
+          "Sampling",
+          "Logging"
+        ],
+        "checked": [],
+        "tags": [
+          {
+            "text": "deprecated",
+            "color": "amber"
+          },
+          {
+            "text": "deprecated",
+            "color": "amber"
+          },
+          {
+            "text": "deprecated",
+            "color": "amber"
+          }
+        ],
+        "cues": [
+          "Roots",
+          "sampling",
+          "logging"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "start_seconds": 42.1,
+      "end_seconds": 47.1,
+      "beat": "payoff",
+      "narration": "So each request explains itself. State becomes explicit handles. Questions become a retry loop.",
+      "on_screen_text": "Each request explains itself",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "match_cut",
+      "motion": "three rows fade up in narration order; the request dot from the hook returns resolved on the last row",
+      "visual_description": "Three summary rows: request explains itself, explicit handles, retry loop; request dot resolved at the end.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "itself"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "stack",
+        "rows": [
+          "Request explains itself",
+          "State: explicit handles",
+          "Questions: retry loop"
+        ],
+        "mark": 2,
+        "tag": "resolved",
+        "cues": [
+          "request",
+          "State",
+          "Questions"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "start_seconds": 47.1,
+      "end_seconds": 49.6,
+      "beat": "cta",
+      "narration": "Would you miss the handshake? Tell me below.",
+      "on_screen_text": "Miss the handshake?",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "crossfade",
+      "motion": "question types on; request dot circles back toward the start so the last frame can loop to the hook",
+      "visual_description": "Clean end card with the question; dot positioned to loop into scene 1.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "miss"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [],
+      "visual": {
+        "template": "title",
+        "text": "Miss the handshake?",
+        "sub": "Tell me below",
+        "cues": [
+          "Would",
+          "Tell"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+0
+00:00:00,000 --> 00:00:02,000
+One good answer doesn't prove your skill works.
+
+1
+00:00:02,920 --> 00:00:05,160
+AI output can change from one run to the next.
+
+2
+00:00:05,800 --> 00:00:08,520
+You edit a skill, try it once, and it passes.
+
+3
+00:00:09,640 --> 00:00:10,120
+Rearrun.
+
+4
+00:00:09,983 --> 00:00:14,783
+it, and it fails. So how do you know your change helped?
+
+5
+00:00:14,783 --> 00:00:18,183
+An evil is a repeatable test for AI behavior.
+
+6
+00:00:18,183 --> 00:00:19,983
+Step 1. Give an agent a realistic test.
+
+7
+00:00:19,967 --> 00:00:21,967
+and describe a good result.
+
+8
+00:00:21,967 --> 00:00:25,967
+Step 2. Approve the run and see which checks passed and failed.
+
+9
+00:00:25,967 --> 00:00:29,967
+Step 3. Change your skill, agent, or MCP tool.
+
+10
+00:00:29,951 --> 00:00:31,951
+and compare before and after.
+
+11
+00:00:31,951 --> 00:00:36,951
+Illustrative, you're edit passed by hand, but the rerun shows a failed check.
+
+12
+00:00:36,951 --> 00:00:39,951
+So rerun the same eval after every change, and
+
+13
+00:00:39,935 --> 00:00:43,635
+and compare the runs. It's in public preview.
+
+14
+00:00:43,635 --> 00:00:45,635
+Which skill would you test first?
+
+15
+00:00:45,635 --> 00:00:46,135
+Tell me below.
+

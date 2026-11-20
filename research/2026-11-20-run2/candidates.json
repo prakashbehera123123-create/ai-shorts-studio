@@ -1,0 +1,239 @@
+{
+  "research_date": "2026-11-20",
+  "window_days": 7,
+  "candidates": [
+    {
+      "id": "C01",
+      "title": "Your agent should sleep, not poll: GitHub Event Streams and gh event listen",
+      "summary": "GitHub Event Streams (preview, waitlist) lets an agent subscribe to a pull request and hold an open connection, receiving events (review submitted, new commits, merge conflict, merge/close, check-suite changes) instead of polling. gh event listen wraps it: one command, JSON line per event, exits after first event by default.",
+      "bucket": "agentic-ai-mcp",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Every CI-watching or PR-babysitting agent loop burns tokens and API calls polling; push-based wake-up is a core agent-architecture pattern a junior engineer can apply today.",
+      "visual_angle": "Split diagram: left an agent repeatedly knocking 'done yet?' on a PR; right a sleeping agent with a single open wire that lights up when a review/check event arrives. Show the real gh event listen flags as terminal text (self-created).",
+      "hook": "Your coding agent is checking your pull request every few seconds. It doesn't have to.",
+      "scores": {"freshness": 5, "relevance": 5, "usefulness": 4, "evidence": 4, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [
+        "tension: before->after - agents loop-poll PR state (the changelog says gh pr view/run watch now suggest gh event listen instead of polling), versus an open event stream where 'your agent sleeps while there's no work and wakes as soon as there is' (GitHub changelog 2026-11-17/18).",
+        "example: worked example from sources - gh event listen takes a PR URL plus event types, creates a subscription, opens the stream, prints each event as one JSON line, exits after first event; --count, --follow, --timeout, --jq flags. No latency or cost numbers published, so any poll-vs-push cost comparison must be labelled illustrative.",
+        "metaphor: doorbell vs. repeatedly opening the front door to check if the courier is there.",
+        "Preview and waitlist-only; gh event commands 'may change' (v2.105.0+). Page does not state transport (SSE/WebSocket); do not claim one."
+      ],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-17-github-event-streams-is-now-in-preview", "publisher": "GitHub Changelog", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary", "claim": "Event Streams preview: subscribe to a PR, open connection, receive events for reviews, commits, conflicts, merge/close and check suites; no public webhook endpoint needed; waitlist."},
+        {"url": "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli", "publisher": "GitHub Changelog", "published": "2026-11-18", "accessed": "2026-11-20", "kind": "primary", "claim": "gh event listen (CLI v2.105.0+) subscribes, streams JSON lines, exits after first event by default; flags --count/--follow/--timeout/--jq; related gh commands now suggest it instead of polling."}
+      ]
+    },
+    {
+      "id": "C02",
+      "title": "Adaptive effort: letting the reviewer decide how hard to think about each pull request",
+      "summary": "Copilot code review adds an Adaptive option (public preview) that assesses each PR's complexity and risk and reviews at Lite, Balanced or Max effort, showing which level it chose. It never exceeds the maximum set at enterprise/org/repo level; Balanced stays the default.",
+      "bucket": "llm-engineering",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Teaches the general pattern of routing reasoning effort/cost per input with a policy ceiling, which applies to any LLM feature a junior engineer will build.",
+      "visual_angle": "Three-lane gauge (Lite/Balanced/Max); a small typo PR vs a payments-auth PR slide into different lanes; a red ceiling line from org policy caps the dial.",
+      "hook": "A one-line typo and a payments rewrite should not get the same amount of AI thinking.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 4, "evidence": 4, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [
+        "tension: broken belief - 'max effort everywhere is safest' vs paying for deep review on trivial diffs; source states 'Adaptive makes that choice for you' (GitHub changelog 2026-11-17).",
+        "example: illustrative only - changelog gives no figures, only the three level names and the ceiling rule; use two made-up PRs, labelled illustrative.",
+        "metaphor: a triage nurse routing patients to quick check vs full workup, with the hospital's policy setting the highest ward allowed.",
+        "Source does not say how complexity/risk is assessed; do not invent the mechanism. Page contains other items (secret detection) in the same post, not read in detail beyond the Adaptive section."
+      ],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more", "publisher": "GitHub Changelog", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary", "claim": "Adaptive picks Lite/Balanced/Max per PR from complexity and risk; capped by enterprise/org/repo maximum; shows chosen level; Balanced default; public preview on Pro/Pro+/Max/Business/Enterprise."}
+      ]
+    },
+    {
+      "id": "C03",
+      "title": "Same model, different harness: how GitHub compares Copilot CLI, Claude Code and Codex CLI fairly",
+      "summary": "The Copilot benchmarks site adds a Harnesses view comparing Copilot CLI with Claude Code and Codex CLI using the same model at the same reasoning effort, plotting resolution rate against mean cost per task with run-to-run ellipses and ~95% bootstrap intervals on paired differences. Only exact model pairs at medium effort are shown.",
+      "bucket": "llm-engineering",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "medium",
+      "audience_why": "Shows that the wrapper (harness) around a model changes results, and how to read agent benchmarks with variance and cost, a skill for evaluating tools.",
+      "visual_angle": "Animated scatter: x = cost per task, y = resolution rate, same-model points joined by lines with shaded variance ellipses; then a paired-difference bar with an interval.",
+      "hook": "Same model. Same effort. Different tool. The score still changes.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 4, "evidence": 3, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [
+        "tension: black box - people compare models, but the harness (tool wrapper) is a hidden variable; GitHub's own view is built to isolate it (changelog 2026-11-17).",
+        "example: methodology example only - no resolution/cost numbers in the text (values are only in an image I could not read). Do not quote results; use illustrative dots, labelled illustrative.",
+        "metaphor: same engine in different cars - the lap time depends on the chassis, so you race cars with the same engine to compare chassis.",
+        "Vendor conflict of interest: GitHub compares its own product (Copilot CLI) with competitors; attribute any advantage to GitHub and say so. Second source for the 'harness = model+context+tools' definition is C09."
+      ],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-17-github-copilot-benchmarks-site-adds-harness-comparisons", "publisher": "GitHub Changelog", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary", "claim": "Harnesses view compares Copilot CLI with Claude Code and Codex CLI at same model and effort; scatter of resolution vs cost; paired differences with approx 95% bootstrap intervals; only exact model pairs at medium effort; Terminal-Bench-Science 0.1 added."}
+      ]
+    },
+    {
+      "id": "C04",
+      "title": "Copilot Fusion: one model picker entry that coordinates several models",
+      "summary": "Fusion is a Copilot model option where you choose an effort tier (Max, High, Standard) and Fusion selects and coordinates models per task. GitHub states Fusion Max reached 71.2% on Terminal-Bench 4.1, 5.4 points ahead of Opus 5.5 and Fable 5.2, at 88% lower cost than Fable 5.2 and 57% lower than Opus 5.5.",
+      "bucket": "ai-tools-releases",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "medium",
+      "audience_why": "Introduces model routing/ensembling as a product pattern and how to read vendor benchmark claims on quality-vs-cost.",
+      "visual_angle": "A conductor node fans a task to model icons per subtask; a cost-vs-score chart with the vendor numbers clearly captioned 'GitHub-reported'.",
+      "hook": "What if you stop picking the model, and pick only how hard it should try?",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 3, "evidence": 3, "visual": 4, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": [
+        "tension: before->after - from choosing a single model to choosing an effort tier and letting the system assign models (changelog 2026-11-17).",
+        "example: real numbers, vendor-stated: Fusion Max 71.2% on Terminal-Bench 4.1; +5.4 points vs Opus 5.5 and Fable 5.2; 88% cheaper than Fable 5.2, 57% cheaper than Opus 5.5 (GitHub). Not independently verified.",
+        "metaphor: an orchestra conductor choosing which instruments play each bar.",
+        "Internal routing algorithm is not described in the page; say so. All benchmark figures are first-party; attribute."
+      ],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-17-github-copilot-fusion-updates-more-availability-benchmarks-and-models", "publisher": "GitHub Changelog", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary", "claim": "Fusion lets users pick effort tier while it selects/coordinates models; Fusion Max 71.2% on Terminal-Bench 4.1, +5.4 pts vs Opus 5.5/Fable 5.2, 88% and 57% cheaper; new models added to tiers."}
+      ]
+    },
+    {
+      "id": "C05",
+      "title": "Background completion windows: trade latency for 30-40% cheaper tokens",
+      "summary": "OpenAI's Responses API public beta adds two-hour and eight-hour background completion windows. Per the changelog, model token rates are 30% lower than Standard for the two-hour window and 40% lower for the eight-hour window.",
+      "bucket": "llm-engineering",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Concrete cost lever: any non-interactive workload (evals, batch enrichment, nightly agents) can be moved to a slower tier for a discount.",
+      "visual_angle": "Three-lane timeline (Standard / 2h / 8h) with a price tag shrinking as the deadline stretches; sort a job list into 'user waiting' vs 'can wait'.",
+      "hook": "If nobody is waiting for the answer, why are you paying for it right now?",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 5, "evidence": 4, "visual": 4, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": [
+        "tension: broken belief - 'API price is fixed per token' vs price depending on how long you let the provider take (changelog 2026-11-17).",
+        "example: real numbers from source: 30% lower at 2h, 40% lower at 8h vs Standard; any dollar example must be illustrative (no per-token price read).",
+        "metaphor: standard shipping vs economy shipping - same parcel, the later the deadline the cheaper the postage.",
+        "Previously deferred; URL re-verified today. Page is a changelog index; eligible models unverified. Public beta; do not claim results are guaranteed within the window."
+      ],
+      "sources": [
+        {"url": "https://developers.openai.com/api/docs/changelog", "publisher": "OpenAI API changelog", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary", "claim": "Responses API public beta adds 2-hour and 8-hour background completion windows with token rates 30% and 40% lower than Standard."}
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "Why MCP dropped the handshake: stateless servers and multi round-trip requests",
+      "summary": "MCP spec 2026-07-28 removes protocol sessions (Mcp-Session-Id) and the initialize handshake; each request carries protocol version and client capabilities in _meta, and a server/discover RPC replaces up-front negotiation. Server-initiated requests become Multi Round-Trip Requests (input_required result, client retries with inputResponses).",
+      "bucket": "agentic-ai-mcp",
+      "language": "English",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Anyone building or hosting MCP servers must understand why statelessness makes them scale behind load balancers and how elicitation/sampling now work.",
+      "visual_angle": "Before: client and server tethered by a session cord to one pod; after: each request carries its own 'passport' (_meta) and can hit any pod behind a load balancer; then a two-step input_required retry loop.",
+      "hook": "MCP deleted its own handshake. Here's what broke, and what got easier.",
+      "scores": {"freshness": 3, "relevance": 5, "usefulness": 5, "evidence": 5, "visual": 5, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [
+        "tension: broken belief - 'a protocol needs a handshake and a session' vs the official spec removing both (MCP 2026-07-28 changelog); server state moves into explicit server-minted handles passed as tool arguments.",
+        "example: real spec detail - a request carries io.modelcontextprotocol/protocolVersion and clientCapabilities in _meta; mismatch returns UnsupportedProtocolVersionError; a tool needing a user choice returns resultType 'input_required' with inputRequests, client retries with inputResponses.",
+        "metaphor: a hotel key card (session tied to one room) vs a passport shown at every checkpoint (each request self-describing).",
+        "evergreen: spec dated 2026-07-28, outside the 7-day window. Changelog page shows no date, so published is null. Previously deferred; URL re-verified. Do not assert SDK adoption levels."
+      ],
+      "sources": [
+        {"url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog", "publisher": "Model Context Protocol (official spec changelog)", "published": null, "accessed": "2026-11-20", "kind": "primary", "claim": "Removes sessions/Mcp-Session-Id and initialize handshake; _meta carries version/capabilities; server/discover; subscriptions/listen; MRTR with input_required; SSE resumability removed."}
+      ]
+    },
+    {
+      "id": "C07",
+      "title": "Two detectors in one: how Copilot's on-demand secret scanning catches keys with no pattern",
+      "summary": "Secret scanning on demand lets Copilot agents delegate to a security-review sub-agent before returning changes. It combines GitHub's catalog of over 500 provider secret patterns with a fine-tuned model that reads surrounding code to find credentials with no recognizable format (e.g. a password in a connection string). It scans only your changes, not history, and is off by default.",
+      "bucket": "responsible-ai",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Agents write code and can leak credentials; this shows a layered pattern+model detection design and how an agent can self-check before handing back work.",
+      "visual_angle": "Diff view where pattern matches highlight an API key in one colour, and a second pass highlights a password inside a connection string; a sub-agent box labelled 'security-review' sits before the 'return changes' arrow.",
+      "hook": "A regex can't see a password hiding in a connection string. A model can.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 4, "evidence": 4, "visual": 4, "distinctiveness": 3},
+      "reject_flags": [],
+      "cautions": [
+        "tension: black box - pattern matching misses secrets without a known format; GitHub adds a fine-tuned model that reads context (changelog 2026-11-17, updated 2026-11-18).",
+        "example: real figures from source: over 500 provider patterns; CLI toggle '/settings aiSecretDetection on'; agent delegates via task tool with agent_type security-review. The connection-string password case is the source's own example.",
+        "metaphor: a metal detector (patterns) plus a sniffer dog (model) at the same gate.",
+        "Off by default; VS Code not supported in this release; consumes AI credits. No detection-accuracy numbers published; do not claim any."
+      ],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-17-secret-scanning-on-demand-for-developers-and-agents", "publisher": "GitHub Changelog", "published": "2026-11-17", "accessed": "2026-11-20", "kind": "primary", "claim": "On-demand secret scanning via security-review sub-agent; 500+ provider patterns plus fine-tuned model for context-based credentials; scans changes only; off by default; update on 2026-11-18 clarified SDK auth."}
+      ]
+    },
+    {
+      "id": "C08",
+      "title": "How an AI text watermark works without adding a single token",
+      "summary": "Anthropic's docs (release note 2026-11-16) state text from several Claude models carries its text watermark on supported platforms, and non-default temperature/top_p/top_k may stop it. Anthropic's explainer says the sampling randomness is replaced by a secret key plus preceding words, adds no tokens or hidden characters, and is detectable only with the key.",
+      "bucket": "responsible-ai",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Engineers who set temperature/top_p in clients may silently disable provenance; also a clear mechanism for detection limits (short text, code, heavy edits).",
+      "visual_angle": "Dice-roll metaphor animated: next-word candidates chosen by a random dice vs by a key-seeded dice; a detector with the key lights up a pattern across a long paragraph but not a short one.",
+      "hook": "There is a hidden pattern in how Claude picks words, and one API setting can erase it.",
+      "scores": {"freshness": 4, "relevance": 4, "usefulness": 4, "evidence": 5, "visual": 5, "distinctiveness": 5},
+      "reject_flags": [],
+      "cautions": [
+        "tension: black box - the text looks normal, nothing added, yet it is checkable with a key; and setting temperature/top_p/top_k to non-default may remove it (Anthropic docs).",
+        "example: the source's own limits - works poorly on short text, sparse in factual/exact passages and most code, light edits probably do not remove it but a full rewrite does. No detection accuracy numbers given; any demo must be labelled illustrative.",
+        "metaphor: choosing each step on a path by a dice roll only you can re-roll with the secret key.",
+        "Explainer is dated 2026-08-14 (updated 2026-09-01); in-window hook is the 2026-11-16 release-note entry. Detection API is private preview for eligible organizations. Anthropic says it is a version of the SynthID-Text approach; attribute. Do not list models without re-checking."
+      ],
+      "sources": [
+        {"url": "https://platform.claude.com/docs/en/build-with-claude/text-watermark", "publisher": "Anthropic (Claude API docs)", "published": null, "accessed": "2026-11-20", "kind": "primary", "claim": "No added tokens/hidden characters; omit temperature, top_p, top_k to keep watermark; non-default values might remove it."},
+        {"url": "https://www.anthropic.com/news/claude-text-watermark", "publisher": "Anthropic", "published": "2026-08-14", "accessed": "2026-11-20", "kind": "primary", "claim": "Mechanism: key plus preceding words replaces sampling randomness; detection requires key; limitations on short text, code, rewrites."},
+        {"url": "https://platform.claude.com/docs/en/release-notes/overview", "publisher": "Anthropic (Claude Platform release notes)", "published": "2026-11-16", "accessed": "2026-11-20", "kind": "primary", "claim": "2026-11-16 entry: text from listed Claude models carries the watermark on supported platforms; non-default sampling parameters might prevent it."}
+      ]
+    },
+    {
+      "id": "C09",
+      "title": "What is an agent harness? VS Code retires its Local harness for the Copilot harness",
+      "summary": "VS Code 1.146 deprecates the Local harness (the software that manages the model, context and tools for Copilot agent sessions) in favour of the Copilot harness, default for new sessions since 1.143, built on the Copilot SDK and sharing a runtime with Copilot CLI and the Copilot app. Local harness is removed in February 2027.",
+      "bucket": "career-concepts",
+      "language": "English",
+      "evergreen": false,
+      "evidence": "high",
+      "audience_why": "Defines 'harness' (model + context + tools loop), a term junior engineers now meet daily, and shows why one shared runtime across IDE/CLI/app matters.",
+      "visual_angle": "Exploded diagram of an agent: model in the middle, ring of context and tools, outer shell labelled harness; three clients (IDE, CLI, app) plugging into the same runtime.",
+      "hook": "The model isn't the agent. The thing wrapped around it is, and VS Code just swapped it out.",
+      "scores": {"freshness": 5, "relevance": 4, "usefulness": 3, "evidence": 4, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [
+        "tension: broken belief - 'the model is the agent' vs the harness that manages model, context and tools; GitHub deprecates one to unify on a shared runtime (changelog 2026-11-16).",
+        "example: real dates from source: deprecated in VS Code 1.146 on 2026-11-16; default since 1.143; three-month transition; removal February 2027.",
+        "metaphor: engine vs the whole car.",
+        "Source gives no reason for retirement; do not speculate. Pairs naturally with C03; choose one or merge."
+      ],
+      "sources": [
+        {"url": "https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027", "publisher": "GitHub Changelog", "published": "2026-11-16", "accessed": "2026-11-20", "kind": "primary", "claim": "Local harness deprecated in VS Code 1.146 and removed Feb 2027; Copilot harness built on Copilot SDK, shares runtime with Copilot CLI and app; default since 1.143."}
+      ]
+    },
+    {
+      "id": "C10",
+      "title": "MCP tool lists that cache: ttlMs, cacheScope and why tool order affects prompt cache hits",
+      "summary": "MCP spec 2026-07-28 requires ttlMs and cacheScope on list/read results so clients can cache instead of polling, and says servers SHOULD return tools/list in deterministic order to enable client caching and improve LLM prompt cache hit rates.",
+      "bucket": "agentic-ai-mcp",
+      "language": "English",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "A small server-side choice (stable tool order) can cut LLM cost and latency; links MCP design to prompt caching.",
+      "visual_angle": "Prompt as stacked blocks: tool list on top; when tool order shuffles, the cached prefix breaks (blocks go red); with deterministic order, the prefix stays green. TTL clock on list results.",
+      "hook": "Shuffle your MCP tool list and you may be throwing away your prompt cache.",
+      "scores": {"freshness": 3, "relevance": 4, "usefulness": 4, "evidence": 4, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "cautions": [
+        "tension: hidden cost - tool order looks irrelevant, but the spec ties deterministic ordering to prompt cache hit rates.",
+        "example: spec text only - ttlMs freshness hint in ms; cacheScope public/private; servers SHOULD return deterministic order. No measured savings published, so any saving must be labelled illustrative; prefix-caching explanation needs a primary LLM-provider doc before scripting.",
+        "metaphor: a supermarket that rearranges aisles daily, so your memorised shopping route (cache) never works.",
+        "Overlaps C06 (same changelog): choose one of C06/C10. evergreen: spec is 2026-07-28; changelog page shows no date (null)."
+      ],
+      "sources": [
+        {"url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog", "publisher": "Model Context Protocol (official spec changelog)", "published": null, "accessed": "2026-11-20", "kind": "primary", "claim": "Servers SHOULD return tools/list in deterministic order for client caching and prompt cache hit rates; ttlMs and cacheScope required on list/read results via CacheableResult."}
+      ]
+    }
+  ]
+}

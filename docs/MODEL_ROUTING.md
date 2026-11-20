@@ -13,6 +13,12 @@ Model choice should follow task difficulty, not prestige. Use aliases supported 
 | Python/FFmpeg implementation | Sonnet | Default/medium | Coding and test iteration |
 | Captions and metadata formatting | Haiku | Low/default | Structured transformation |
 | Editorial QA and factual conflict resolution | Sonnet | Medium | Needs judgment |
+| Reference-video analysis synthesis, creative direction, skill development | Sonnet | Default/medium | Creative judgment from sampled evidence |
+
+Current agent assignments (2026-11-20): research-analyst, scriptwriter, fact-checker, video-reviewer all `sonnet`.
+research-analyst moved from `haiku` to `sonnet` because candidates now need story judgement (tension, worked example,
+metaphor) and the dry-run review found research quality was a main gap. Use Haiku for bounded transforms (metadata,
+CSV/JSON clean-up, simple classification) invoked ad hoc, not as a standing agent.
 | Architecture redesign or persistent hard bug | Opus, only after escalation | High if needed | Reserve for genuinely difficult cases |
 
 ## Practical Claude Code controls

@@ -1,0 +1,1352 @@
+{
+  "fps": 30,
+  "crf": 20,
+  "preset": "medium",
+  "duration": 48.866667,
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 2.8,
+      "speech": 2.44,
+      "transition_in": "cut",
+      "beat": "hook",
+      "headline": "Done yet?",
+      "accent": null,
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Done yet?",
+          "Done yet?"
+        ],
+        "accent": "yet",
+        "cues": [
+          "asking",
+          "done"
+        ],
+        "icon": "refresh-cw",
+        "icon_svg": "<svg\n  class=\"lucide lucide-refresh-cw\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\" />\n  <path d=\"M21 3v5h-5\" />\n  <path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\" />\n  <path d=\"M8 16H3v5\" />\n</svg>"
+      },
+      "cues": [
+        1.014,
+        1.827
+      ]
+    },
+    {
+      "id": 2,
+      "start": 2.8,
+      "end": 8.2,
+      "speech": 4.89,
+      "transition_in": "push",
+      "beat": "tension",
+      "headline": "Mostly nothing new",
+      "accent": null,
+      "step": "",
+      "question": "How should an agent wait for pull-request feedback without polling?",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Agent asks",
+            "tone": "input",
+            "icon": "bot",
+            "icon_svg": "<svg\n  class=\"lucide lucide-bot\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M12 8V4H8\" />\n  <rect width=\"16\" height=\"12\" x=\"4\" y=\"8\" rx=\"2\" />\n  <path d=\"M2 14h2\" />\n  <path d=\"M20 14h2\" />\n  <path d=\"M15 13v2\" />\n  <path d=\"M9 13v2\" />\n</svg>"
+          },
+          {
+            "label": "Nothing new",
+            "icon": "inbox",
+            "icon_svg": "<svg\n  class=\"lucide lucide-inbox\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <polyline points=\"22 12 16 12 14 15 10 15 8 12 2 12\" />\n  <path d=\"M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />\n</svg>"
+          },
+          {
+            "label": "Burns rate limit",
+            "tone": "failure",
+            "icon": "flame",
+            "icon_svg": "<svg\n  class=\"lucide lucide-flame\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4\" />\n</svg>"
+          }
+        ],
+        "cues": [
+          "poll",
+          "requests",
+          "nothing"
+        ]
+      },
+      "cues": [
+        0.0,
+        3.761,
+        4.516
+      ]
+    },
+    {
+      "id": 3,
+      "start": 8.2,
+      "end": 12.1,
+      "speech": 3.3,
+      "transition_in": "cut",
+      "beat": "tension",
+      "headline": "Poll less: feedback waits",
+      "accent": "waits",
+      "step": "",
+      "question": "How should an agent wait for pull-request feedback without polling?",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "split",
+        "left": {
+          "title": "Poll often",
+          "tone": "failure",
+          "items": [
+            "Rate limit burned"
+          ],
+          "icon": "repeat",
+          "icon_svg": "<svg\n  class=\"lucide lucide-repeat\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"m17 2 4 4-4 4\" />\n  <path d=\"M3 11v-1a4 4 0 0 1 4-4h14\" />\n  <path d=\"m7 22-4-4 4-4\" />\n  <path d=\"M21 13v1a4 4 0 0 1-4 4H3\" />\n</svg>"
+        },
+        "right": {
+          "title": "Poll less",
+          "tone": "failure",
+          "items": [
+            "Feedback waits"
+          ],
+          "icon": "hourglass",
+          "icon_svg": "<svg\n  class=\"lucide lucide-hourglass\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M5 22h14\" />\n  <path d=\"M5 2h14\" />\n  <path d=\"M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22\" />\n  <path d=\"M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2\" />\n</svg>"
+        },
+        "cues": [
+          "less",
+          "feedback"
+        ]
+      },
+      "cues": [
+        null,
+        1.548
+      ]
+    },
+    {
+      "id": 4,
+      "start": 12.1,
+      "end": 14.9,
+      "speech": 2.31,
+      "transition_in": "crossfade",
+      "beat": "context",
+      "headline": "Doorbell, not knocking",
+      "accent": "doorbell",
+      "step": "",
+      "question": "How should an agent wait for pull-request feedback without polling?",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Doorbell,",
+          "not knocking"
+        ],
+        "accent": "Doorbell",
+        "cues": [
+          "doorbell",
+          "knocking"
+        ],
+        "icon": "bell-ring",
+        "icon_svg": "<svg\n  class=\"lucide lucide-bell-ring\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M10.268 21a2 2 0 0 0 3.464 0\" />\n  <path d=\"M22 8c0-2.3-.8-4.3-2-6\" />\n  <path d=\"M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326\" />\n  <path d=\"M4 2C2.8 3.7 2 5.7 2 8\" />\n</svg>"
+      },
+      "cues": [
+        0.265,
+        0.947
+      ]
+    },
+    {
+      "id": 5,
+      "start": 14.9,
+      "end": 21.933333,
+      "speech": 6.53,
+      "transition_in": "push",
+      "beat": "explanation",
+      "headline": "Subscribe once",
+      "accent": null,
+      "step": "",
+      "question": "How should an agent wait for pull-request feedback without polling?",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "stack",
+        "rows": [
+          "Subscribe to a pull request",
+          "Open connection",
+          "Events arrive"
+        ],
+        "mark": 1,
+        "tag": "preview",
+        "cues": [
+          "subscribe",
+          "open",
+          "events"
+        ],
+        "icons": [
+          "git-pull-request",
+          "cable",
+          "zap"
+        ],
+        "icons_svg": [
+          "<svg\n  class=\"lucide lucide-git-pull-request\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <circle cx=\"18\" cy=\"18\" r=\"3\" />\n  <circle cx=\"6\" cy=\"6\" r=\"3\" />\n  <path d=\"M13 6h3a2 2 0 0 1 2 2v7\" />\n  <line x1=\"6\" x2=\"6\" y1=\"9\" y2=\"21\" />\n</svg>",
+          "<svg\n  class=\"lucide lucide-cable\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z\" />\n  <path d=\"M17 21v-2\" />\n  <path d=\"M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10\" />\n  <path d=\"M21 21v-2\" />\n  <path d=\"M3 5V3\" />\n  <path d=\"M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z\" />\n  <path d=\"M7 5V3\" />\n</svg>",
+          "<svg\n  class=\"lucide lucide-zap\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z\" />\n</svg>"
+        ]
+      },
+      "cues": [
+        1.813,
+        5.003,
+        5.581
+      ]
+    },
+    {
+      "id": 6,
+      "start": 21.933333,
+      "end": 29.166667,
+      "speech": 6.73,
+      "transition_in": "zoom_through",
+      "beat": "example",
+      "headline": "gh event listen",
+      "accent": null,
+      "step": "",
+      "question": "How should an agent wait for pull-request feedback without polling?",
+      "source": "Source: GitHub Changelog · 2026-11-18",
+      "visual": {
+        "template": "panel",
+        "title": "gh event listen",
+        "fields": [
+          [
+            "PR",
+            "pull request URL"
+          ],
+          [
+            "event",
+            "submitted review"
+          ],
+          [
+            "flags",
+            "--count --follow --timeout --jq"
+          ]
+        ],
+        "highlight": 1,
+        "cues": [
+          "listen",
+          "link",
+          "review"
+        ]
+      },
+      "cues": [
+        1.536,
+        3.65,
+        6.335
+      ]
+    },
+    {
+      "id": 7,
+      "start": 29.166667,
+      "end": 34.766667,
+      "speech": 5.05,
+      "transition_in": "cut",
+      "beat": "example",
+      "headline": "One JSON line per event",
+      "accent": null,
+      "step": "",
+      "question": "How should an agent wait for pull-request feedback without polling?",
+      "source": "Source: GitHub Changelog · 2026-11-18",
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Creates the subscription",
+          "Opens the stream",
+          "One JSON line per event",
+          "Exits after first event (default)"
+        ],
+        "checked": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "cues": [
+          "prints",
+          "line",
+          "exits",
+          "first"
+        ]
+      },
+      "cues": [
+        0.142,
+        1.74,
+        3.594,
+        4.616
+      ]
+    },
+    {
+      "id": 8,
+      "start": 34.766667,
+      "end": 39.033333,
+      "speech": 3.7,
+      "transition_in": "match_cut",
+      "beat": "payoff",
+      "headline": "Sleeps, then wakes",
+      "accent": "sleeps",
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "fork",
+        "from": "Open wire",
+        "branches": [
+          {
+            "label": "Sleeps: no work",
+            "tone": "input",
+            "icon": "moon",
+            "icon_svg": "<svg\n  class=\"lucide lucide-moon\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401\" />\n</svg>"
+          },
+          {
+            "label": "Wakes: event arrives",
+            "tone": "success",
+            "icon": "sun",
+            "icon_svg": "<svg\n  class=\"lucide lucide-sun\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <circle cx=\"12\" cy=\"12\" r=\"4\" />\n  <path d=\"M12 2v2\" />\n  <path d=\"M12 20v2\" />\n  <path d=\"m4.93 4.93 1.41 1.41\" />\n  <path d=\"m17.66 17.66 1.41 1.41\" />\n  <path d=\"M2 12h2\" />\n  <path d=\"M20 12h2\" />\n  <path d=\"m6.34 17.66-1.41 1.41\" />\n  <path d=\"m19.07 4.93-1.41 1.41\" />\n</svg>"
+          }
+        ],
+        "cues": [
+          "sleeps",
+          "wakes"
+        ]
+      },
+      "cues": [
+        0.54,
+        2.256
+      ]
+    },
+    {
+      "id": 9,
+      "start": 39.033333,
+      "end": 42.4,
+      "speech": 2.86,
+      "transition_in": "cut",
+      "beat": "payoff",
+      "headline": "No webhook endpoint",
+      "accent": null,
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "No public webhook",
+          "endpoint",
+          "Works on a laptop"
+        ],
+        "accent": "laptop",
+        "cues": [
+          "public",
+          "laptop"
+        ],
+        "icon": "laptop",
+        "icon_svg": "<svg\n  class=\"lucide lucide-laptop\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n \n \n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z\" />\n  <path d=\"M20.054 15.987H3.946\" />\n</svg>"
+      },
+      "cues": [
+        0.118,
+        2.417
+      ]
+    },
+    {
+      "id": 10,
+      "start": 42.4,
+      "end": 45.733333,
+      "speech": 2.83,
+      "transition_in": "crossfade",
+      "beat": "payoff",
+      "headline": "Preview, waitlist only",
+      "accent": null,
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Preview",
+          "Waitlist only",
+          "May change"
+        ],
+        "checked": [],
+        "tags": [
+          {
+            "text": "preview",
+            "color": "amber"
+          },
+          {
+            "text": "waitlist",
+            "color": "amber"
+          },
+          {
+            "text": "may change",
+            "color": "amber"
+          }
+        ],
+        "cues": [
+          "preview",
+          "waitlist",
+          "change"
+        ]
+      },
+      "cues": [
+        0.226,
+        0.778,
+        2.297
+      ]
+    },
+    {
+      "id": 11,
+      "start": 45.733333,
+      "end": 48.866667,
+      "speech": 2.8,
+      "transition_in": "crossfade",
+      "beat": "cta",
+      "headline": "Which loop first?",
+      "accent": null,
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub Changelog · 2026-11-17",
+      "visual": {
+        "template": "title",
+        "text": "Which loop first?",
+        "sub": "Tell me below",
+        "cues": [
+          "Which",
+          "fix"
+        ]
+      },
+      "cues": [
+        0.0,
+        1.432
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.0,
+      "end": 1.502,
+      "words": [
+        {
+          "text": "Your",
+          "start": 0.0,
+          "end": 0.313
+        },
+        {
+          "text": "agent",
+          "start": 0.313,
+          "end": 0.688
+        },
+        {
+          "text": "keeps",
+          "start": 0.688,
+          "end": 1.064
+        },
+        {
+          "text": "asking:",
+          "start": 1.064,
+          "end": 1.502
+        }
+      ]
+    },
+    {
+      "start": 1.502,
+      "end": 2.8,
+      "words": [
+        {
+          "text": "is",
+          "start": 1.502,
+          "end": 1.689
+        },
+        {
+          "text": "it",
+          "start": 1.689,
+          "end": 1.877
+        },
+        {
+          "text": "done",
+          "start": 1.877,
+          "end": 2.19
+        },
+        {
+          "text": "yet?",
+          "start": 2.19,
+          "end": 2.44
+        }
+      ]
+    },
+    {
+      "start": 2.8,
+      "end": 5.883,
+      "words": [
+        {
+          "text": "Poll",
+          "start": 2.8,
+          "end": 4.074
+        },
+        {
+          "text": "often,",
+          "start": 4.074,
+          "end": 5.603
+        }
+      ]
+    },
+    {
+      "start": 5.883,
+      "end": 6.368,
+      "words": [
+        {
+          "text": "and",
+          "start": 5.883,
+          "end": 5.991
+        },
+        {
+          "text": "you",
+          "start": 5.991,
+          "end": 6.099
+        },
+        {
+          "text": "burn",
+          "start": 6.099,
+          "end": 6.234
+        },
+        {
+          "text": "rate",
+          "start": 6.234,
+          "end": 6.368
+        }
+      ]
+    },
+    {
+      "start": 6.368,
+      "end": 6.854,
+      "words": [
+        {
+          "text": "limit",
+          "start": 6.368,
+          "end": 6.53
+        },
+        {
+          "text": "on",
+          "start": 6.53,
+          "end": 6.611
+        },
+        {
+          "text": "requests",
+          "start": 6.611,
+          "end": 6.854
+        }
+      ]
+    },
+    {
+      "start": 6.854,
+      "end": 7.366,
+      "words": [
+        {
+          "text": "that",
+          "start": 6.854,
+          "end": 6.989
+        },
+        {
+          "text": "mostly",
+          "start": 6.989,
+          "end": 7.178
+        },
+        {
+          "text": "return",
+          "start": 7.178,
+          "end": 7.366
+        }
+      ]
+    },
+    {
+      "start": 7.366,
+      "end": 8.2,
+      "words": [
+        {
+          "text": "nothing",
+          "start": 7.366,
+          "end": 7.582
+        },
+        {
+          "text": "new.",
+          "start": 7.582,
+          "end": 7.69
+        }
+      ]
+    },
+    {
+      "start": 8.2,
+      "end": 9.592,
+      "words": [
+        {
+          "text": "Wait",
+          "start": 8.2,
+          "end": 8.458
+        },
+        {
+          "text": "longer",
+          "start": 8.458,
+          "end": 8.819
+        },
+        {
+          "text": "between",
+          "start": 8.819,
+          "end": 9.231
+        },
+        {
+          "text": "checks,",
+          "start": 9.231,
+          "end": 9.592
+        }
+      ]
+    },
+    {
+      "start": 9.592,
+      "end": 10.83,
+      "words": [
+        {
+          "text": "and",
+          "start": 9.592,
+          "end": 9.798
+        },
+        {
+          "text": "feedback",
+          "start": 9.798,
+          "end": 10.262
+        },
+        {
+          "text": "sits",
+          "start": 10.262,
+          "end": 10.52
+        },
+        {
+          "text": "until",
+          "start": 10.52,
+          "end": 10.83
+        }
+      ]
+    },
+    {
+      "start": 10.83,
+      "end": 12.1,
+      "words": [
+        {
+          "text": "the",
+          "start": 10.83,
+          "end": 11.036
+        },
+        {
+          "text": "next",
+          "start": 11.036,
+          "end": 11.294
+        },
+        {
+          "text": "one.",
+          "start": 11.294,
+          "end": 11.5
+        }
+      ]
+    },
+    {
+      "start": 12.1,
+      "end": 12.887,
+      "words": [
+        {
+          "text": "Think",
+          "start": 12.1,
+          "end": 12.415
+        },
+        {
+          "text": "doorbell,",
+          "start": 12.415,
+          "end": 12.887
+        }
+      ]
+    },
+    {
+      "start": 12.887,
+      "end": 14.9,
+      "words": [
+        {
+          "text": "not",
+          "start": 12.887,
+          "end": 13.097
+        },
+        {
+          "text": "knocking",
+          "start": 13.097,
+          "end": 13.57
+        },
+        {
+          "text": "again",
+          "start": 13.57,
+          "end": 13.885
+        },
+        {
+          "text": "and",
+          "start": 13.885,
+          "end": 14.095
+        },
+        {
+          "text": "again.",
+          "start": 14.095,
+          "end": 14.41
+        }
+      ]
+    },
+    {
+      "start": 14.9,
+      "end": 16.018,
+      "words": [
+        {
+          "text": "GitHub",
+          "start": 14.9,
+          "end": 15.273
+        },
+        {
+          "text": "Event",
+          "start": 15.273,
+          "end": 15.592
+        },
+        {
+          "text": "Streams",
+          "start": 15.592,
+          "end": 16.018
+        }
+      ]
+    },
+    {
+      "start": 16.018,
+      "end": 17.295,
+      "words": [
+        {
+          "text": "lets",
+          "start": 16.018,
+          "end": 16.284
+        },
+        {
+          "text": "an",
+          "start": 16.284,
+          "end": 16.444
+        },
+        {
+          "text": "agent",
+          "start": 16.444,
+          "end": 16.763
+        },
+        {
+          "text": "subscribe",
+          "start": 16.763,
+          "end": 17.295
+        }
+      ]
+    },
+    {
+      "start": 17.295,
+      "end": 18.54,
+      "words": [
+        {
+          "text": "to",
+          "start": 17.295,
+          "end": 17.455
+        },
+        {
+          "text": "a",
+          "start": 17.455,
+          "end": 17.561
+        },
+        {
+          "text": "pull",
+          "start": 17.561,
+          "end": 17.828
+        },
+        {
+          "text": "request.",
+          "start": 17.828,
+          "end": 18.253
+        }
+      ]
+    },
+    {
+      "start": 18.54,
+      "end": 19.953,
+      "words": [
+        {
+          "text": "It",
+          "start": 18.54,
+          "end": 18.733
+        },
+        {
+          "text": "keeps",
+          "start": 18.733,
+          "end": 19.118
+        },
+        {
+          "text": "a",
+          "start": 19.118,
+          "end": 19.246
+        },
+        {
+          "text": "connection",
+          "start": 19.246,
+          "end": 19.953
+        }
+      ]
+    },
+    {
+      "start": 19.953,
+      "end": 21.933,
+      "words": [
+        {
+          "text": "open,",
+          "start": 19.953,
+          "end": 20.274
+        },
+        {
+          "text": "and",
+          "start": 20.274,
+          "end": 20.531
+        },
+        {
+          "text": "events",
+          "start": 20.531,
+          "end": 20.98
+        },
+        {
+          "text": "arrive.",
+          "start": 20.98,
+          "end": 21.43
+        }
+      ]
+    },
+    {
+      "start": 21.933,
+      "end": 22.764,
+      "words": [
+        {
+          "text": "In",
+          "start": 21.933,
+          "end": 22.16
+        },
+        {
+          "text": "the",
+          "start": 22.16,
+          "end": 22.462
+        },
+        {
+          "text": "CLI,",
+          "start": 22.462,
+          "end": 22.764
+        }
+      ]
+    },
+    {
+      "start": 22.764,
+      "end": 24.047,
+      "words": [
+        {
+          "text": "G",
+          "start": 22.764,
+          "end": 22.915
+        },
+        {
+          "text": "H",
+          "start": 22.915,
+          "end": 23.066
+        },
+        {
+          "text": "event",
+          "start": 23.066,
+          "end": 23.519
+        },
+        {
+          "text": "listen",
+          "start": 23.519,
+          "end": 24.047
+        }
+      ]
+    },
+    {
+      "start": 24.047,
+      "end": 25.633,
+      "words": [
+        {
+          "text": "takes",
+          "start": 24.047,
+          "end": 24.5
+        },
+        {
+          "text": "a",
+          "start": 24.5,
+          "end": 24.651
+        },
+        {
+          "text": "pull",
+          "start": 24.651,
+          "end": 25.029
+        },
+        {
+          "text": "request",
+          "start": 25.029,
+          "end": 25.633
+        }
+      ]
+    },
+    {
+      "start": 25.633,
+      "end": 27.036,
+      "words": [
+        {
+          "text": "link.",
+          "start": 25.633,
+          "end": 26.011
+        },
+        {
+          "text": "Add",
+          "start": 26.296,
+          "end": 26.493
+        },
+        {
+          "text": "the",
+          "start": 26.493,
+          "end": 26.69
+        },
+        {
+          "text": "events",
+          "start": 26.69,
+          "end": 27.036
+        }
+      ]
+    },
+    {
+      "start": 27.036,
+      "end": 27.479,
+      "words": [
+        {
+          "text": "you",
+          "start": 27.036,
+          "end": 27.233
+        },
+        {
+          "text": "want,",
+          "start": 27.233,
+          "end": 27.479
+        }
+      ]
+    },
+    {
+      "start": 27.479,
+      "end": 29.167,
+      "words": [
+        {
+          "text": "like",
+          "start": 27.479,
+          "end": 27.726
+        },
+        {
+          "text": "a",
+          "start": 27.726,
+          "end": 27.825
+        },
+        {
+          "text": "submitted",
+          "start": 27.825,
+          "end": 28.318
+        },
+        {
+          "text": "review.",
+          "start": 28.318,
+          "end": 28.663
+        }
+      ]
+    },
+    {
+      "start": 29.167,
+      "end": 30.509,
+      "words": [
+        {
+          "text": "It",
+          "start": 29.167,
+          "end": 29.359
+        },
+        {
+          "text": "prints",
+          "start": 29.359,
+          "end": 29.806
+        },
+        {
+          "text": "each",
+          "start": 29.806,
+          "end": 30.126
+        },
+        {
+          "text": "event",
+          "start": 30.126,
+          "end": 30.509
+        }
+      ]
+    },
+    {
+      "start": 30.509,
+      "end": 31.788,
+      "words": [
+        {
+          "text": "as",
+          "start": 30.509,
+          "end": 30.701
+        },
+        {
+          "text": "one",
+          "start": 30.701,
+          "end": 30.957
+        },
+        {
+          "text": "line",
+          "start": 30.957,
+          "end": 31.276
+        },
+        {
+          "text": "of",
+          "start": 31.276,
+          "end": 31.468
+        },
+        {
+          "text": "JSON,",
+          "start": 31.468,
+          "end": 31.788
+        }
+      ]
+    },
+    {
+      "start": 31.788,
+      "end": 32.811,
+      "words": [
+        {
+          "text": "then,",
+          "start": 31.788,
+          "end": 32.108
+        },
+        {
+          "text": "by",
+          "start": 32.108,
+          "end": 32.299
+        },
+        {
+          "text": "default,",
+          "start": 32.299,
+          "end": 32.811
+        }
+      ]
+    },
+    {
+      "start": 32.811,
+      "end": 34.767,
+      "words": [
+        {
+          "text": "exits",
+          "start": 32.811,
+          "end": 33.194
+        },
+        {
+          "text": "after",
+          "start": 33.194,
+          "end": 33.578
+        },
+        {
+          "text": "the",
+          "start": 33.578,
+          "end": 33.833
+        },
+        {
+          "text": "first.",
+          "start": 33.833,
+          "end": 34.217
+        }
+      ]
+    },
+    {
+      "start": 34.767,
+      "end": 36.054,
+      "words": [
+        {
+          "text": "Your",
+          "start": 34.767,
+          "end": 35.035
+        },
+        {
+          "text": "agent",
+          "start": 35.035,
+          "end": 35.357
+        },
+        {
+          "text": "sleeps",
+          "start": 35.357,
+          "end": 35.732
+        },
+        {
+          "text": "while",
+          "start": 35.732,
+          "end": 36.054
+        }
+      ]
+    },
+    {
+      "start": 36.054,
+      "end": 36.858,
+      "words": [
+        {
+          "text": "there's",
+          "start": 36.054,
+          "end": 36.429
+        },
+        {
+          "text": "no",
+          "start": 36.429,
+          "end": 36.59
+        },
+        {
+          "text": "work,",
+          "start": 36.59,
+          "end": 36.858
+        }
+      ]
+    },
+    {
+      "start": 36.858,
+      "end": 37.824,
+      "words": [
+        {
+          "text": "and",
+          "start": 36.858,
+          "end": 37.073
+        },
+        {
+          "text": "wakes",
+          "start": 37.073,
+          "end": 37.395
+        },
+        {
+          "text": "as",
+          "start": 37.395,
+          "end": 37.555
+        },
+        {
+          "text": "soon",
+          "start": 37.555,
+          "end": 37.824
+        }
+      ]
+    },
+    {
+      "start": 37.824,
+      "end": 39.033,
+      "words": [
+        {
+          "text": "as",
+          "start": 37.824,
+          "end": 37.984
+        },
+        {
+          "text": "there",
+          "start": 37.984,
+          "end": 38.306
+        },
+        {
+          "text": "is.",
+          "start": 38.306,
+          "end": 38.467
+        }
+      ]
+    },
+    {
+      "start": 39.033,
+      "end": 40.042,
+      "words": [
+        {
+          "text": "No",
+          "start": 39.033,
+          "end": 39.201
+        },
+        {
+          "text": "public",
+          "start": 39.201,
+          "end": 39.594
+        },
+        {
+          "text": "webhook",
+          "start": 39.594,
+          "end": 40.042
+        }
+      ]
+    },
+    {
+      "start": 40.042,
+      "end": 41.22,
+      "words": [
+        {
+          "text": "endpoint,",
+          "start": 40.042,
+          "end": 40.547
+        },
+        {
+          "text": "so",
+          "start": 40.547,
+          "end": 40.715
+        },
+        {
+          "text": "it",
+          "start": 40.715,
+          "end": 40.884
+        },
+        {
+          "text": "works",
+          "start": 40.884,
+          "end": 41.22
+        }
+      ]
+    },
+    {
+      "start": 41.22,
+      "end": 42.4,
+      "words": [
+        {
+          "text": "on",
+          "start": 41.22,
+          "end": 41.388
+        },
+        {
+          "text": "a",
+          "start": 41.388,
+          "end": 41.5
+        },
+        {
+          "text": "laptop.",
+          "start": 41.5,
+          "end": 41.893
+        }
+      ]
+    },
+    {
+      "start": 42.4,
+      "end": 43.228,
+      "words": [
+        {
+          "text": "It's",
+          "start": 42.4,
+          "end": 42.676
+        },
+        {
+          "text": "preview,",
+          "start": 42.676,
+          "end": 43.228
+        }
+      ]
+    },
+    {
+      "start": 43.228,
+      "end": 44.195,
+      "words": [
+        {
+          "text": "waitlist",
+          "start": 43.228,
+          "end": 43.85
+        },
+        {
+          "text": "only,",
+          "start": 43.85,
+          "end": 44.195
+        }
+      ]
+    },
+    {
+      "start": 44.195,
+      "end": 45.733,
+      "words": [
+        {
+          "text": "and",
+          "start": 44.195,
+          "end": 44.471
+        },
+        {
+          "text": "may",
+          "start": 44.471,
+          "end": 44.747
+        },
+        {
+          "text": "change.",
+          "start": 44.747,
+          "end": 45.23
+        }
+      ]
+    },
+    {
+      "start": 45.733,
+      "end": 46.996,
+      "words": [
+        {
+          "text": "Which",
+          "start": 45.733,
+          "end": 46.062
+        },
+        {
+          "text": "agent",
+          "start": 46.062,
+          "end": 46.392
+        },
+        {
+          "text": "loop",
+          "start": 46.392,
+          "end": 46.666
+        },
+        {
+          "text": "would",
+          "start": 46.666,
+          "end": 46.996
+        }
+      ]
+    },
+    {
+      "start": 46.996,
+      "end": 47.764,
+      "words": [
+        {
+          "text": "you",
+          "start": 46.996,
+          "end": 47.215
+        },
+        {
+          "text": "fix",
+          "start": 47.215,
+          "end": 47.435
+        },
+        {
+          "text": "first?",
+          "start": 47.435,
+          "end": 47.764
+        }
+      ]
+    },
+    {
+      "start": 47.764,
+      "end": 48.867,
+      "words": [
+        {
+          "text": "Tell",
+          "start": 47.764,
+          "end": 48.039
+        },
+        {
+          "text": "me",
+          "start": 48.039,
+          "end": 48.204
+        },
+        {
+          "text": "below.",
+          "start": 48.204,
+          "end": 48.533
+        }
+      ]
+    }
+  ]
+}

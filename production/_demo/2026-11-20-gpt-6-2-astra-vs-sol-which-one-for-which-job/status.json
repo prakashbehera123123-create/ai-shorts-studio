@@ -1,0 +1,74 @@
+{
+  "video_id": "2026-11-20-gpt-6-2-astra-vs-sol-which-one-for-which-job",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "updated_at": "2026-11-20T06:23:27+00:00",
+  "human_review_required": true,
+  "published": false,
+  "history": [
+    {
+      "status": "RESEARCHED",
+      "at": "2026-11-19T20:06:57+00:00",
+      "note": "created"
+    },
+    {
+      "status": "APPROVED_TOPIC",
+      "at": "2026-11-19T20:08:17+00:00",
+      "note": "Approved by user in chat 2026-11-20"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-19T20:29:47+00:00",
+      "note": "Script, storyboard and fact check passed (0 unsupported); corrections logged in fact_check.md"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-19T20:42:50+00:00",
+      "note": "Manifest: generated frames, SAPI placeholder voice, system font"
+    },
+    {
+      "status": "RENDERED",
+      "at": "2026-11-19T20:42:50+00:00",
+      "note": "Draft render passed: 1080x1920 H.264/AAC, ~50s, captions readable, -16 LUFS"
+    },
+    {
+      "status": "QA_PASSED",
+      "at": "2026-11-19T20:50:40+00:00",
+      "note": "Technical QA PASS; editorial review PASS (0 blockers)"
+    },
+    {
+      "status": "READY_FOR_HUMAN_REVIEW",
+      "at": "2026-11-19T20:50:40+00:00",
+      "note": "Metadata checked; awaiting human review. Not published."
+    },
+    {
+      "status": "APPROVED_TOPIC",
+      "at": "2026-11-20T05:33:30+00:00",
+      "note": "Dry run 2: remake with creative standard v1 skills; v1 deliverables archived in baseline_v1/"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-20T05:38:39+00:00",
+      "note": "Dry run 2: story-architecture script + schema-v2 storyboard; fact check corrections applied; readiness.md filled"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-20T05:41:49+00:00",
+      "note": "Dry run 2: text-card frames, SAPI placeholder voice (pauses directed), no music/SFX by design"
+    },
+    {
+      "status": "RENDERED",
+      "at": "2026-11-20T05:41:49+00:00",
+      "note": "Dry run 2 render: two-pass loudness -14.0 LUFS; technical QA PASS"
+    },
+    {
+      "status": "QA_PASSED",
+      "at": "2026-11-20T06:23:27+00:00",
+      "note": "Dry run 3 (motion renderer): technical PASS, editorial rubric PASS"
+    },
+    {
+      "status": "READY_FOR_HUMAN_REVIEW",
+      "at": "2026-11-20T06:23:27+00:00",
+      "note": "Dry run 3: ready for human review. SAPI placeholder voice. Not published."
+    }
+  ]
+}

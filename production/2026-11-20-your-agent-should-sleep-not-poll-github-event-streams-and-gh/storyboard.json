@@ -1,0 +1,481 @@
+{
+  "schema_version": 2,
+  "video_id": "2026-11-20-your-agent-should-sleep-not-poll-github-event-streams-and-gh",
+  "language": "English",
+  "target_duration_seconds": 49,
+  "format": "9:16",
+  "creative": {
+    "central_question": "How should an agent wait for pull-request feedback without polling?",
+    "payoff": "Subscribe once and keep a connection open; the agent sleeps while there is no work and wakes as soon as there is. Preview, waitlist only.",
+    "visual_motif": "The signal trace: a dot knocks and returns empty (poll); later one open wire stays dark until an event lights it (push).",
+    "music": "none (voice only)",
+    "palette": "channel default (see docs/CREATIVE_PRODUCTION_STANDARD.md)"
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0,
+      "end_seconds": 2.9,
+      "beat": "hook",
+      "narration": "Your agent keeps asking: is it done yet?",
+      "on_screen_text": "Done yet?",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "'Done yet?' punches in twice on the voice stress; cyan trace dot knocks from the left; slow 3% push-in",
+      "visual_description": "Large headline in the question zone with a cyan knocking dot on the dark gradient.",
+      "sfx": [
+        "knock"
+      ],
+      "voice": {
+        "emphasis": [
+          "asking"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Done yet?",
+          "Done yet?"
+        ],
+        "accent": "yet",
+        "cues": [
+          "asking",
+          "done"
+        ],
+        "icon": "refresh-cw"
+      }
+    },
+    {
+      "id": 2,
+      "start_seconds": 2.9,
+      "end_seconds": 8.2,
+      "beat": "tension",
+      "narration": "Poll often, and you burn rate limit on requests that mostly return nothing new.",
+      "on_screen_text": "Mostly nothing new",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "push",
+      "motion": "trace dot travels agent -> ask -> nothing new -> ask again, repeating; coral rate-limit chip fills as the loop repeats",
+      "visual_description": "Vertical loop of generic labelled nodes: agent asks, nothing new, burns rate limit; pinned question headline.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "burn"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Agent asks",
+            "tone": "input",
+            "icon": "bot"
+          },
+          {
+            "label": "Nothing new",
+            "icon": "inbox"
+          },
+          {
+            "label": "Burns rate limit",
+            "tone": "failure",
+            "icon": "flame"
+          }
+        ],
+        "cues": [
+          "poll",
+          "requests",
+          "nothing"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "start_seconds": 8.2,
+      "end_seconds": 12.0,
+      "beat": "tension",
+      "narration": "Wait longer between checks, and feedback sits until the next one.",
+      "on_screen_text": "Poll less: feedback waits",
+      "visual_type": "generated_graphic",
+      "visual_form": "split_screen",
+      "transition_in": "cut",
+      "motion": "left half pulses with dense knocks, right half shows one late arrival; right label turns amber",
+      "visual_description": "Two halves: Poll often vs Poll less, outcome per side.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "waits"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "split",
+        "left": {
+          "title": "Poll often",
+          "tone": "failure",
+          "items": [
+            "Rate limit burned"
+          ],
+          "icon": "repeat"
+        },
+        "right": {
+          "title": "Poll less",
+          "tone": "failure",
+          "items": [
+            "Feedback waits"
+          ],
+          "icon": "hourglass"
+        },
+        "cues": [
+          "less",
+          "feedback"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "start_seconds": 12.0,
+      "end_seconds": 15.0,
+      "beat": "context",
+      "narration": "Think doorbell, not knocking again and again.",
+      "on_screen_text": "Doorbell, not knocking",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "crossfade",
+      "motion": "'Doorbell' lands first, then 'not knocking' strikes through; trace dot rests",
+      "visual_description": "Metaphor headline, doorbell versus knocking.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "doorbell"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Doorbell,",
+          "not knocking"
+        ],
+        "accent": "Doorbell",
+        "cues": [
+          "doorbell",
+          "knocking"
+        ],
+        "icon": "bell-ring"
+      }
+    },
+    {
+      "id": 5,
+      "start_seconds": 15.0,
+      "end_seconds": 22.0,
+      "beat": "explanation",
+      "narration": "GitHub Event Streams lets an agent subscribe to a pull request. It keeps a connection open, and events arrive.",
+      "on_screen_text": "Subscribe once",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "push",
+      "motion": "three rows build in order; middle row (open connection) turns dashed amber; preview tag pops; cyan wire lights on 'events arrive'",
+      "visual_description": "Stack of three rows: subscribe to a pull request, open connection, events arrive.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "one",
+          "open"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "stack",
+        "rows": [
+          "Subscribe to a pull request",
+          "Open connection",
+          "Events arrive"
+        ],
+        "mark": 1,
+        "tag": "preview",
+        "cues": [
+          "subscribe",
+          "open",
+          "events"
+        ],
+        "icons": [
+          "git-pull-request",
+          "cable",
+          "zap"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "start_seconds": 22.0,
+      "end_seconds": 29.4,
+      "beat": "example",
+      "narration": "In the CLI, G H event listen takes a pull request link. Add the events you want, like a submitted review.",
+      "on_screen_text": "gh event listen",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "zoom_through",
+      "motion": "terminal-style panel pops; command field first, then the pull request link, then highlight moves to submitted review; flags row fades in last",
+      "visual_description": "Terminal-like panel showing gh event listen with PR link, event and flag fields (self-created, no real UI).",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "review"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual": {
+        "template": "panel",
+        "title": "gh event listen",
+        "fields": [
+          [
+            "PR",
+            "pull request URL"
+          ],
+          [
+            "event",
+            "submitted review"
+          ],
+          [
+            "flags",
+            "--count --follow --timeout --jq"
+          ]
+        ],
+        "highlight": 1,
+        "cues": [
+          "listen",
+          "link",
+          "review"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "start_seconds": 29.4,
+      "end_seconds": 34.6,
+      "beat": "example",
+      "narration": "It prints each event as one line of JSON, then, by default, exits after the first.",
+      "on_screen_text": "One JSON line per event",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "cut",
+      "motion": "four checks tick one by one, last tick on 'exits' with a mint pulse",
+      "visual_description": "Checklist of what the command does, all ticked.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "exits"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Creates the subscription",
+          "Opens the stream",
+          "One JSON line per event",
+          "Exits after first event (default)"
+        ],
+        "checked": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "cues": [
+          "prints",
+          "line",
+          "exits",
+          "first"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "start_seconds": 34.6,
+      "end_seconds": 39.4,
+      "beat": "payoff",
+      "narration": "Your agent sleeps while there's no work, and wakes as soon as there is.",
+      "on_screen_text": "Sleeps, then wakes",
+      "visual_type": "generated_graphic",
+      "visual_form": "split_screen",
+      "transition_in": "match_cut",
+      "motion": "trace dot enters the open wire, wire stays dark (sleep), then lights mint as the dot arrives (wake)",
+      "visual_description": "Fork from one open wire to Sleeps and Wakes outcomes; the motif returns resolved.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "sleeps",
+          "wakes"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "fork",
+        "from": "Open wire",
+        "branches": [
+          {
+            "label": "Sleeps: no work",
+            "tone": "input",
+            "icon": "moon"
+          },
+          {
+            "label": "Wakes: event arrives",
+            "tone": "success",
+            "icon": "sun"
+          }
+        ],
+        "cues": [
+          "sleeps",
+          "wakes"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "start_seconds": 39.4,
+      "end_seconds": 43.2,
+      "beat": "payoff",
+      "narration": "No public webhook endpoint, so it works on a laptop.",
+      "on_screen_text": "No webhook endpoint",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "'No public webhook endpoint' lines drop in; 'works on a laptop' lands in mint",
+      "visual_description": "Three-line headline over the dark gradient.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "laptop"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "No public webhook",
+          "endpoint",
+          "Works on a laptop"
+        ],
+        "accent": "laptop",
+        "cues": [
+          "public",
+          "laptop"
+        ],
+        "icon": "laptop"
+      }
+    },
+    {
+      "id": 10,
+      "start_seconds": 43.2,
+      "end_seconds": 46.2,
+      "beat": "payoff",
+      "narration": "It's preview, waitlist only, and may change.",
+      "on_screen_text": "Preview, waitlist only",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "crossfade",
+      "motion": "three caveat rows tick in, amber tags pulse once",
+      "visual_description": "Caveat checklist: preview, waitlist only, may change.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "may change"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Preview",
+          "Waitlist only",
+          "May change"
+        ],
+        "checked": [],
+        "tags": [
+          {
+            "text": "preview",
+            "color": "amber"
+          },
+          {
+            "text": "waitlist",
+            "color": "amber"
+          },
+          {
+            "text": "may change",
+            "color": "amber"
+          }
+        ],
+        "cues": [
+          "preview",
+          "waitlist",
+          "change"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "start_seconds": 46.2,
+      "end_seconds": 49.2,
+      "beat": "cta",
+      "narration": "Which agent loop would you fix first? Tell me below.",
+      "on_screen_text": "Which loop first?",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "crossfade",
+      "motion": "question fades up, sub line follows; dot sits at the left ready to knock again for the loop",
+      "visual_description": "Closing question title card.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "title",
+        "text": "Which loop first?",
+        "sub": "Tell me below",
+        "cues": [
+          "Which",
+          "fix"
+        ]
+      }
+    }
+  ]
+}

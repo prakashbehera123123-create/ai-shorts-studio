@@ -1,0 +1,442 @@
+{
+  "schema_version": 2,
+  "video_id": "2026-11-20-gpt-6-2-astra-vs-sol-which-one-for-which-job",
+  "language": "English",
+  "target_duration_seconds": 50,
+  "format": "9:16",
+  "creative": {
+    "central_question": "What do you check before you switch an app to GPT-6.2?",
+    "payoff": "Test three things we picked from OpenAI's changelog (tool calling, edited conversation history, the instructions field), then read the migration guide.",
+    "visual_motif": "The signal trace: a cyan request line with a travelling dot leaves the app and routes through an API lane; it returns resolved in the payoff.",
+    "music": "none (voice only for this dry run)",
+    "palette": "channel default (see docs/CREATIVE_PRODUCTION_STANDARD.md)"
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0.0,
+      "end_seconds": 3.0,
+      "beat": "hook",
+      "narration": "Switching to GPT-6.2? Check these three things first.",
+      "on_screen_text": "3 checks before GPT-6.2",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "headline punches in on 'three'; the cyan signal dot leaves an app box toward a GPT-6.2 box; slow 3% push-in",
+      "visual_description": "Headline in the question zone; an app box and a GPT-6.2 box joined by the cyan trace.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "three"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Switching to",
+          "GPT-6.2?",
+          "3 checks first"
+        ],
+        "accent": "checks",
+        "size": 100,
+        "cues": [
+          "Switching",
+          "GPT-6.2",
+          "Check"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "start_seconds": 3.0,
+      "end_seconds": 9.5,
+      "beat": "context",
+      "narration": "OpenAI released two models, Astra and Sol. Both support the Responses API and Chat Completions.",
+      "on_screen_text": "Two models, two APIs",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "push",
+      "motion": "two equal neutral variant cards draw on in narration order, then two API lanes connect to both; no ranking or highlight between the cards",
+      "visual_description": "Two unbranded, equal-sized cards labelled Astra and Sol, each linked to two lane labels: Responses API and Chat Completions. Source chip: OpenAI changelog, Nov 17 2026.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "two"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual": {
+        "template": "split",
+        "left": {
+          "title": "Astra",
+          "items": [
+            "Responses API",
+            "Chat Completions"
+          ]
+        },
+        "right": {
+          "title": "Sol",
+          "items": [
+            "Responses API",
+            "Chat Completions"
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "start_seconds": 9.5,
+      "end_seconds": 13.5,
+      "beat": "tension",
+      "narration": "The changelog notes differences. We picked three worth testing.",
+      "on_screen_text": "3 checks (our pick)",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "three empty check boxes appear one by one, labelled 'our pick'; the pinned question stays visible",
+      "visual_description": "Pinned question at the top; large 3 with three empty check boxes in amber.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "three"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Tool calling",
+          "Edited history",
+          "Instructions field"
+        ],
+        "tags": [
+          {
+            "text": "our pick",
+            "color": "amber"
+          },
+          null,
+          null
+        ],
+        "cues": [
+          "changelog",
+          "picked",
+          "three",
+          "testing"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "start_seconds": 13.5,
+      "end_seconds": 16.5,
+      "beat": "explanation",
+      "narration": "One. Tool calling requires the Responses API.",
+      "on_screen_text": "1: Tool calling",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "zoom_through",
+      "motion": "the signal dot travels from the app along a tool-call arrow into the Responses API lane; the Chat Completions lane is shown without a tool-call arrow",
+      "visual_description": "S-curve flow: app, then tool-call arrow, then Responses API lane in cyan; a dimmed Chat Completions lane beside it. Source chip: OpenAI changelog.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "requires"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Your app",
+            "tone": "input"
+          },
+          {
+            "label": "Tool call"
+          },
+          {
+            "label": "Responses API",
+            "tone": "active"
+          }
+        ],
+        "cues": [
+          "One",
+          "Tool",
+          "Responses"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "start_seconds": 16.5,
+      "end_seconds": 23.0,
+      "beat": "example",
+      "narration": "Illustrative: if your app calls tools through Chat Completions, tools on GPT-6.2 need the Responses API.",
+      "on_screen_text": "Illustrative: tools app",
+      "visual_type": "generated_graphic",
+      "visual_form": "split_screen",
+      "transition_in": "cut",
+      "motion": "split view: the illustrative app's tool call is rerouted from the Chat Completions lane to the Responses API lane; neutral colours, no failure styling",
+      "visual_description": "Split screen: left lane Chat Completions (muted), right lane Responses API (cyan) with the tool-call arrow; label 'illustrative example'. Source chip: OpenAI changelog.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "must"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual": {
+        "template": "split",
+        "illustrative": true,
+        "left": {
+          "title": "Chat Completions",
+          "items": [
+            "App calls tools"
+          ]
+        },
+        "right": {
+          "title": "GPT-6.2 tools",
+          "tone": "active",
+          "items": [
+            "Via Responses API"
+          ]
+        },
+        "cues": [
+          "Illustrative",
+          "calls",
+          "GPT-6.2",
+          "Responses"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "start_seconds": 23.0,
+      "end_seconds": 30.5,
+      "beat": "explanation",
+      "narration": "Two. In the Responses API, GPT-6.2 changes how reasoning is preserved when you edit earlier messages.",
+      "on_screen_text": "2: Edited history",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "push",
+      "motion": "a stack of message blocks draws on; an earlier block gets an amber edit mark; a 'changed in GPT-6.2' tag appears beside the stack (no mechanism shown)",
+      "visual_description": "Vertical stack of four message blocks, amber edit mark on an earlier block, cyan tag 'reasoning preservation changed'. Source chip: OpenAI changelog.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "earlier"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "visual": {
+        "template": "stack",
+        "rows": [
+          "Message 1",
+          "Message 2 (edited)",
+          "Message 3",
+          "Message 4"
+        ],
+        "mark": 1,
+        "tag": "changed in GPT-6.2",
+        "cues": [
+          "Two",
+          "edit",
+          "messages"
+        ],
+        "illustrative": true
+      }
+    },
+    {
+      "id": 7,
+      "start_seconds": 30.5,
+      "end_seconds": 35.0,
+      "beat": "explanation",
+      "narration": "Three. It also changes how the Responses API handles the top-level instructions field.",
+      "on_screen_text": "3: Instructions field",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "cut",
+      "motion": "an own-style unbranded request panel appears; the instructions field highlights in cyan and its label pulses once",
+      "visual_description": "Generic request panel with fields model, instructions and input; the instructions field highlighted. No vendor UI.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "differently"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "visual": {
+        "template": "panel",
+        "title": "Request (generic)",
+        "fields": [
+          [
+            "model",
+            "GPT-6.2"
+          ],
+          [
+            "instructions",
+            "top-level field"
+          ],
+          [
+            "input",
+            "..."
+          ]
+        ],
+        "highlight": 1,
+        "cues": [
+          "Three",
+          "instructions"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "start_seconds": 35.0,
+      "end_seconds": 41.5,
+      "beat": "payoff",
+      "narration": "So test those three before you switch. Then read OpenAI's GPT-6.2 migration guide.",
+      "on_screen_text": "Test 3, then read the guide",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "match_cut",
+      "motion": "the three check boxes from scene 3 tick to mint one by one; the signal trace returns resolved and runs on to a migration guide node",
+      "visual_description": "Three ticked checks in mint, a trace line from the app ending at a node labelled migration guide. Question pinned and answered.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "test"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Tool calling",
+          "Edited history",
+          "Instructions field"
+        ],
+        "checked": [
+          0,
+          1,
+          2
+        ],
+        "cues": [
+          "test",
+          "those",
+          "three",
+          "read"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "start_seconds": 41.5,
+      "end_seconds": 46.0,
+      "beat": "payoff",
+      "narration": "The first is a requirement. The other two are behaviour changes worth testing.",
+      "on_screen_text": "1 requirement, 2 changes",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "crossfade",
+      "motion": "the three checks regroup: check 1 tagged 'requirement', checks 2 and 3 tagged 'behaviour change'; slow push-in",
+      "visual_description": "Three check rows with tags: requirement (amber) and behaviour change (cyan) x2. No pass/fail styling.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "changes"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Tool calling",
+          "Edited history",
+          "Instructions field"
+        ],
+        "tags": [
+          {
+            "text": "requirement",
+            "color": "amber"
+          },
+          {
+            "text": "behaviour change",
+            "color": "cyan"
+          },
+          {
+            "text": "behaviour change",
+            "color": "cyan"
+          }
+        ],
+        "cues": [
+          "first",
+          "other",
+          "two",
+          "changes"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "start_seconds": 46.0,
+      "end_seconds": 50.5,
+      "beat": "cta",
+      "narration": "Which of these three would your app hit first? Comment below.",
+      "on_screen_text": "Which one first?",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "crossfade",
+      "motion": "the three numerals 1 2 3 appear and the cyan dot loops from the last numeral back toward the hook's app box so the end can loop to the start",
+      "visual_description": "End card with the question and three numbered chips; trace loops to the opening frame.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "first"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [],
+      "visual": {
+        "template": "title",
+        "text": "Which one first?",
+        "sub": "Comment below",
+        "cues": [
+          "Which",
+          "Comment"
+        ]
+      }
+    }
+  ]
+}

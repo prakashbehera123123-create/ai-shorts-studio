@@ -1,0 +1,7 @@
+# Sources
+
+Confidence: high / medium / low. Mark each claim as fact, interpretation, or speculation in script.md.
+
+| id | url | publisher | published | accessed | claim supported | type | confidence |
+|---|---|---|---|---|---|---|---|
+| S1 | https://modelcontextprotocol.io/specification/2026-07-28/changelog | Model Context Protocol (official spec changelog) | not stated | 2026-11-20 | Removes sessions/Mcp-Session-Id and initialize handshake; _meta carries version/capabilities; server/discover; subscriptions/listen; every request carries io.modelcontextprotocol/protocolVersion and io.modelcontextprotocol/clientCapabilities in _meta; version mismatch returns UnsupportedProtocolVersionError; servers needing cross-call state use explicit server-minted handles passed as ordinary tool arguments; list endpoints no longer vary per connection; server/discover (servers MUST implement) advertises versions, capabilities and identity; Multi Round-Trip Requests replace server-initiated requests (roots/list, sampling/createMessage, elicitation/create): server returns resultType 'input_required' with inputRequests, client retries the original request with inputResponses; all results carry resultType ('complete' or 'input_required'); SSE resumability removed (broken stream loses the in-flight request; client re-issues it with a new request ID); ping removed; Roots, Sampling and Logging deprecated (still functional during the deprecation window). Changes are relative to revision 2025-11-25. | primary | high |

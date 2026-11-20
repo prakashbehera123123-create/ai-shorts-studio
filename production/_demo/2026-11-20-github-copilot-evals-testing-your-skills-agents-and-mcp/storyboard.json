@@ -1,0 +1,462 @@
+{
+  "schema_version": 2,
+  "video_id": "2026-11-20-github-copilot-evals-testing-your-skills-agents-and-mcp",
+  "language": "English",
+  "target_duration_seconds": 48,
+  "format": "9:16",
+  "creative": {
+    "central_question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+    "payoff": "Rerun the same eval after every customization change and compare the runs; it is in public preview.",
+    "visual_motif": "The signal trace: one task goes through the agent twice; the first trace ends in a green check, the rerun forks to a red one; later before/after eval runs sit side by side.",
+    "music": "none (voice only for this dry run)",
+    "palette": "channel default (see docs/CREATIVE_PRODUCTION_STANDARD.md)"
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0,
+      "end_seconds": 2.9,
+      "beat": "hook",
+      "narration": "One good answer doesn't prove your skill works.",
+      "on_screen_text": "One good answer isn't proof",
+      "visual_type": "generated_graphic",
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "headline words punch in on voice stress; a cyan trace dot enters from the left and lands on a mint check; slow 3% push-in",
+      "visual_description": "Headline in the question zone; below it a single cyan trace ending in a green check on the dark gradient.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "good"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "visual": {
+        "template": "fork",
+        "from": "Same task",
+        "branches": [
+          {
+            "label": "Try 1 passes",
+            "tone": "success"
+          },
+          {
+            "label": "Try 2 fails",
+            "tone": "failure"
+          }
+        ],
+        "illustrative": true,
+        "cues": [
+          "One",
+          "answer",
+          "prove"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "start_seconds": 2.9,
+      "end_seconds": 10.4,
+      "beat": "tension",
+      "narration": "AI output can change from one run to the next. You edit a skill, try it once, and it passes.",
+      "on_screen_text": "Varies per run (illustrative)",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "cut",
+      "motion": "amber task chip enters; trace dot travels task -> agent -> output; output node changes label as the run repeats; mint check lights at the end",
+      "visual_description": "Vertical flow of three generic labelled nodes (Task, Agent, Output) with the motif trace; amber task chip, mint pass check.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "change"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "visual": {
+        "template": "flow",
+        "illustrative": true,
+        "nodes": [
+          {
+            "label": "Run 1: output A"
+          },
+          {
+            "label": "Run 2: output B",
+            "tone": "input"
+          },
+          {
+            "label": "Edit skill, try once"
+          },
+          {
+            "label": "It passes",
+            "tone": "success"
+          }
+        ],
+        "cues": [
+          "output",
+          "next",
+          "edit",
+          "passes"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "start_seconds": 10.4,
+      "end_seconds": 15.4,
+      "beat": "tension",
+      "narration": "Rerun it, and it fails. So how do you know your change helped?",
+      "on_screen_text": "Illustrative: did it help?",
+      "visual_type": "generated_graphic",
+      "visual_form": "split_screen",
+      "transition_in": "cut",
+      "motion": "same trace runs in both halves; left ends in mint check, right forks to a coral cross; question mark pulses in the pinned headline",
+      "visual_description": "Two stacked halves labelled Run 1 and Run 2 (illustrative); pinned question headline stays visible.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "fails"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S3"
+      ],
+      "visual": {
+        "template": "split",
+        "illustrative": true,
+        "left": {
+          "title": "Tried once",
+          "tone": "success",
+          "items": [
+            "Passed"
+          ]
+        },
+        "right": {
+          "title": "Rerun",
+          "tone": "failure",
+          "items": [
+            "Failed"
+          ]
+        },
+        "cues": [
+          "Rerun",
+          "it",
+          "and",
+          "fails"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "start_seconds": 15.4,
+      "end_seconds": 18.9,
+      "beat": "explanation",
+      "narration": "An eval is a repeatable test for AI behavior.",
+      "on_screen_text": "How an eval works",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "crossfade",
+      "motion": "the two traces merge into one loop; step tag 1/3 2/3 3/3 pips draw on under the title",
+      "visual_description": "Title text with three empty step pips and a looping cyan trace; no vendor logo.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "repeatable"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Eval =",
+          "a repeatable",
+          "test"
+        ],
+        "accent": "repeatable",
+        "cues": [
+          "eval",
+          "repeatable",
+          "test"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "start_seconds": 18.9,
+      "end_seconds": 23.6,
+      "beat": "explanation",
+      "narration": "Step one: give an agent a realistic task, and describe a good result.",
+      "on_screen_text": "1. Realistic task",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "push",
+      "motion": "amber task node draws on, then a mint 'good result' checklist node; arrow links them as each is named; pip 1/3 fills",
+      "visual_description": "Two labelled nodes: Task (amber) and Good result (mint) connected by a cyan arrow.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "realistic"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Realistic task",
+            "tone": "input"
+          },
+          {
+            "label": "What a good result looks like",
+            "tone": "active"
+          }
+        ],
+        "cues": [
+          "realistic",
+          "good"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "start_seconds": 23.6,
+      "end_seconds": 28.0,
+      "beat": "explanation",
+      "narration": "Step two: approve the run and see which checks passed and failed.",
+      "on_screen_text": "2. Approve, then check",
+      "visual_type": "generated_graphic",
+      "visual_form": "ui_mock",
+      "transition_in": "cut",
+      "motion": "own unbranded approve button taps, then checklist rows resolve one by one into mint passes and one coral fail; pip 2/3 fills",
+      "visual_description": "Generic card with an Approve button and four check rows; rows turn mint or coral. Own mock, not a vendor UI. Result rows carry an on-screen 'Illustrative' label.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "approve"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S4"
+      ],
+      "visual": {
+        "template": "checklist",
+        "illustrative": true,
+        "items": [
+          "You approve the run",
+          "Check A",
+          "Check B"
+        ],
+        "checked": [
+          0
+        ],
+        "tags": [
+          null,
+          {
+            "text": "passed",
+            "color": "mint"
+          },
+          {
+            "text": "failed",
+            "color": "coral"
+          }
+        ],
+        "cues": [
+          "approve",
+          "checks",
+          "passed",
+          "failed"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "start_seconds": 28.0,
+      "end_seconds": 33.3,
+      "beat": "explanation",
+      "narration": "Step three: change your skill, agent or MCP tool, and compare before and after.",
+      "on_screen_text": "3. Compare before/after",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "zoom_through",
+      "motion": "trace loops Eval -> Edit -> Eval; two result tiles (before, after) slide together at the end; pip 3/3 fills",
+      "visual_description": "Cycle of three generic nodes (Eval, Edit, Eval) with the motif trace; before and after result tiles at the bottom.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "compare"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S4"
+      ],
+      "visual": {
+        "template": "split",
+        "illustrative": true,
+        "left": {
+          "title": "Before",
+          "items": [
+            "Check A passed",
+            "Check B failed"
+          ]
+        },
+        "right": {
+          "title": "After",
+          "tone": "active",
+          "items": [
+            "Check A passed",
+            "Check B passed"
+          ]
+        },
+        "cues": [
+          "change",
+          "skill",
+          "agent",
+          "compare",
+          "before",
+          "after"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "start_seconds": 33.3,
+      "end_seconds": 38.3,
+      "beat": "example",
+      "narration": "Illustrative: your edit passed by hand, but the rerun shows a failed check.",
+      "on_screen_text": "Illustrative example",
+      "visual_type": "generated_graphic",
+      "visual_form": "split_screen",
+      "transition_in": "cut",
+      "motion": "left tile 'by hand' shows mint check; right tile 'eval rerun' shows rows with one coral fail that pulses once; ILLUSTRATIVE badge stays on",
+      "visual_description": "Before/after halves; left mint, right coral; prominent 'Illustrative' badge, no real numbers.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "rerun"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "visual": {
+        "template": "fork",
+        "illustrative": true,
+        "from": "Your edit",
+        "branches": [
+          {
+            "label": "Passed by hand",
+            "tone": "success"
+          },
+          {
+            "label": "Rerun: failed check",
+            "tone": "failure"
+          }
+        ],
+        "cues": [
+          "edit",
+          "passed",
+          "rerun"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "start_seconds": 38.3,
+      "end_seconds": 44.3,
+      "beat": "payoff",
+      "narration": "So rerun the same eval after every change, and compare the runs. It's in public preview.",
+      "on_screen_text": "Rerun after every change",
+      "visual_type": "generated_graphic",
+      "visual_form": "parallax_2_5d",
+      "transition_in": "match_cut",
+      "visual_description": "Callback to the hook trace, now looping through layered before/after run tiles; a small coral 'Public preview' caveat chip with source chip at the bottom.",
+      "visual_justification": "Depth separates the before-run and after-run layers of the same trace so the comparison reads at a glance.",
+      "motion": "foreground and background tile layers drift at different speeds; the trace returns from the hook and completes the loop; caveat chip fades in on 'public preview'",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "every"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S3",
+        "S4",
+        "S1"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Rerun the same eval",
+          "After every change",
+          "Compare the runs"
+        ],
+        "checked": [
+          0,
+          1,
+          2
+        ],
+        "tags": [
+          null,
+          null,
+          {
+            "text": "public preview",
+            "color": "amber"
+          }
+        ],
+        "cues": [
+          "rerun",
+          "change",
+          "compare",
+          "preview"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "start_seconds": 44.3,
+      "end_seconds": 47.6,
+      "beat": "cta",
+      "narration": "Which skill would you test first? Tell me below.",
+      "on_screen_text": "Which skill first?",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "crossfade",
+      "motion": "question types on; trace dot circles back toward the start so the last frame can loop to the hook",
+      "visual_description": "Clean end card with the question; trace dot positioned to loop into scene 1.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "first"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [],
+      "visual": {
+        "template": "title",
+        "text": "Which skill first?",
+        "sub": "Tell me below",
+        "cues": [
+          "Which",
+          "Tell"
+        ]
+      }
+    }
+  ]
+}

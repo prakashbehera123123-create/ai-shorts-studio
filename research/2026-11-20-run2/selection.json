@@ -1,0 +1,77 @@
+{
+  "research_date": "2026-11-20",
+  "selected": [
+    {
+      "id": "C01",
+      "title": "Your agent should sleep, not poll: GitHub Event Streams and gh event listen",
+      "score": 4.4,
+      "folder": "production/2026-11-20-your-agent-should-sleep-not-poll-github-event-streams-and-gh"
+    },
+    {
+      "id": "C06",
+      "title": "Why MCP dropped the handshake: stateless servers and multi round-trip requests",
+      "score": 4.5,
+      "folder": "production/2026-11-20-why-mcp-dropped-the-handshake-stateless-servers-and-multi"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "C02",
+      "score": 4.2,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C03",
+      "score": 4.0,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C04",
+      "score": 3.7,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C05",
+      "score": 4.3,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C07",
+      "score": 4.1,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C08",
+      "score": 4.4,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C09",
+      "score": 4.0,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    },
+    {
+      "id": "C10",
+      "score": 3.8,
+      "reasons": [
+        "daily limit reached by higher-scoring topics"
+      ]
+    }
+  ],
+  "warnings": [],
+  "report": "shortlist.md"
+}

@@ -1,0 +1,1 @@
+Three. It also changes how the Responses API handles the top-level instructions field.

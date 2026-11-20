@@ -1,0 +1,48 @@
+0
+00:00:00,000 --> 00:00:02,720
+Your agent keeps asking is it done yet?
+
+1
+00:00:02,720 --> 00:00:08,000
+Goal off film and you burn rate limit on requests that mostly return nothing new.
+
+2
+00:00:08,000 --> 00:00:10,000
+Wait longer between checks and feed.
+
+3
+00:00:09,983 --> 00:00:19,983
+back sits until the next one.
+
+4
+00:00:19,967 --> 00:00:26,967
+and events arrive. In the CLI GH event, listen takes a full request link. Add the events
+
+5
+00:00:26,967 --> 00:00:29,967
+you want like a submitted review. It prints each
+
+6
+00:00:29,951 --> 00:00:34,751
+even as one line of JSON then by default exits after the first.
+
+7
+00:00:34,751 --> 00:00:39,231
+Your agent sleeps while there's no work and breaks as soon as there is.
+
+8
+00:00:39,231 --> 00:00:40,071
+No public vote.
+
+9
+00:00:39,935 --> 00:00:44,935
+So it works on a laptop, test preview, wait list only and may change.
+
+10
+00:00:44,935 --> 00:00:47,935
+Which agent group would you fix first?
+
+11
+00:00:47,935 --> 00:00:48,935
+Tell me below.
+

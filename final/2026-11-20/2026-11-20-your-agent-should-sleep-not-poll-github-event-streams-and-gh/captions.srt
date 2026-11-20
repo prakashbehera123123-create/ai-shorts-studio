@@ -1,0 +1,160 @@
+1
+00:00:00,000 --> 00:00:01,502
+Your agent keeps asking:
+
+2
+00:00:01,502 --> 00:00:02,800
+is it done yet?
+
+3
+00:00:02,800 --> 00:00:05,883
+Poll often,
+
+4
+00:00:05,883 --> 00:00:06,368
+and you burn rate
+
+5
+00:00:06,368 --> 00:00:06,854
+limit on requests
+
+6
+00:00:06,854 --> 00:00:07,366
+that mostly return
+
+7
+00:00:07,366 --> 00:00:08,200
+nothing new.
+
+8
+00:00:08,200 --> 00:00:09,592
+Wait longer between checks,
+
+9
+00:00:09,592 --> 00:00:10,830
+and feedback sits until
+
+10
+00:00:10,830 --> 00:00:12,100
+the next one.
+
+11
+00:00:12,100 --> 00:00:12,887
+Think doorbell,
+
+12
+00:00:12,887 --> 00:00:14,900
+not knocking again and again.
+
+13
+00:00:14,900 --> 00:00:16,018
+GitHub Event Streams
+
+14
+00:00:16,018 --> 00:00:17,295
+lets an agent subscribe
+
+15
+00:00:17,295 --> 00:00:18,540
+to a pull request.
+
+16
+00:00:18,540 --> 00:00:19,953
+It keeps a connection
+
+17
+00:00:19,953 --> 00:00:21,933
+open, and events arrive.
+
+18
+00:00:21,933 --> 00:00:22,764
+In the CLI,
+
+19
+00:00:22,764 --> 00:00:24,047
+G H event listen
+
+20
+00:00:24,047 --> 00:00:25,633
+takes a pull request
+
+21
+00:00:25,633 --> 00:00:27,036
+link. Add the events
+
+22
+00:00:27,036 --> 00:00:27,479
+you want,
+
+23
+00:00:27,479 --> 00:00:29,167
+like a submitted review.
+
+24
+00:00:29,167 --> 00:00:30,509
+It prints each event
+
+25
+00:00:30,509 --> 00:00:31,788
+as one line of JSON,
+
+26
+00:00:31,788 --> 00:00:32,811
+then, by default,
+
+27
+00:00:32,811 --> 00:00:34,767
+exits after the first.
+
+28
+00:00:34,767 --> 00:00:36,054
+Your agent sleeps while
+
+29
+00:00:36,054 --> 00:00:36,858
+there's no work,
+
+30
+00:00:36,858 --> 00:00:37,824
+and wakes as soon
+
+31
+00:00:37,824 --> 00:00:39,033
+as there is.
+
+32
+00:00:39,033 --> 00:00:40,042
+No public webhook
+
+33
+00:00:40,042 --> 00:00:41,220
+endpoint, so it works
+
+34
+00:00:41,220 --> 00:00:42,400
+on a laptop.
+
+35
+00:00:42,400 --> 00:00:43,228
+It's preview,
+
+36
+00:00:43,228 --> 00:00:44,195
+waitlist only,
+
+37
+00:00:44,195 --> 00:00:45,733
+and may change.
+
+38
+00:00:45,733 --> 00:00:46,996
+Which agent loop would
+
+39
+00:00:46,996 --> 00:00:47,764
+you fix first?
+
+40
+00:00:47,764 --> 00:00:48,867
+Tell me below.
+

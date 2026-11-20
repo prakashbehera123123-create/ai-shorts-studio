@@ -1,0 +1,120 @@
+1
+00:00:00,000 --> 00:00:01,800
+GitHub just added a way to
+
+2
+00:00:01,800 --> 00:00:03,733
+test your Copilot skills and
+
+3
+00:00:03,733 --> 00:00:04,800
+MCP tools.
+
+4
+00:00:04,800 --> 00:00:06,833
+AI output can change from one
+
+5
+00:00:06,833 --> 00:00:08,333
+run to the next.
+
+6
+00:00:08,333 --> 00:00:10,333
+So one good answer does not
+
+7
+00:00:10,333 --> 00:00:11,567
+prove your skill,
+
+8
+00:00:11,567 --> 00:00:13,667
+agent or MCP tool works.
+
+9
+00:00:13,667 --> 00:00:15,500
+That is why evals exist.
+
+10
+00:00:15,500 --> 00:00:17,667
+An eval is a repeatable test
+
+11
+00:00:17,667 --> 00:00:19,233
+for AI behavior.
+
+12
+00:00:19,233 --> 00:00:21,033
+You give an agent a realistic
+
+13
+00:00:21,033 --> 00:00:22,633
+task, describe what a good
+
+14
+00:00:22,633 --> 00:00:24,100
+result looks like,
+
+15
+00:00:24,100 --> 00:00:25,733
+and check the result and how
+
+16
+00:00:25,733 --> 00:00:27,267
+the agent got there.
+
+17
+00:00:27,267 --> 00:00:28,567
+In Copilot Evals,
+
+18
+00:00:28,567 --> 00:00:30,600
+you ask Copilot in your own
+
+19
+00:00:30,600 --> 00:00:32,733
+words, or use the slash eval
+
+20
+00:00:32,733 --> 00:00:33,667
+command.
+
+21
+00:00:33,667 --> 00:00:35,000
+You approve each run,
+
+22
+00:00:35,000 --> 00:00:36,767
+then see which checks passed
+
+23
+00:00:36,767 --> 00:00:37,833
+and failed.
+
+24
+00:00:37,833 --> 00:00:39,067
+Change your skill,
+
+25
+00:00:39,067 --> 00:00:40,467
+rerun the same eval,
+
+26
+00:00:40,467 --> 00:00:42,800
+and compare before and after.
+
+27
+00:00:42,800 --> 00:00:44,533
+It is in public preview,
+
+28
+00:00:44,533 --> 00:00:45,633
+for Individual,
+
+29
+00:00:45,633 --> 00:00:47,800
+Business and Enterprise plans.
+
+30
+00:00:47,800 --> 00:00:50,067
+What would you test first?
+

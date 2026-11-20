@@ -1,0 +1,1253 @@
+{
+  "fps": 30,
+  "crf": 20,
+  "preset": "medium",
+  "duration": 47.166667,
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 2.933333,
+      "speech": 2.6,
+      "transition_in": "cut",
+      "beat": "hook",
+      "headline": "One good answer isn't proof",
+      "accent": "good",
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "fork",
+        "from": "Same task",
+        "branches": [
+          {
+            "label": "Try 1 passes",
+            "tone": "success"
+          },
+          {
+            "label": "Try 2 fails",
+            "tone": "failure"
+          }
+        ],
+        "illustrative": true,
+        "cues": [
+          "One",
+          "answer",
+          "prove"
+        ]
+      },
+      "cues": [
+        0.029,
+        0.375,
+        0.919
+      ]
+    },
+    {
+      "id": 2,
+      "start": 2.933333,
+      "end": 9.666667,
+      "speech": 6.18,
+      "transition_in": "cut",
+      "beat": "tension",
+      "headline": "Varies per run (illustrative)",
+      "accent": null,
+      "step": "",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "flow",
+        "illustrative": true,
+        "nodes": [
+          {
+            "label": "Run 1: output A"
+          },
+          {
+            "label": "Run 2: output B",
+            "tone": "input"
+          },
+          {
+            "label": "Edit skill, try once"
+          },
+          {
+            "label": "It passes",
+            "tone": "success"
+          }
+        ],
+        "cues": [
+          "output",
+          "next",
+          "edit",
+          "passes"
+        ]
+      },
+      "cues": [
+        0.315,
+        1.815,
+        3.029,
+        5.055
+      ]
+    },
+    {
+      "id": 3,
+      "start": 9.666667,
+      "end": 14.666667,
+      "speech": 4.4,
+      "transition_in": "cut",
+      "beat": "tension",
+      "headline": "Illustrative: did it help?",
+      "accent": null,
+      "step": "",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "split",
+        "illustrative": true,
+        "left": {
+          "title": "Tried once",
+          "tone": "success",
+          "items": [
+            "Passed"
+          ]
+        },
+        "right": {
+          "title": "Rerun",
+          "tone": "failure",
+          "items": [
+            "Failed"
+          ]
+        },
+        "cues": [
+          "Rerun",
+          "it",
+          "and",
+          "fails"
+        ]
+      },
+      "cues": [
+        0.029,
+        0.339,
+        0.805,
+        0.985
+      ]
+    },
+    {
+      "id": 4,
+      "start": 14.666667,
+      "end": 17.966667,
+      "speech": 2.8,
+      "transition_in": "crossfade",
+      "beat": "explanation",
+      "headline": "How an eval works",
+      "accent": null,
+      "step": "",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Eval =",
+          "a repeatable",
+          "test"
+        ],
+        "accent": "repeatable",
+        "cues": [
+          "eval",
+          "repeatable",
+          "test"
+        ]
+      },
+      "cues": [
+        0.125,
+        0.589,
+        0.995
+      ]
+    },
+    {
+      "id": 5,
+      "start": 17.966667,
+      "end": 22.633333,
+      "speech": 4.31,
+      "transition_in": "push",
+      "beat": "explanation",
+      "headline": "1. Realistic task",
+      "accent": "realistic",
+      "step": "1/3",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Realistic task",
+            "tone": "input"
+          },
+          {
+            "label": "What a good result looks like",
+            "tone": "active"
+          }
+        ],
+        "cues": [
+          "realistic",
+          "good"
+        ]
+      },
+      "cues": [
+        1.465,
+        3.099
+      ]
+    },
+    {
+      "id": 6,
+      "start": 22.633333,
+      "end": 26.566667,
+      "speech": 3.59,
+      "transition_in": "cut",
+      "beat": "explanation",
+      "headline": "2. Approve, then check",
+      "accent": "approve",
+      "step": "2/3",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "checklist",
+        "illustrative": true,
+        "items": [
+          "You approve the run",
+          "Check A",
+          "Check B"
+        ],
+        "checked": [
+          0
+        ],
+        "tags": [
+          null,
+          {
+            "text": "passed",
+            "color": "mint"
+          },
+          {
+            "text": "failed",
+            "color": "coral"
+          }
+        ],
+        "cues": [
+          "approve",
+          "checks",
+          "passed",
+          "failed"
+        ]
+      },
+      "cues": [
+        0.869,
+        1.899,
+        2.169,
+        2.575
+      ]
+    },
+    {
+      "id": 7,
+      "start": 26.566667,
+      "end": 32.433333,
+      "speech": 5.31,
+      "transition_in": "zoom_through",
+      "beat": "explanation",
+      "headline": "3. Compare before/after",
+      "accent": "compare",
+      "step": "3/3",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "split",
+        "illustrative": true,
+        "left": {
+          "title": "Before",
+          "items": [
+            "Check A passed",
+            "Check B failed"
+          ]
+        },
+        "right": {
+          "title": "After",
+          "tone": "active",
+          "items": [
+            "Check A passed",
+            "Check B passed"
+          ]
+        },
+        "cues": [
+          "change",
+          "skill",
+          "agent",
+          "compare",
+          "before",
+          "after"
+        ]
+      },
+      "cues": [
+        0.925,
+        1.355,
+        1.775,
+        3.619,
+        3.935,
+        4.329
+      ]
+    },
+    {
+      "id": 8,
+      "start": 32.433333,
+      "end": 37.5,
+      "speech": 4.46,
+      "transition_in": "cut",
+      "beat": "example",
+      "headline": "Illustrative example",
+      "accent": null,
+      "step": "",
+      "question": "How do you know a change to your skill, agent or MCP tool actually helped?",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "fork",
+        "illustrative": true,
+        "from": "Your edit",
+        "branches": [
+          {
+            "label": "Passed by hand",
+            "tone": "success"
+          },
+          {
+            "label": "Rerun: failed check",
+            "tone": "failure"
+          }
+        ],
+        "cues": [
+          "edit",
+          "passed",
+          "rerun"
+        ]
+      },
+      "cues": [
+        1.065,
+        1.265,
+        2.599
+      ]
+    },
+    {
+      "id": 9,
+      "start": 37.5,
+      "end": 43.533333,
+      "speech": 5.53,
+      "transition_in": "match_cut",
+      "beat": "payoff",
+      "headline": "Rerun after every change",
+      "accent": "every",
+      "step": "",
+      "question": "",
+      "source": "Source: GitHub · 2026-11-17",
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Rerun the same eval",
+          "After every change",
+          "Compare the runs"
+        ],
+        "checked": [
+          0,
+          1,
+          2
+        ],
+        "tags": [
+          null,
+          null,
+          {
+            "text": "public preview",
+            "color": "amber"
+          }
+        ],
+        "cues": [
+          "rerun",
+          "change",
+          "compare",
+          "preview"
+        ]
+      },
+      "cues": [
+        0.225,
+        1.579,
+        2.455,
+        4.475
+      ]
+    },
+    {
+      "id": 10,
+      "start": 43.533333,
+      "end": 47.166667,
+      "speech": 3.28,
+      "transition_in": "crossfade",
+      "beat": "cta",
+      "headline": "Which skill first?",
+      "accent": "first",
+      "step": "",
+      "question": "",
+      "source": "",
+      "visual": {
+        "template": "title",
+        "text": "Which skill first?",
+        "sub": "Tell me below",
+        "cues": [
+          "Which",
+          "Tell"
+        ]
+      },
+      "cues": [
+        0.029,
+        2.039
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.079,
+      "end": 0.969,
+      "words": [
+        {
+          "text": "One",
+          "start": 0.079,
+          "end": 0.269
+        },
+        {
+          "text": "good",
+          "start": 0.269,
+          "end": 0.425
+        },
+        {
+          "text": "answer",
+          "start": 0.425,
+          "end": 0.705
+        },
+        {
+          "text": "doesn't",
+          "start": 0.705,
+          "end": 0.969
+        }
+      ]
+    },
+    {
+      "start": 0.969,
+      "end": 2.933,
+      "words": [
+        {
+          "text": "prove",
+          "start": 0.969,
+          "end": 1.209
+        },
+        {
+          "text": "your",
+          "start": 1.209,
+          "end": 1.345
+        },
+        {
+          "text": "skill",
+          "start": 1.345,
+          "end": 1.599
+        },
+        {
+          "text": "works.",
+          "start": 1.599,
+          "end": 2.6
+        }
+      ]
+    },
+    {
+      "start": 3.012,
+      "end": 4.098,
+      "words": [
+        {
+          "text": "AI",
+          "start": 3.012,
+          "end": 3.298
+        },
+        {
+          "text": "output",
+          "start": 3.298,
+          "end": 3.638
+        },
+        {
+          "text": "can",
+          "start": 3.638,
+          "end": 3.802
+        },
+        {
+          "text": "change",
+          "start": 3.802,
+          "end": 4.098
+        }
+      ]
+    },
+    {
+      "start": 4.098,
+      "end": 4.648,
+      "words": [
+        {
+          "text": "from",
+          "start": 4.098,
+          "end": 4.288
+        },
+        {
+          "text": "one",
+          "start": 4.288,
+          "end": 4.462
+        },
+        {
+          "text": "run",
+          "start": 4.462,
+          "end": 4.648
+        }
+      ]
+    },
+    {
+      "start": 4.648,
+      "end": 5.892,
+      "words": [
+        {
+          "text": "to",
+          "start": 4.648,
+          "end": 4.732
+        },
+        {
+          "text": "the",
+          "start": 4.732,
+          "end": 4.798
+        },
+        {
+          "text": "next.",
+          "start": 4.798,
+          "end": 5.892
+        }
+      ]
+    },
+    {
+      "start": 5.892,
+      "end": 6.888,
+      "words": [
+        {
+          "text": "You",
+          "start": 5.892,
+          "end": 6.012
+        },
+        {
+          "text": "edit",
+          "start": 6.012,
+          "end": 6.202
+        },
+        {
+          "text": "a",
+          "start": 6.202,
+          "end": 6.242
+        },
+        {
+          "text": "skill,",
+          "start": 6.242,
+          "end": 6.888
+        }
+      ]
+    },
+    {
+      "start": 6.888,
+      "end": 7.862,
+      "words": [
+        {
+          "text": "try",
+          "start": 6.888,
+          "end": 7.128
+        },
+        {
+          "text": "it",
+          "start": 7.128,
+          "end": 7.218
+        },
+        {
+          "text": "once,",
+          "start": 7.218,
+          "end": 7.862
+        }
+      ]
+    },
+    {
+      "start": 7.862,
+      "end": 9.667,
+      "words": [
+        {
+          "text": "and",
+          "start": 7.862,
+          "end": 7.952
+        },
+        {
+          "text": "it",
+          "start": 7.952,
+          "end": 8.038
+        },
+        {
+          "text": "passes.",
+          "start": 8.038,
+          "end": 9.113
+        }
+      ]
+    },
+    {
+      "start": 9.746,
+      "end": 11.832,
+      "words": [
+        {
+          "text": "Rerun",
+          "start": 9.746,
+          "end": 10.056
+        },
+        {
+          "text": "it,",
+          "start": 10.056,
+          "end": 10.522
+        },
+        {
+          "text": "and",
+          "start": 10.522,
+          "end": 10.612
+        },
+        {
+          "text": "it",
+          "start": 10.612,
+          "end": 10.702
+        },
+        {
+          "text": "fails.",
+          "start": 10.702,
+          "end": 11.832
+        }
+      ]
+    },
+    {
+      "start": 11.832,
+      "end": 12.352,
+      "words": [
+        {
+          "text": "So",
+          "start": 11.832,
+          "end": 12.026
+        },
+        {
+          "text": "how",
+          "start": 12.026,
+          "end": 12.186
+        },
+        {
+          "text": "do",
+          "start": 12.186,
+          "end": 12.352
+        }
+      ]
+    },
+    {
+      "start": 12.352,
+      "end": 14.667,
+      "words": [
+        {
+          "text": "you",
+          "start": 12.352,
+          "end": 12.462
+        },
+        {
+          "text": "know",
+          "start": 12.462,
+          "end": 12.626
+        },
+        {
+          "text": "your",
+          "start": 12.626,
+          "end": 12.806
+        },
+        {
+          "text": "change",
+          "start": 12.806,
+          "end": 13.116
+        },
+        {
+          "text": "helped?",
+          "start": 13.116,
+          "end": 14.067
+        }
+      ]
+    },
+    {
+      "start": 14.746,
+      "end": 15.132,
+      "words": [
+        {
+          "text": "An",
+          "start": 14.746,
+          "end": 14.842
+        },
+        {
+          "text": "eval",
+          "start": 14.842,
+          "end": 15.132
+        }
+      ]
+    },
+    {
+      "start": 15.132,
+      "end": 15.982,
+      "words": [
+        {
+          "text": "is",
+          "start": 15.132,
+          "end": 15.232
+        },
+        {
+          "text": "a",
+          "start": 15.232,
+          "end": 15.306
+        },
+        {
+          "text": "repeatable",
+          "start": 15.306,
+          "end": 15.712
+        },
+        {
+          "text": "test",
+          "start": 15.712,
+          "end": 15.982
+        }
+      ]
+    },
+    {
+      "start": 15.982,
+      "end": 17.967,
+      "words": [
+        {
+          "text": "for",
+          "start": 15.982,
+          "end": 16.116
+        },
+        {
+          "text": "AI",
+          "start": 16.116,
+          "end": 16.392
+        },
+        {
+          "text": "behavior.",
+          "start": 16.392,
+          "end": 17.467
+        }
+      ]
+    },
+    {
+      "start": 18.046,
+      "end": 19.402,
+      "words": [
+        {
+          "text": "Step",
+          "start": 18.046,
+          "end": 18.316
+        },
+        {
+          "text": "one:",
+          "start": 18.316,
+          "end": 18.886
+        },
+        {
+          "text": "give",
+          "start": 18.886,
+          "end": 19.012
+        },
+        {
+          "text": "an",
+          "start": 19.012,
+          "end": 19.106
+        },
+        {
+          "text": "agent",
+          "start": 19.106,
+          "end": 19.402
+        }
+      ]
+    },
+    {
+      "start": 19.402,
+      "end": 20.632,
+      "words": [
+        {
+          "text": "a",
+          "start": 19.402,
+          "end": 19.482
+        },
+        {
+          "text": "realistic",
+          "start": 19.482,
+          "end": 19.916
+        },
+        {
+          "text": "task,",
+          "start": 19.916,
+          "end": 20.632
+        }
+      ]
+    },
+    {
+      "start": 20.632,
+      "end": 22.633,
+      "words": [
+        {
+          "text": "and",
+          "start": 20.632,
+          "end": 20.716
+        },
+        {
+          "text": "describe",
+          "start": 20.716,
+          "end": 21.076
+        },
+        {
+          "text": "a",
+          "start": 21.076,
+          "end": 21.116
+        },
+        {
+          "text": "good",
+          "start": 21.116,
+          "end": 21.296
+        },
+        {
+          "text": "result.",
+          "start": 21.296,
+          "end": 22.277
+        }
+      ]
+    },
+    {
+      "start": 22.712,
+      "end": 24.122,
+      "words": [
+        {
+          "text": "Step",
+          "start": 22.712,
+          "end": 22.982
+        },
+        {
+          "text": "two:",
+          "start": 22.982,
+          "end": 23.552
+        },
+        {
+          "text": "approve",
+          "start": 23.552,
+          "end": 23.838
+        },
+        {
+          "text": "the",
+          "start": 23.838,
+          "end": 23.942
+        },
+        {
+          "text": "run",
+          "start": 23.942,
+          "end": 24.122
+        }
+      ]
+    },
+    {
+      "start": 24.122,
+      "end": 24.852,
+      "words": [
+        {
+          "text": "and",
+          "start": 24.122,
+          "end": 24.238
+        },
+        {
+          "text": "see",
+          "start": 24.238,
+          "end": 24.408
+        },
+        {
+          "text": "which",
+          "start": 24.408,
+          "end": 24.582
+        },
+        {
+          "text": "checks",
+          "start": 24.582,
+          "end": 24.852
+        }
+      ]
+    },
+    {
+      "start": 24.852,
+      "end": 26.567,
+      "words": [
+        {
+          "text": "passed",
+          "start": 24.852,
+          "end": 25.148
+        },
+        {
+          "text": "and",
+          "start": 25.148,
+          "end": 25.258
+        },
+        {
+          "text": "failed.",
+          "start": 25.258,
+          "end": 26.223
+        }
+      ]
+    },
+    {
+      "start": 26.646,
+      "end": 27.542,
+      "words": [
+        {
+          "text": "Step",
+          "start": 26.646,
+          "end": 26.916
+        },
+        {
+          "text": "three:",
+          "start": 26.916,
+          "end": 27.542
+        }
+      ]
+    },
+    {
+      "start": 27.542,
+      "end": 28.392,
+      "words": [
+        {
+          "text": "change",
+          "start": 27.542,
+          "end": 27.832
+        },
+        {
+          "text": "your",
+          "start": 27.832,
+          "end": 27.972
+        },
+        {
+          "text": "skill,",
+          "start": 27.972,
+          "end": 28.392
+        }
+      ]
+    },
+    {
+      "start": 28.392,
+      "end": 30.142,
+      "words": [
+        {
+          "text": "agent",
+          "start": 28.392,
+          "end": 28.826
+        },
+        {
+          "text": "or",
+          "start": 28.826,
+          "end": 28.952
+        },
+        {
+          "text": "MCP",
+          "start": 28.952,
+          "end": 29.492
+        },
+        {
+          "text": "tool,",
+          "start": 29.492,
+          "end": 30.142
+        }
+      ]
+    },
+    {
+      "start": 30.142,
+      "end": 32.433,
+      "words": [
+        {
+          "text": "and",
+          "start": 30.142,
+          "end": 30.236
+        },
+        {
+          "text": "compare",
+          "start": 30.236,
+          "end": 30.552
+        },
+        {
+          "text": "before",
+          "start": 30.552,
+          "end": 30.832
+        },
+        {
+          "text": "and",
+          "start": 30.832,
+          "end": 30.946
+        },
+        {
+          "text": "after.",
+          "start": 30.946,
+          "end": 31.877
+        }
+      ]
+    },
+    {
+      "start": 32.512,
+      "end": 33.382,
+      "words": [
+        {
+          "text": "Illustrative:",
+          "start": 32.512,
+          "end": 33.382
+        }
+      ]
+    },
+    {
+      "start": 33.382,
+      "end": 34.188,
+      "words": [
+        {
+          "text": "your",
+          "start": 33.382,
+          "end": 33.548
+        },
+        {
+          "text": "edit",
+          "start": 33.548,
+          "end": 33.748
+        },
+        {
+          "text": "passed",
+          "start": 33.748,
+          "end": 34.048
+        },
+        {
+          "text": "by",
+          "start": 34.048,
+          "end": 34.188
+        }
+      ]
+    },
+    {
+      "start": 34.188,
+      "end": 35.638,
+      "words": [
+        {
+          "text": "hand,",
+          "start": 34.188,
+          "end": 34.858
+        },
+        {
+          "text": "but",
+          "start": 34.858,
+          "end": 34.978
+        },
+        {
+          "text": "the",
+          "start": 34.978,
+          "end": 35.082
+        },
+        {
+          "text": "rerun",
+          "start": 35.082,
+          "end": 35.382
+        },
+        {
+          "text": "shows",
+          "start": 35.382,
+          "end": 35.638
+        }
+      ]
+    },
+    {
+      "start": 35.638,
+      "end": 37.493,
+      "words": [
+        {
+          "text": "a",
+          "start": 35.638,
+          "end": 35.678
+        },
+        {
+          "text": "failed",
+          "start": 35.678,
+          "end": 35.968
+        },
+        {
+          "text": "check.",
+          "start": 35.968,
+          "end": 36.893
+        }
+      ]
+    },
+    {
+      "start": 37.579,
+      "end": 38.365,
+      "words": [
+        {
+          "text": "So",
+          "start": 37.579,
+          "end": 37.775
+        },
+        {
+          "text": "rerun",
+          "start": 37.775,
+          "end": 38.055
+        },
+        {
+          "text": "the",
+          "start": 38.055,
+          "end": 38.109
+        },
+        {
+          "text": "same",
+          "start": 38.109,
+          "end": 38.365
+        }
+      ]
+    },
+    {
+      "start": 38.365,
+      "end": 39.909,
+      "words": [
+        {
+          "text": "eval",
+          "start": 38.365,
+          "end": 38.649
+        },
+        {
+          "text": "after",
+          "start": 38.649,
+          "end": 38.909
+        },
+        {
+          "text": "every",
+          "start": 38.909,
+          "end": 39.129
+        },
+        {
+          "text": "change,",
+          "start": 39.129,
+          "end": 39.909
+        }
+      ]
+    },
+    {
+      "start": 39.909,
+      "end": 41.489,
+      "words": [
+        {
+          "text": "and",
+          "start": 39.909,
+          "end": 40.005
+        },
+        {
+          "text": "compare",
+          "start": 40.005,
+          "end": 40.325
+        },
+        {
+          "text": "the",
+          "start": 40.325,
+          "end": 40.429
+        },
+        {
+          "text": "runs.",
+          "start": 40.429,
+          "end": 41.489
+        }
+      ]
+    },
+    {
+      "start": 41.489,
+      "end": 43.533,
+      "words": [
+        {
+          "text": "It's",
+          "start": 41.489,
+          "end": 41.629
+        },
+        {
+          "text": "in",
+          "start": 41.629,
+          "end": 41.729
+        },
+        {
+          "text": "public",
+          "start": 41.729,
+          "end": 42.025
+        },
+        {
+          "text": "preview.",
+          "start": 42.025,
+          "end": 43.03
+        }
+      ]
+    },
+    {
+      "start": 43.612,
+      "end": 44.158,
+      "words": [
+        {
+          "text": "Which",
+          "start": 43.612,
+          "end": 43.768
+        },
+        {
+          "text": "skill",
+          "start": 43.768,
+          "end": 44.018
+        },
+        {
+          "text": "would",
+          "start": 44.018,
+          "end": 44.158
+        }
+      ]
+    },
+    {
+      "start": 44.158,
+      "end": 45.622,
+      "words": [
+        {
+          "text": "you",
+          "start": 44.158,
+          "end": 44.248
+        },
+        {
+          "text": "test",
+          "start": 44.248,
+          "end": 44.528
+        },
+        {
+          "text": "first?",
+          "start": 44.528,
+          "end": 45.622
+        }
+      ]
+    },
+    {
+      "start": 45.622,
+      "end": 47.167,
+      "words": [
+        {
+          "text": "Tell",
+          "start": 45.622,
+          "end": 45.788
+        },
+        {
+          "text": "me",
+          "start": 45.788,
+          "end": 45.918
+        },
+        {
+          "text": "below.",
+          "start": 45.918,
+          "end": 46.813
+        }
+      ]
+    }
+  ]
+}

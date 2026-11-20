@@ -132,9 +132,36 @@ def _gate_problems(folder: Path, cfg: ProductionConfig, stage: Status) -> list[s
         read_manifest(folder / "assets" / "manifest.csv", require_rows=stage.rank >= Status.ASSETS_READY.rank)
     except ContractError as exc:
         problems.extend(exc.problems)
-    if stage.rank >= Status.RENDERED.rank and not any((folder / "render").glob("*.mp4")):
-        problems.append("stage requires a draft MP4 in render/")
+    if stage.rank >= Status.RENDERED.rank:
+        if not any((folder / "render").glob("*.mp4")):
+            problems.append("stage requires a draft MP4 in render/")
+        else:
+            problems.extend(_render_report_problems(folder))
+    if stage.rank >= Status.QA_PASSED.rank:
+        from .qa import editorial_problems, technical_problems
+
+        problems.extend(technical_problems(folder))
+        problems.extend(editorial_problems(folder))
+    if stage.rank >= Status.READY_FOR_HUMAN_REVIEW.rank:
+        from .metadata import metadata_problems
+
+        problems.extend(metadata_problems(folder))
+        report = folder / "qa_report.md"
+        if "Overall: **PASS**" not in report.read_text(encoding="utf-8"):
+            problems.append("qa_report.md overall result is not PASS (run python -m studio qa)")
     return problems
+
+
+def _render_report_problems(folder: Path) -> list[str]:
+    """A render report, when present, must record zero errors (written by studio.compose)."""
+    report = folder / "render" / "render_report.json"
+    if not report.is_file():
+        return []
+    try:
+        errors = json.loads(report.read_text(encoding="utf-8")).get("errors", [])
+    except json.JSONDecodeError:
+        return ["render/render_report.json is not valid JSON"]
+    return [f"render error: {e}" for e in errors]
 
 
 def validate_production(folder: Path, cfg: ProductionConfig) -> list[str]:
@@ -164,4 +191,10 @@ def set_status(folder: Path, cfg: ProductionConfig, target: str, note: str = "",
         if problems:
             raise ContractError([f"cannot enter {target_status.value}: {p}" for p in problems])
     save_status(status_path, updated)
+    if target_status is Status.READY_FOR_HUMAN_REVIEW:
+        from .archive import deliver
+
+        dest = deliver(folder, folder.resolve().parent.parent / "final")
+        updated["delivery"] = dest.relative_to(folder.resolve().parent.parent).as_posix()
+        save_status(status_path, updated)
     return updated

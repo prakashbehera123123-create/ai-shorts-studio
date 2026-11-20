@@ -1,0 +1,12 @@
+0
+00:00:00,000 --> 00:00:02,800
+So each address explains itself.
+
+1
+00:00:02,800 --> 00:00:05,120
+State becomes explicit handles.
+
+2
+00:00:05,120 --> 00:00:06,960
+Questions become a retry loop.
+

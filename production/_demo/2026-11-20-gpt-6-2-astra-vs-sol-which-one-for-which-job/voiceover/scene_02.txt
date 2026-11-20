@@ -1,0 +1,1 @@
+OpenAI released two models, Astra and Sol. Both support the Responses API and Chat Completions.

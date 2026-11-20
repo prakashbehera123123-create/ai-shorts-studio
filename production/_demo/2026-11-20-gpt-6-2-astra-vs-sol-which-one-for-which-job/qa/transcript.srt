@@ -1,0 +1,64 @@
+0
+00:00:00,000 --> 00:00:04,300
+Switching to GPT 6.2? Check these three things first.
+
+1
+00:00:04,300 --> 00:00:07,100
+Open AI released two models, Astra and Soul.
+
+2
+00:00:07,100 --> 00:00:09,300
+Both support the responses API and chat completions.
+
+3
+00:00:09,983 --> 00:00:13,983
+The change leg notes differences. We pick three worth testing.
+
+4
+00:00:13,983 --> 00:00:17,983
+1. Tool calling requires the responses API.
+
+5
+00:00:17,983 --> 00:00:21,983
+Illustrative, if your app calls tools through chat.
+
+6
+00:00:19,967 --> 00:00:23,487
+completions, tools on GPT 6.2 need the responses API.
+
+7
+00:00:23,487 --> 00:00:29,447
+2. In the responses API, GPT 6.2 changes how reasoning is preserved when you edit earlier
+
+8
+00:00:29,447 --> 00:00:29,967
+messages.
+
+9
+00:00:29,951 --> 00:00:35,951
+3. It also changes how the responses API handles the top level instructions field.
+
+10
+00:00:35,951 --> 00:00:39,951
+So test those three before you switch. Then read open as gpt6
+
+11
+00:00:39,935 --> 00:00:42,195
+point 2 migration guide.
+
+12
+00:00:42,195 --> 00:00:43,715
+The first is a requirement.
+
+13
+00:00:43,715 --> 00:00:46,435
+The other two are behavior changes worth testing.
+
+14
+00:00:46,435 --> 00:00:48,495
+Which of these three would your app hit first?
+
+15
+00:00:48,495 --> 00:00:48,995
+Comment below.
+

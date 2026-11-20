@@ -1,0 +1,10 @@
+asset_id,filename,asset_type,source_url,creator,license,license_url,attribution_required,notes
+F001,assets/motion/spec.json (11 scenes),generated_graphic,,AI Shorts Studio motion engine,internal-generated,,no,Motion graphics rendered by studio/motion/engine.html from storyboard
+V001,voiceover/narration.wav,generated_audio,https://github.com/resemble-ai/chatterbox,Chatterbox (Resemble AI) cloning the channel owner's own voice,"MIT (model); voice: channel owner, consented",https://github.com/resemble-ai/chatterbox/blob/master/LICENSE,no,AI-cloned narration of the owner's voice from voice/reference.wav; disclose as synthetic; output carries Resemble PerTh watermark
+T001,segoeuib.ttf,font,,Microsoft (Windows system font),Windows system font,,no,Verify Microsoft font terms for video use before publishing
+A001,assets/library/audio/generated/bed.wav,generated_audio,,AI Shorts Studio (generated with FFmpeg),self-generated,,no,music bed
+A002,assets/library/audio/generated/knock.wav,generated_audio,,AI Shorts Studio (generated with FFmpeg),self-generated,,no,sound effect
+A003,assets/library/audio/generated/rise.wav,generated_audio,,AI Shorts Studio (generated with FFmpeg),self-generated,,no,sound effect
+A004,assets/library/audio/generated/tick.wav,generated_audio,,AI Shorts Studio (generated with FFmpeg),self-generated,,no,sound effect
+A005,assets/library/audio/generated/whoosh.wav,generated_audio,,AI Shorts Studio (generated with FFmpeg),self-generated,,no,sound effect
+I001,vendor/node_modules/lucide-static/icons,licensed_stock,https://lucide.dev,Lucide contributors,ISC,https://github.com/lucide-icons/lucide/blob/main/LICENSE,no,icons drawn in motion graphics

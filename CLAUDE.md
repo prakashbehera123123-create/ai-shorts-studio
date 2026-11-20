@@ -1,7 +1,7 @@
 # AI Shorts Studio — Project Operating Rules
 
 ## Mission
-Produce up to two high-quality, faceless, vertical YouTube Shorts per day in AI engineering, Agentic AI, practical AI tools/experiments, and relevant technology developments. One language per video: English OR Hinglish. Do not randomly mix languages.
+Produce up to two high-quality, faceless, vertical YouTube Shorts per day in AI engineering, Agentic AI, practical AI tools/experiments, and relevant technology developments; other hot technology, security, system-design and science topics are allowed when they score higher (`config/content-strategy.md`). One language per video: English OR Hinglish. Do not randomly mix languages.
 
 ## Non-negotiable rules
 1. Never publish, schedule, delete, or modify a public YouTube video. Prepare deliverables and stop for explicit human approval.
@@ -41,6 +41,9 @@ Produce up to two high-quality, faceless, vertical YouTube Shorts per day in AI 
 - Captions readable on mobile, safe margins, no tiny text.
 - Voice and visuals must support the same narrative.
 - Avoid generic AI hype, exaggerated claims, misleading hooks, and repetitive templates.
+- Creative standard: `docs/CREATIVE_PRODUCTION_STANDARD.md` (story beats, voice, palette/layout, visual-form selection, motion, captions, sound, −14 LUFS). Procedures live in skills: story-architecture, visual-direction, voice-and-sound, motion-graphics, depth-and-3d, shortform-editing, reference-analysis; produce-short orchestrates them.
+- New storyboards use schema v2 (`templates/storyboard.example.json`); complete `templates/production-readiness-checklist.md` before rendering.
+- Reference videos in `reference/` are third-party learning material: analyse locally, never commit, never copy scripts, graphics or branding.
 
 ## Daily batch workflow
 1. Research 8–12 candidate topics with primary sources.

@@ -22,8 +22,9 @@ COLUMNS: tuple[str, ...] = (
     "notes",
 )
 
-# Same vocabulary as storyboard visual_type (CLAUDE.md workflow step 5).
-ASSET_TYPES = frozenset({"generated_graphic", "screen_capture", "licensed_stock", "user_asset"})
+# Visual vocabulary is shared with storyboard visual_type (CLAUDE.md workflow step 5).
+VISUAL_TYPES = frozenset({"generated_graphic", "screen_capture", "licensed_stock", "user_asset"})
+ASSET_TYPES = VISUAL_TYPES | {"generated_audio", "font"}
 YES_NO = frozenset({"yes", "no"})
 
 

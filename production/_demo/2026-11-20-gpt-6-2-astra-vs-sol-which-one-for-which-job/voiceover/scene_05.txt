@@ -1,0 +1,1 @@
+Illustrative: if your app calls tools through Chat Completions, tools on G P T six point two need the Responses API.

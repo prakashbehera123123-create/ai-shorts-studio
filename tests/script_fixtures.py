@@ -24,7 +24,7 @@ SOURCES = """# Sources
 def script_md(language: str = "English", hook: str = HOOK, narration: str = NARRATION, cta: str = CTA,
               claims: str = "| K1 | Repeatable evals compare runs before and after a change | S1 | fact |") -> str:
     return (
-        f"# Script: Demo\n\nLanguage: {language}\n\n## Hook\n{hook}\n\n## Narration\n{narration}\n\n"
+        f"# Script: Test your agent before and after a change\n\nLanguage: {language}\n\n## Hook\n{hook}\n\n## Narration\n{narration}\n\n"
         f"## On-screen text\n- Test before and after\n\n## CTA\n{cta}\n\n"
         f"## Claim-to-source map\n| id | claim | sources | type |\n|---|---|---|---|\n{claims}\n"
     )

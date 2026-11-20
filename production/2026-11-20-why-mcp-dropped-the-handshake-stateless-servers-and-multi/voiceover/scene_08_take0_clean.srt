@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:03,280
+Illustrate you, a tool needs the user to choose.
+
+1
+00:00:03,280 --> 00:00:05,440
+The server returns an input required result.
+

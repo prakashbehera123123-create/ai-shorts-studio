@@ -1,0 +1,138 @@
+{
+  "video_id": "2026-11-20-gpt-6-2-astra-vs-sol-which-one-for-which-job",
+  "passed": true,
+  "measurements": {
+    "probe": {
+      "file": "render/draft.mp4",
+      "duration_seconds": 49.87,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "has_video": true,
+      "has_audio": true
+    },
+    "loudness_lufs": -14.0,
+    "true_peak_dbfs": -1.5,
+    "long_silences": [],
+    "sampled_frames": [
+      "qa/frames/scene_01.jpg",
+      "qa/frames/scene_02.jpg",
+      "qa/frames/scene_03.jpg",
+      "qa/frames/scene_04.jpg",
+      "qa/frames/scene_05.jpg",
+      "qa/frames/scene_06.jpg",
+      "qa/frames/scene_07.jpg",
+      "qa/frames/scene_08.jpg",
+      "qa/frames/scene_09.jpg",
+      "qa/frames/scene_10.jpg"
+    ],
+    "longest_static_s": 4.25,
+    "visual_activity_pct": 41.1,
+    "transcript_recall_pct": 96.7
+  },
+  "checks": [
+    {
+      "name": "format spec (1080x1920, H.264/AAC, 25-55s)",
+      "passed": true,
+      "detail": "1080x1920 h264/aac 49.87s",
+      "severity": "blocker"
+    },
+    {
+      "name": "integrated loudness",
+      "passed": true,
+      "detail": "-14.0 LUFS (allowed -15.0 to -13.0)",
+      "severity": "blocker"
+    },
+    {
+      "name": "true peak / clipping",
+      "passed": true,
+      "detail": "-1.5 dBFS (max -1.0)",
+      "severity": "blocker"
+    },
+    {
+      "name": "no long silences",
+      "passed": true,
+      "detail": "none",
+      "severity": "blocker"
+    },
+    {
+      "name": "captions cover full timeline",
+      "passed": true,
+      "detail": "contiguous, 0 to end",
+      "severity": "blocker"
+    },
+    {
+      "name": "caption reading speed",
+      "passed": false,
+      "detail": "cue 'Check these three things' needs 30 chars/s reading speed; cue 'Both support the Responses API' needs 23 chars/s reading speed; cue 'The changelog notes' needs 28 chars/s reading speed; cue 'Tool calling requires' needs 24 chars/s reading speed; cue 'if your app calls' needs 27 chars/s reading speed; cue 'tools through Chat' needs 27 chars/s reading speed; cue 'is preserved when' needs 31 chars/s reading speed; cue 'handles the top-level' needs 27 chars/s reading speed; cue 'So test those three' needs 24 chars/s reading speed; cue 'Then read OpenAI's' needs 27 chars/s reading speed; cue 'The other two' shows for only 0.43s; cue 'are behaviour changes' needs 27 chars/s reading speed; cue 'Which of these three' needs 36 chars/s reading speed",
+      "severity": "warning"
+    },
+    {
+      "name": "render report clean",
+      "passed": true,
+      "detail": "no errors",
+      "severity": "blocker"
+    },
+    {
+      "name": "render warning",
+      "passed": false,
+      "detail": "motion renderer: done: 1496 frames in 124 s",
+      "severity": "warning"
+    },
+    {
+      "name": "render warning",
+      "passed": false,
+      "detail": "Voice is the Windows SAPI placeholder; record voiceover/voiceover.wav or approve a better local TTS before publishing",
+      "severity": "warning"
+    },
+    {
+      "name": "visual cadence (no static visual zone > 6 s)",
+      "passed": true,
+      "detail": "longest static stretch 4.25s, visual zone active 41% of the time",
+      "severity": "blocker"
+    },
+    {
+      "name": "visual cadence target (1-3 s)",
+      "passed": false,
+      "detail": "longest static stretch 4.25s exceeds 3s",
+      "severity": "warning"
+    },
+    {
+      "name": "audio matches script (whisper recall >= 90%)",
+      "passed": true,
+      "detail": "97% of script words heard; not heard: changelog, openais, picked, sol",
+      "severity": "warning"
+    },
+    {
+      "name": "script/storyboard contract",
+      "passed": true,
+      "detail": "126 words, 10 mapped claims",
+      "severity": "blocker"
+    },
+    {
+      "name": "fact check (no unsupported claims)",
+      "passed": true,
+      "detail": "all claims supported/qualified",
+      "severity": "blocker"
+    },
+    {
+      "name": "asset rights recorded",
+      "passed": true,
+      "detail": "3 manifest rows valid",
+      "severity": "blocker"
+    },
+    {
+      "name": "rights/quality note",
+      "passed": false,
+      "detail": "V001 voiceover/narration.wav: PLACEHOLDER draft voice; replace with recorded or approved TTS before publishing",
+      "severity": "warning"
+    },
+    {
+      "name": "rights/quality note",
+      "passed": false,
+      "detail": "T001 segoeuib.ttf: Verify Microsoft font terms for video use before publishing",
+      "severity": "warning"
+    }
+  ]
+}

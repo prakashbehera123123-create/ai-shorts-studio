@@ -1,0 +1,1 @@
+Two. In the Responses API, G P T six point two changes how reasoning is preserved when you edit earlier messages.

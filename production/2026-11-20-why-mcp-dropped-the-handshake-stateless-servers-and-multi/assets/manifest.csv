@@ -1,0 +1,4 @@
+asset_id,filename,asset_type,source_url,creator,license,license_url,attribution_required,notes
+F001,assets/motion/spec.json (12 scenes),generated_graphic,,AI Shorts Studio motion engine,internal-generated,,no,Motion graphics rendered by studio/motion/engine.html from storyboard
+V001,voiceover/narration.wav,generated_audio,https://github.com/resemble-ai/chatterbox,Chatterbox (Resemble AI) cloning the channel owner's own voice,"MIT (model); voice: channel owner, consented",https://github.com/resemble-ai/chatterbox/blob/master/LICENSE,no,AI-cloned narration of the owner's voice from voice/reference.wav; disclose as synthetic; output carries Resemble PerTh watermark
+T001,segoeuib.ttf,font,,Microsoft (Windows system font),Windows system font,,no,Verify Microsoft font terms for video use before publishing

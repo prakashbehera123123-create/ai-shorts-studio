@@ -1,0 +1,72 @@
+0
+00:00:00,000 --> 00:00:05,960
+MCP deleted its own handshake. The July 2002 6 spec removes the handshake. It also removes
+
+1
+00:00:05,960 --> 00:00:07,200
+the session ID.
+
+2
+00:00:07,200 --> 00:00:09,360
+So, how does the server know who's asking?
+
+3
+00:00:09,983 --> 00:00:13,503
+A station works like a wooden key card, good for one room.
+
+4
+00:00:13,503 --> 00:00:15,983
+Now every request shows a passport.
+
+5
+00:00:15,983 --> 00:00:19,183
+Inside are its protocol version and client capabilities.
+
+6
+00:00:19,183 --> 00:00:19,983
+Around the world.
+
+7
+00:00:19,967 --> 00:00:22,567
+gets an unsupported version error.
+
+8
+00:00:22,567 --> 00:00:28,087
+Need state across calls, the server creates a handle, the client passes it as a normal tool
+
+9
+00:00:28,087 --> 00:00:29,807
+argument, illustrative.
+
+10
+00:00:29,951 --> 00:00:34,111
+a tool needs the user to choose. The server returns an input required result.
+
+11
+00:00:34,831 --> 00:00:37,631
+Then the client sends the same request again with the answers.
+
+12
+00:00:38,191 --> 00:00:41,231
+Roots, sampling and learning.
+
+13
+00:00:39,935 --> 00:00:42,855
+blogging or deprecated, but still work.
+
+14
+00:00:42,855 --> 00:00:45,575
+So each request explains itself.
+
+15
+00:00:45,575 --> 00:00:47,775
+State becomes explicit handles.
+
+16
+00:00:47,775 --> 00:00:49,015
+Questions become a retry loop.
+
+17
+00:00:49,986 --> 00:00:51,666
+miss the handshake, tell me below.
+

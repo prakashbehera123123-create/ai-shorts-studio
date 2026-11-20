@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:03,600
+A station works like a wooden key card, good for one room.
+
+1
+00:00:03,600 --> 00:00:05,840
+Now every request shows a passport.
+

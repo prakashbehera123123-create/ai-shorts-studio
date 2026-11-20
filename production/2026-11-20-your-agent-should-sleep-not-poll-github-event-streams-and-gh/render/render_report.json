@@ -1,0 +1,94 @@
+{
+  "video_id": "2026-11-20-your-agent-should-sleep-not-poll-github-event-streams-and-gh",
+  "voice_source": "clone",
+  "renderer": "motion",
+  "tempo": 1.0,
+  "tts_rate": null,
+  "output": "render/draft.mp4",
+  "duration_seconds": 48.87,
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "speech": 2.44,
+      "end": 2.8
+    },
+    {
+      "id": 2,
+      "start": 2.8,
+      "speech": 4.89,
+      "end": 8.2
+    },
+    {
+      "id": 3,
+      "start": 8.2,
+      "speech": 3.3,
+      "end": 12.1
+    },
+    {
+      "id": 4,
+      "start": 12.1,
+      "speech": 2.31,
+      "end": 14.9
+    },
+    {
+      "id": 5,
+      "start": 14.9,
+      "speech": 6.53,
+      "end": 21.933333
+    },
+    {
+      "id": 6,
+      "start": 21.933333,
+      "speech": 6.73,
+      "end": 29.166667
+    },
+    {
+      "id": 7,
+      "start": 29.166667,
+      "speech": 5.05,
+      "end": 34.766667
+    },
+    {
+      "id": 8,
+      "start": 34.766667,
+      "speech": 3.7,
+      "end": 39.033333
+    },
+    {
+      "id": 9,
+      "start": 39.033333,
+      "speech": 2.86,
+      "end": 42.4
+    },
+    {
+      "id": 10,
+      "start": 42.4,
+      "speech": 2.83,
+      "end": 45.733333
+    },
+    {
+      "id": 11,
+      "start": 45.733333,
+      "speech": 2.8,
+      "end": 48.866667
+    }
+  ],
+  "cues": 40,
+  "probe": {
+    "file": "render/draft.mp4",
+    "duration_seconds": 48.87,
+    "width": 1080,
+    "height": 1920,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "has_video": true,
+    "has_audio": true
+  },
+  "errors": [],
+  "warnings": [
+    "voice clone: all takes from cache; takes chosen by recall, 14 cached; tempo 1.0x",
+    "motion renderer: done: 1466 frames in 122 s",
+    "sound: bed bed.wav, 8 SFX knock@0s, whoosh@2.49s, tick@12.1s, whoosh@14.55s, whoosh@21.583s, rise@34.417s, tick@42.4s, tick@45.733s"
+  ]
+}

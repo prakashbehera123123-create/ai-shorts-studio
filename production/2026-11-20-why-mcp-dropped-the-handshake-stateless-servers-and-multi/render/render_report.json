@@ -1,0 +1,99 @@
+{
+  "video_id": "2026-11-20-why-mcp-dropped-the-handshake-stateless-servers-and-multi",
+  "voice_source": "clone",
+  "renderer": "motion",
+  "tempo": 1.043,
+  "tts_rate": null,
+  "output": "render/draft.mp4",
+  "duration_seconds": 52.13,
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "speech": 2.25,
+      "end": 2.6
+    },
+    {
+      "id": 2,
+      "start": 2.6,
+      "speech": 4.08,
+      "end": 7.166667
+    },
+    {
+      "id": 3,
+      "start": 7.166667,
+      "speech": 2.29,
+      "end": 10.066667
+    },
+    {
+      "id": 4,
+      "start": 10.066667,
+      "speech": 5.54,
+      "end": 16.1
+    },
+    {
+      "id": 5,
+      "start": 16.1,
+      "speech": 3.01,
+      "end": 19.466667
+    },
+    {
+      "id": 6,
+      "start": 19.466667,
+      "speech": 2.86,
+      "end": 22.833333
+    },
+    {
+      "id": 7,
+      "start": 22.833333,
+      "speech": 5.75,
+      "end": 29.133333
+    },
+    {
+      "id": 8,
+      "start": 29.133333,
+      "speech": 5.12,
+      "end": 34.8
+    },
+    {
+      "id": 9,
+      "start": 34.8,
+      "speech": 2.93,
+      "end": 38.233333
+    },
+    {
+      "id": 10,
+      "start": 38.233333,
+      "speech": 4.0,
+      "end": 42.733333
+    },
+    {
+      "id": 11,
+      "start": 42.733333,
+      "speech": 6.46,
+      "end": 49.7
+    },
+    {
+      "id": 12,
+      "start": 49.7,
+      "speech": 2.09,
+      "end": 52.133333
+    }
+  ],
+  "cues": 38,
+  "probe": {
+    "file": "render/draft.mp4",
+    "duration_seconds": 52.13,
+    "width": 1080,
+    "height": 1920,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "has_video": true,
+    "has_audio": true
+  },
+  "errors": [],
+  "warnings": [
+    "voice clone: all takes from cache; takes chosen by recall, 14 cached; tempo 1.043x",
+    "motion renderer: done: 1564 frames in 130 s"
+  ]
+}

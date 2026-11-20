@@ -1,0 +1,79 @@
+{
+  "video_id": "2026-11-20-gpt-6-2-astra-vs-sol-which-one-for-which-job",
+  "voice_source": "sapi",
+  "tts_rate": 3,
+  "output": "render/draft.mp4",
+  "duration_seconds": 50.3,
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "speech": 4.15,
+      "end": 4.5
+    },
+    {
+      "id": 2,
+      "start": 4.5,
+      "speech": 4.42,
+      "end": 9.266667
+    },
+    {
+      "id": 3,
+      "start": 9.266667,
+      "speech": 5.91,
+      "end": 15.533333
+    },
+    {
+      "id": 4,
+      "start": 15.533333,
+      "speech": 6.08,
+      "end": 21.966667
+    },
+    {
+      "id": 5,
+      "start": 21.966667,
+      "speech": 4.39,
+      "end": 26.7
+    },
+    {
+      "id": 6,
+      "start": 26.7,
+      "speech": 6.46,
+      "end": 33.5
+    },
+    {
+      "id": 7,
+      "start": 33.5,
+      "speech": 6.07,
+      "end": 39.933333
+    },
+    {
+      "id": 8,
+      "start": 39.933333,
+      "speech": 6.37,
+      "end": 46.666667
+    },
+    {
+      "id": 9,
+      "start": 46.666667,
+      "speech": 3.28,
+      "end": 50.3
+    }
+  ],
+  "cues": 33,
+  "probe": {
+    "file": "render/draft.mp4",
+    "duration_seconds": 50.3,
+    "width": 1080,
+    "height": 1920,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "has_video": true,
+    "has_audio": true
+  },
+  "errors": [],
+  "warnings": [
+    "Voice is the Windows SAPI placeholder; record voiceover/voiceover.wav or approve a better local TTS before publishing",
+    "Scene visuals are text cards; storyboard diagram descriptions are not drawn yet"
+  ]
+}

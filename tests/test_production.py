@@ -8,6 +8,8 @@ from pathlib import Path
 from studio.config import load_config
 from studio.errors import ContractError, StudioError, TransitionError
 from studio.manifest import COLUMNS
+from studio.metadata import build_metadata
+from studio.qa import write_qa_report
 from tests.script_fixtures import write_valid
 from studio.production import REQUIRED_FILES, create_production, set_status, validate_production
 
@@ -80,7 +82,22 @@ class ProductionTests(unittest.TestCase):
             set_status(folder, CFG, "RENDERED", now=NOW)
         (folder / "render" / "draft.mp4").write_bytes(b"")
         set_status(folder, CFG, "RENDERED", now=NOW)
+
+        with self.assertRaisesRegex(ContractError, "technical.json"):
+            set_status(folder, CFG, "QA_PASSED", now=NOW)
+        (folder / "qa").mkdir()
+        (folder / "qa" / "technical.json").write_text(json.dumps(
+            {"video_id": folder.name, "passed": True, "measurements": {}, "checks": [
+                {"name": "format spec", "passed": True, "detail": "ok", "severity": "blocker"}]}), encoding="utf-8")
+        with self.assertRaisesRegex(ContractError, "editorial"):
+            set_status(folder, CFG, "QA_PASSED", now=NOW)
+        (folder / "qa" / "editorial.md").write_text("Decision: PASS\n\n## Blockers\n- none\n", encoding="utf-8")
         set_status(folder, CFG, "QA_PASSED", now=NOW)
+
+        with self.assertRaisesRegex(ContractError, "title|PASS"):
+            set_status(folder, CFG, "READY_FOR_HUMAN_REVIEW", now=NOW)
+        (folder / "metadata.md").write_text(build_metadata(folder), encoding="utf-8")
+        self.assertEqual(write_qa_report(folder), "PASS")
         final = set_status(folder, CFG, "READY_FOR_HUMAN_REVIEW", now=NOW)
         self.assertEqual(final["status"], "READY_FOR_HUMAN_REVIEW")
         self.assertFalse(final["published"])

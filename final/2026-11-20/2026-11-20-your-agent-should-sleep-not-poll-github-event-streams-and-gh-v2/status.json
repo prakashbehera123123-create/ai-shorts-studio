@@ -1,0 +1,59 @@
+{
+  "video_id": "2026-11-20-your-agent-should-sleep-not-poll-github-event-streams-and-gh",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "updated_at": "2026-11-20T12:39:17+00:00",
+  "human_review_required": true,
+  "published": false,
+  "history": [
+    {
+      "status": "RESEARCHED",
+      "at": "2026-11-20T10:36:52+00:00",
+      "note": "created"
+    },
+    {
+      "status": "APPROVED_TOPIC",
+      "at": "2026-11-20T10:37:34+00:00",
+      "note": "Owner asked for two new Shorts today (run 2); top-2 by score, primary pages verified by orchestrator"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-20T10:41:37+00:00",
+      "note": "script + storyboard v2 checked; fact check 0 unsupported, corrections applied"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-20T11:18:42+00:00",
+      "note": "motion spec + cloned voice in manifest"
+    },
+    {
+      "status": "RENDERED",
+      "at": "2026-11-20T11:18:42+00:00",
+      "note": "motion renderer + cloned voice; all scenes >=85% whisper recall"
+    },
+    {
+      "status": "QA_PASSED",
+      "at": "2026-11-20T11:24:47+00:00",
+      "note": "technical PASS; editorial PASS 3.57, 0 blockers"
+    },
+    {
+      "status": "READY_FOR_HUMAN_REVIEW",
+      "at": "2026-11-20T11:24:47+00:00",
+      "note": "cloned voice; warnings surfaced in qa_report.md; human must listen 14-22 s"
+    },
+    {
+      "status": "RENDERED",
+      "at": "2026-11-20T12:29:34+00:00",
+      "note": "re-render to add sound design (bed + SFX) and Lucide icons; previous draft archived in render/versions/"
+    },
+    {
+      "status": "QA_PASSED",
+      "at": "2026-11-20T12:39:17+00:00",
+      "note": "re-render with sound bed + SFX and Lucide icons; technical PASS; editorial PASS 3.57"
+    },
+    {
+      "status": "READY_FOR_HUMAN_REVIEW",
+      "at": "2026-11-20T12:39:17+00:00",
+      "note": "sound + icons version; listen to SFX near word tails"
+    }
+  ]
+}

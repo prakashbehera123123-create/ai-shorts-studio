@@ -1,18 +1,235 @@
 {
+  "schema_version": 2,
   "video_id": "YYYY-MM-DD-topic-slug",
   "language": "English",
   "target_duration_seconds": 40,
   "format": "9:16",
+  "creative": {
+    "central_question": "The one question the viewer wants answered by the end.",
+    "payoff": "The concrete takeaway delivered in the payoff beat.",
+    "visual_motif": "One recurring visual element that carries the idea (e.g. a request packet travelling through the system).",
+    "music": "low-energy synth bed, ducked under voice, no lyrics (licence recorded in manifest)",
+    "palette": "channel default (see docs/CREATIVE_PRODUCTION_STANDARD.md)"
+  },
   "scenes": [
     {
       "id": 1,
       "start_seconds": 0,
-      "end_seconds": 3,
-      "narration": "Opening hook goes here.",
-      "on_screen_text": "Short hook",
+      "end_seconds": 2.6,
+      "beat": "hook",
+      "narration": "Opening question or surprising concrete claim.",
+      "on_screen_text": "3-5 word hook",
       "visual_type": "generated_graphic",
-      "visual_description": "One clear visual idea, high contrast, mobile readable.",
-      "source_ids": []
+      "visual_form": "kinetic_type",
+      "transition_in": "cut",
+      "motion": "hook words punch in one by one on voice stress, slow 3% push-in",
+      "visual_description": "Single focal object of the motif on dark background, hook text above it.",
+      "sfx": [
+        "whoosh_in"
+      ],
+      "voice": {
+        "emphasis": [
+          "surprising"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [],
+      "visual": {
+        "template": "kinetic",
+        "lines": [
+          "Hook in",
+          "3-5 words"
+        ],
+        "accent": "words",
+        "cues": [
+          "surprising"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "start_seconds": 2.6,
+      "end_seconds": 8.0,
+      "beat": "context",
+      "narration": "Why this matters to the viewer, stated in one sentence.",
+      "on_screen_text": "Why it matters",
+      "visual_type": "generated_graphic",
+      "visual_form": "diagram_2d",
+      "transition_in": "push",
+      "motion": "motif object moves into a simple 3-node diagram; nodes draw on in narration order",
+      "visual_description": "Three labelled nodes, one highlighted in accent colour.",
+      "sfx": [
+        "tick"
+      ],
+      "voice": {
+        "emphasis": [],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Input",
+            "tone": "input"
+          },
+          {
+            "label": "Process"
+          },
+          {
+            "label": "Result",
+            "tone": "active"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "start_seconds": 8.0,
+      "end_seconds": 15.0,
+      "beat": "explanation",
+      "narration": "The mechanism, one step at a time.",
+      "on_screen_text": "Step 1 → Step 2",
+      "visual_type": "generated_graphic",
+      "visual_form": "architecture_flow",
+      "transition_in": "zoom_through",
+      "motion": "camera pans along the flow; a packet travels each arrow as it is named; callout labels pop at each hop",
+      "visual_description": "Left-to-right flow wrapped into a vertical S-curve for 9:16.",
+      "sfx": [
+        "soft_pop",
+        "soft_pop"
+      ],
+      "voice": {
+        "emphasis": [
+          "first"
+        ],
+        "pause_after_ms": 200
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual": {
+        "template": "flow",
+        "nodes": [
+          {
+            "label": "Step 1",
+            "tone": "input"
+          },
+          {
+            "label": "Step 2",
+            "tone": "active"
+          }
+        ],
+        "cues": [
+          "first"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "start_seconds": 15.0,
+      "end_seconds": 22.0,
+      "beat": "example",
+      "narration": "A concrete example with a real, sourced number or behaviour.",
+      "on_screen_text": "Real example",
+      "visual_type": "generated_graphic",
+      "visual_form": "chart",
+      "transition_in": "cut",
+      "motion": "bars grow from zero in 0.6 s, value label counts up, source line fades in last",
+      "visual_description": "Two-bar comparison, labelled units, source and date under the chart.",
+      "sfx": [
+        "rise"
+      ],
+      "voice": {
+        "emphasis": [
+          "forty"
+        ],
+        "pause_after_ms": 250
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual": {
+        "template": "chart",
+        "bars": [
+          {
+            "label": "Before",
+            "value": 40,
+            "color": "coral"
+          },
+          {
+            "label": "After",
+            "value": 70,
+            "color": "mint"
+          }
+        ],
+        "unit": "%",
+        "illustrative": true
+      }
+    },
+    {
+      "id": 5,
+      "start_seconds": 22.0,
+      "end_seconds": 33.0,
+      "beat": "payoff",
+      "narration": "The takeaway the viewer can act on.",
+      "on_screen_text": "Do this",
+      "visual_type": "generated_graphic",
+      "visual_form": "parallax_2_5d",
+      "transition_in": "match_cut",
+      "motion": "motif returns from scene 1, now resolved; foreground and background layers drift at different speeds",
+      "visual_description": "Callback to the hook image showing the answer.",
+      "visual_justification": "Depth separates the 'before' and 'after' layers of the same motif.",
+      "sfx": [
+        "resolve_chime"
+      ],
+      "voice": {
+        "emphasis": [
+          "this"
+        ],
+        "pause_after_ms": 300
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "checklist",
+        "items": [
+          "Do this",
+          "Then this"
+        ],
+        "checked": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "start_seconds": 33.0,
+      "end_seconds": 38.0,
+      "beat": "cta",
+      "narration": "One focused question for the comments.",
+      "on_screen_text": "Your answer?",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "crossfade",
+      "motion": "question text types on; channel motif loops subtly so the last frame can loop to the first",
+      "visual_description": "Clean end card with the question; loopable into scene 1.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [],
+        "pause_after_ms": 0
+      },
+      "source_ids": [],
+      "visual": {
+        "template": "title",
+        "text": "Your answer?",
+        "sub": "Comment below"
+      }
     }
   ]
 }

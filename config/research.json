@@ -7,12 +7,12 @@
   "min_evidence_score": 3,
   "duplicate_similarity": 0.5,
   "weights": {
-    "freshness": 0.20,
-    "relevance": 0.20,
-    "usefulness": 0.20,
-    "evidence": 0.20,
-    "visual": 0.10,
-    "distinctiveness": 0.10
+    "freshness": 0.2,
+    "relevance": 0.2,
+    "usefulness": 0.2,
+    "evidence": 0.2,
+    "visual": 0.1,
+    "distinctiveness": 0.1
   },
   "buckets": [
     "agentic-ai-mcp",
@@ -21,6 +21,10 @@
     "cloud-ai",
     "developer-workflows",
     "career-concepts",
-    "responsible-ai"
+    "responsible-ai",
+    "how-tech-works",
+    "system-design",
+    "science-space-tech",
+    "trending-tech"
   ]
 }

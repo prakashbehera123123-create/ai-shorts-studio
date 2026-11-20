@@ -1,0 +1,66 @@
+{
+  "fps": 30,
+  "renderer": "motion",
+  "browser_channel": "chrome",
+  "scene_padding_seconds": 0.35,
+  "tts": {
+    "engine": "clone",
+    "voice": "Microsoft Zira Desktop",
+    "rate": 2,
+    "sample_rate": 24000,
+    "pronunciations": {
+      "GPT-6.2": "G P T six point two",
+      "MCP": "M C P",
+      "/eval": "slash eval",
+      "Copilot CLI": "Copilot C L I",
+      "CLI": "C L I"
+    },
+    "clone": {
+      "python": ".venv-voice/Scripts/python.exe",
+      "reference": "voice/reference_clean.wav",
+      "exaggeration": 0.5,
+      "cfg_weight": 0.3,
+      "seed": 1234,
+      "max_tempo": 1.12,
+      "retakes": 2,
+      "min_recall": 85
+    }
+  },
+  "audio": {
+    "loudness_lufs": -14,
+    "true_peak_db": -1.5,
+    "bitrate": "192k",
+    "sample_rate": 48000
+  },
+  "video": {
+    "crf": 20,
+    "preset": "medium"
+  },
+  "style": {
+    "font_bold": "C:/Windows/Fonts/segoeuib.ttf",
+    "font_regular": "C:/Windows/Fonts/segoeui.ttf",
+    "background_top": "#0B1020",
+    "background_bottom": "#18234A",
+    "accent": "#4CC9F0",
+    "text": "#FFFFFF",
+    "muted": "#AAB4CF",
+    "headline_size": 96,
+    "caption_size": 68,
+    "source_size": 34,
+    "min_caption_size": 56,
+    "side_margin": 110,
+    "caption_top": 1240,
+    "caption_max_words": 6,
+    "caption_max_chars": 30
+  },
+  "hyperframes": {
+    "launcher": "",
+    "format": "mov"
+  },
+  "sound": {
+    "enabled": true,
+    "bed_db": -4,
+    "sfx_db": -10,
+    "auto_sfx": true
+  }
+}
