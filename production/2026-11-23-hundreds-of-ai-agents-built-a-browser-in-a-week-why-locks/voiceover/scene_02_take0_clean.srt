@@ -1,0 +1,4 @@
+0
+00:00:00,000 --> 00:00:03,520
+Then a clear team structure helped build a browser in about a week.
+

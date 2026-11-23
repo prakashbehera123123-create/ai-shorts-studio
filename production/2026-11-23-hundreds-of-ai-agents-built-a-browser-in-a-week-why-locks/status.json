@@ -1,0 +1,34 @@
+{
+  "video_id": "2026-11-23-hundreds-of-ai-agents-built-a-browser-in-a-week-why-locks",
+  "status": "RENDERED",
+  "updated_at": "2026-11-23T03:03:44+00:00",
+  "human_review_required": true,
+  "published": false,
+  "history": [
+    {
+      "status": "RESEARCHED",
+      "at": "2026-11-23T02:06:49+00:00",
+      "note": "created"
+    },
+    {
+      "status": "APPROVED_TOPIC",
+      "at": "2026-11-23T02:07:16+00:00",
+      "note": "Owner approved C01+C06 in chat 2026-11-23; English narration"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-23T02:11:17+00:00",
+      "note": "English script 113 words; fact check 0 unsupported; music only hook/intro/lesson/outro; no SFX"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-23T03:03:44+00:00",
+      "note": "3D world (procedural, original), Lucide icons (ISC), self-generated pad; manifest valid"
+    },
+    {
+      "status": "RENDERED",
+      "at": "2026-11-23T03:03:44+00:00",
+      "note": "draft 41.53 s; scene 1 clean take swapped in, scene 2 reworded for clear voice"
+    }
+  ]
+}

@@ -34,6 +34,12 @@ GENERATORS: dict[str, str] = {
     "bed": "aevalsrc='0.10*(sin(2*PI*110*t)+0.7*sin(2*PI*220*t)"
            "+0.5*sin(2*PI*if(lt(mod(t,8),4),261.63,349.23)*t)+0.5*sin(2*PI*if(lt(mod(t,8),4),329.63,440)*t))"
            "*(0.75+0.25*sin(2*PI*t/8))':d=64,lowpass=f=1800,afade=t=in:d=1.5",
+    # soft pad (2026-11-23, owner: "music where appropriate, nothing noisy"): Am - F - C - G, one chord per 4 s, no sub drone,
+    # each chord swells in (no clicks at changes), heavy low-pass + echo for a calm, airy tail; 64 s, looped by the mixer
+    "pad": "aevalsrc='0.07*(sin(2*PI*if(lt(mod(t,16),4),220,if(lt(mod(t,16),8),174.61,if(lt(mod(t,16),12),261.63,196)))*t)"
+           "+0.8*sin(2*PI*if(lt(mod(t,16),4),261.63,if(lt(mod(t,16),8),220,if(lt(mod(t,16),12),329.63,246.94)))*t)"
+           "+0.7*sin(2*PI*if(lt(mod(t,16),4),329.63,if(lt(mod(t,16),8),261.63,if(lt(mod(t,16),12),392,293.66)))*t))"
+           "*(0.35+0.65*pow(sin(PI*mod(t,4)/4),0.6))':d=64,lowpass=f=1200,aecho=0.8:0.7:180:0.35,afade=t=in:d=2",
 }
 # which cue a transition gets when the storyboard does not name one
 TRANSITION_SFX = {"push": "whoosh", "zoom_through": "whoosh", "match_cut": "rise", "wipe": "whoosh", "crossfade": "tick"}
@@ -83,10 +89,10 @@ def licence_row(path: Path) -> dict[str, str]:
     return {"file": rel, "source_url": "", "creator": "AI Shorts Studio (generated with FFmpeg)", "license": "self-generated"}
 
 
-def pick_bed(video_id: str, generated: dict[str, Path]) -> Path:
+def pick_bed(video_id: str, generated: dict[str, Path], name: str = "bed") -> Path:
     music = licensed_files("music")
     if not music:
-        return generated["bed"]
+        return generated.get(name, generated["bed"])
     return music[int(hashlib.sha256(video_id.encode()).hexdigest(), 16) % len(music)]
 
 
@@ -132,12 +138,40 @@ def _thin(cues: list[SfxCue]) -> list[SfxCue]:
     return kept
 
 
-def mix_filter(n_sfx: int, total: float, bed_db: float, sfx_db: float, cues: list[SfxCue]) -> str:
-    """Inputs: 0 narration, 1 bed, 2.. sfx. Bed is looped, ducked by the voice (sidechain), SFX delayed to their cues."""
+def music_spans(board: dict[str, Any], timings: list[SceneTiming]) -> list[tuple[float, float]] | None:
+    """Scenes flagged `"music": true` in the storyboard -> merged time spans. None = no scene uses the flag (music everywhere)."""
+    if not any("music" in s for s in board.get("scenes", [])):
+        return None
+    by_id = {t.scene_id: t for t in timings}
+    spans: list[tuple[float, float]] = []
+    for s in board["scenes"]:
+        if s.get("music"):
+            t = by_id[int(s["id"])]
+            a, b = t.start, t.end
+            if spans and a - spans[-1][1] < 0.05:
+                spans[-1] = (spans[-1][0], b)
+            else:
+                spans.append((a, b))
+    return spans
+
+
+def gate_expr(spans: list[tuple[float, float]], fade: float = 0.6) -> str:
+    """FFmpeg volume expression: 1 inside spans with `fade`-second ramps, 0 elsewhere."""
+    if not spans:
+        return "0"
+    terms = [f"clip((t-{a:.3f})/{fade},0,1)*clip(({b:.3f}-t)/{fade},0,1)" for a, b in spans]
+    return "min(1," + "+".join(terms) + ")"
+
+
+def mix_filter(n_sfx: int, total: float, bed_db: float, sfx_db: float, cues: list[SfxCue],
+               spans: list[tuple[float, float]] | None = None) -> str:
+    """Inputs: 0 narration, 1 bed, 2.. sfx. Bed is looped, ducked by the voice (sidechain), SFX delayed to their cues.
+    `spans` (optional) limits the bed to those time ranges with soft fades."""
+    gate = f",volume='{gate_expr(spans)}':eval=frame" if spans is not None else ""
     parts = [
         f"[0:a]aresample={SR},aformat=channel_layouts=stereo,asplit=2[voice][key]",
         f"[1:a]aresample={SR},aformat=channel_layouts=stereo,aloop=loop=-1:size=2147483647,atrim=duration={total:.3f},"
-        f"volume={bed_db}dB,afade=t=out:st={max(0.0, total - 1.5):.3f}:d=1.5[bedraw]",
+        f"volume={bed_db}dB{gate},afade=t=out:st={max(0.0, total - 1.5):.3f}:d=1.5[bedraw]",
         "[bedraw][key]sidechaincompress=threshold=0.05:ratio=3:attack=30:release=500:makeup=1[bed]",
     ]
     labels = ["[voice]", "[bed]"]
@@ -155,12 +189,13 @@ def build_mix(narration: Path, out: Path, board: dict[str, Any], timings: list[S
 
     cfg = rcfg.sound
     generated = generate_library()
-    bed = pick_bed(video_id, generated)
+    bed = pick_bed(video_id, generated, str(cfg.get("bed_name", "bed")))
     cues = plan_sfx(board, timings, generated, bool(cfg.get("auto_sfx", True)))
+    spans = music_spans(board, timings)
     args = ["-i", str(narration), "-i", str(bed)]
     for c in cues:
         args += ["-i", str(c.path)]
-    args += ["-filter_complex", mix_filter(len(cues), total, float(cfg.get("bed_db", -22)), float(cfg.get("sfx_db", -10)), cues),
+    args += ["-filter_complex", mix_filter(len(cues), total, float(cfg.get("bed_db", -22)), float(cfg.get("sfx_db", -10)), cues, spans),
              "-map", "[mix]", "-ar", str(SR), "-c:a", "pcm_s16le", str(out)]
     run_ffmpeg(args, log)
     return out, cues, bed

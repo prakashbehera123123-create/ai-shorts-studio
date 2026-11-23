@@ -1,0 +1,22 @@
+{
+  "research_date": "2026-11-23",
+  "selected": [
+    {
+      "id": "C01",
+      "title": "1 aur 1 = 11? Why AI fails simple math: tokens",
+      "score": 4.7,
+      "folder": "production/2026-11-23-1-aur-1-11-why-ai-fails-simple-math-tokens"
+    },
+    {
+      "id": "C06",
+      "title": "Hundreds of AI agents built a browser in a week: why locks failed",
+      "score": 4.3,
+      "folder": "production/2026-11-23-hundreds-of-ai-agents-built-a-browser-in-a-week-why-locks"
+    }
+  ],
+  "rejected": [],
+  "warnings": [
+    "only 2 candidates; target is 8-12"
+  ],
+  "report": "shortlist.md"
+}

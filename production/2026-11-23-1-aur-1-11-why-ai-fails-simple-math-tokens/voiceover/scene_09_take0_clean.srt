@@ -1,0 +1,4 @@
+0
+00:00:00,000 --> 00:00:05,120
+So for exact math, write numbers with commas, and ask it to use a calculator or code tool.
+

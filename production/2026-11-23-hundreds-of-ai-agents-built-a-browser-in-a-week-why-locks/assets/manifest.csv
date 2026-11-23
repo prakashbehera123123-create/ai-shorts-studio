@@ -1,0 +1,15 @@
+asset_id,filename,asset_type,source_url,creator,license,license_url,attribution_required,notes
+F001,assets/motion/spec.json (10 scenes),generated_graphic,,AI Shorts Studio motion engine,internal-generated,,no,Motion graphics rendered by studio/motion/engine.html from storyboard
+V001,voiceover/narration.wav,generated_audio,https://github.com/resemble-ai/chatterbox,Chatterbox (Resemble AI) cloning the channel owner's own voice,"MIT (model); voice: channel owner, consented",https://github.com/resemble-ai/chatterbox/blob/master/LICENSE,no,AI-cloned narration of the owner's voice from voice/reference.wav; disclose as synthetic; output carries Resemble PerTh watermark
+T001,segoeuib.ttf,font,,Microsoft (Windows system font),Windows system font,,no,Verify Microsoft font terms for video use before publishing
+G3D01,assets/3d/scene_01/renders/clip_65cea7cfab8ced46.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 1; procedural/CC0 models only; record any model licence here
+G3D02,assets/3d/scene_02/renders/clip_6423ee453b67a989.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 2; procedural/CC0 models only; record any model licence here
+G3D03,assets/3d/scene_03/renders/clip_b1469465066360c2.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 3; procedural/CC0 models only; record any model licence here
+G3D04,assets/3d/scene_04/renders/clip_0cc04e1fd5383a0d.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 4; procedural/CC0 models only; record any model licence here
+G3D05,assets/3d/scene_05/renders/clip_3f793a7d431cb49d.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 5; procedural/CC0 models only; record any model licence here
+G3D06,assets/3d/scene_06/renders/clip_ab83d86c5b438262.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 6; procedural/CC0 models only; record any model licence here
+G3D07,assets/3d/scene_07/renders/clip_2df628b80e8be959.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 7; procedural/CC0 models only; record any model licence here
+G3D08,assets/3d/scene_08/renders/clip_482cefe5406f6310.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 8; procedural/CC0 models only; record any model licence here
+G3D09,assets/3d/scene_09/renders/clip_3a20b5b2b0d06597.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 9; procedural/CC0 models only; record any model licence here
+G3D10,assets/3d/scene_10/renders/clip_27bb7d973152ec40.mov,generated_graphic,,AI Shorts Studio via HyperFrames + Three.js,internal-generated,,no,3D scene 10; procedural/CC0 models only; record any model licence here
+A001,assets/library/audio/generated/pad.wav,generated_audio,,AI Shorts Studio (generated with FFmpeg),self-generated,,no,music bed

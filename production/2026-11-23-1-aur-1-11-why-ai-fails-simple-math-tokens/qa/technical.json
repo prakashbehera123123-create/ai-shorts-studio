@@ -1,0 +1,138 @@
+{
+  "video_id": "2026-11-23-1-aur-1-11-why-ai-fails-simple-math-tokens",
+  "passed": true,
+  "measurements": {
+    "probe": {
+      "file": "render/draft.mp4",
+      "duration_seconds": 41.87,
+      "width": 1080,
+      "height": 1920,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "has_video": true,
+      "has_audio": true
+    },
+    "loudness_lufs": -14.0,
+    "true_peak_dbfs": -1.2,
+    "long_silences": [],
+    "sampled_frames": [
+      "qa/frames/scene_01.jpg",
+      "qa/frames/scene_02.jpg",
+      "qa/frames/scene_03.jpg",
+      "qa/frames/scene_04.jpg",
+      "qa/frames/scene_05.jpg",
+      "qa/frames/scene_06.jpg",
+      "qa/frames/scene_07.jpg",
+      "qa/frames/scene_08.jpg",
+      "qa/frames/scene_09.jpg",
+      "qa/frames/scene_10.jpg"
+    ],
+    "longest_static_s": 1.25,
+    "visual_activity_pct": 84.8,
+    "transcript_recall_pct": 93.2
+  },
+  "checks": [
+    {
+      "name": "format spec (1080x1920, H.264/AAC, 25-55s)",
+      "passed": true,
+      "detail": "1080x1920 h264/aac 41.87s",
+      "severity": "blocker"
+    },
+    {
+      "name": "integrated loudness",
+      "passed": true,
+      "detail": "-14.0 LUFS (allowed -15.0 to -13.0)",
+      "severity": "blocker"
+    },
+    {
+      "name": "true peak / clipping",
+      "passed": true,
+      "detail": "-1.2 dBFS (max -1.0)",
+      "severity": "blocker"
+    },
+    {
+      "name": "no long silences",
+      "passed": true,
+      "detail": "none",
+      "severity": "blocker"
+    },
+    {
+      "name": "captions cover full timeline",
+      "passed": true,
+      "detail": "contiguous, 0 to end",
+      "severity": "blocker"
+    },
+    {
+      "name": "caption reading speed",
+      "passed": false,
+      "detail": "cue 'and the cut moves' needs 23 chars/s reading speed",
+      "severity": "warning"
+    },
+    {
+      "name": "render report clean",
+      "passed": true,
+      "detail": "no errors",
+      "severity": "blocker"
+    },
+    {
+      "name": "render warning",
+      "passed": false,
+      "detail": "voice clone: all takes from cache; takes chosen by recall, 15 cached; scenes [7] still below 85% recall; tempo 1.0x",
+      "severity": "warning"
+    },
+    {
+      "name": "render warning",
+      "passed": false,
+      "detail": "motion renderer: done: 1256 frames in 110 s",
+      "severity": "warning"
+    },
+    {
+      "name": "render warning",
+      "passed": false,
+      "detail": "3D scenes 1 (rendered), 2 (rendered), 3 (rendered), 4 (rendered), 5 (rendered), 6 (rendered), 8 (rendered), 9 (rendered), 10 (rendered) via HyperFrames",
+      "severity": "warning"
+    },
+    {
+      "name": "render warning",
+      "passed": false,
+      "detail": "sound: bed pad.wav, 0 SFX ",
+      "severity": "warning"
+    },
+    {
+      "name": "visual cadence (no static visual zone > 6 s)",
+      "passed": true,
+      "detail": "longest static stretch 1.25s, visual zone active 85% of the time",
+      "severity": "blocker"
+    },
+    {
+      "name": "audio matches script (whisper recall >= 90%)",
+      "passed": true,
+      "detail": "93% of script words heard; not heard: at, concepts, count, picture, researchers, tested, too, well",
+      "severity": "warning"
+    },
+    {
+      "name": "script/storyboard contract",
+      "passed": true,
+      "detail": "119 words, 11 mapped claims",
+      "severity": "blocker"
+    },
+    {
+      "name": "fact check (no unsupported claims)",
+      "passed": true,
+      "detail": "all claims supported/qualified",
+      "severity": "blocker"
+    },
+    {
+      "name": "asset rights recorded",
+      "passed": true,
+      "detail": "13 manifest rows valid",
+      "severity": "blocker"
+    },
+    {
+      "name": "rights/quality note",
+      "passed": false,
+      "detail": "T001 segoeuib.ttf: Verify Microsoft font terms for video use before publishing",
+      "severity": "warning"
+    }
+  ]
+}

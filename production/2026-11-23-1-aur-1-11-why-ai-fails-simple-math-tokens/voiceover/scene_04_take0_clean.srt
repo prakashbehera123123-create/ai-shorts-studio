@@ -1,0 +1,4 @@
+0
+00:00:00,000 --> 00:00:04,800
+Picture a long number, some models cut it left to right after 3 digits at a time.
+

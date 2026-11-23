@@ -1,0 +1,24 @@
+{
+  "video_id": "2026-11-23-1-aur-1-11-why-ai-fails-simple-math-tokens",
+  "status": "SCRIPT_READY",
+  "updated_at": "2026-11-23T02:12:21+00:00",
+  "human_review_required": true,
+  "published": false,
+  "history": [
+    {
+      "status": "RESEARCHED",
+      "at": "2026-11-23T02:06:49+00:00",
+      "note": "created"
+    },
+    {
+      "status": "APPROVED_TOPIC",
+      "at": "2026-11-23T02:07:16+00:00",
+      "note": "Owner approved C01+C06 in chat 2026-11-23; English narration"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-23T02:12:21+00:00",
+      "note": "English script 119 words; fact check 0 unsupported; hook rewritten to the video's own example (no 1+1=11 riddle); music only hook/intro/payoff/outro; no SFX"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+0
+00:00:00,000 --> 00:00:02,800
+20 AI agents worked like 2 or 3.
+
+1
+00:00:02,800 --> 00:00:06,560
+Then a clear team structure helped build a browser in about a week.
+
+2
+00:00:06,560 --> 00:00:09,800
+Curseer says it began with equal agents and one shared log file.
+
+3
+00:00:09,983 --> 00:00:15,263
+agents hell of too long or forgot them. So 20 agents moved like 2 or 3 they played
+
+4
+00:00:15,263 --> 00:00:19,743
+it safe. Next optimistic concurrency, simpler but flawed.
+
+5
+00:00:19,967 --> 00:00:26,287
+the fixed roles. Planners, create tasks, workers only finish them, judge decides each cycle
+
+6
+00:00:26,287 --> 00:00:29,967
+whether to continue, cursor reports close to a week, over a median line.
+
+7
+00:00:29,951 --> 00:00:34,511
+about a thousand files, a browser from scratch. It's an experiment because the
+
+8
+00:00:34,511 --> 00:00:39,431
+US said it kind of works. Lesson, structure beats more agents. For more AI
+
+9
+00:00:39,431 --> 00:00:41,951
+concepts,
+
+10
+00:00:40,002 --> 00:00:41,282
+like this, follow.
+

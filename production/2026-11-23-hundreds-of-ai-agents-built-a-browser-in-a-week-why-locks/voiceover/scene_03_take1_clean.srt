@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:04,000
+The cursor says it began with equal agents and one shared log 5,
+
+1
+00:00:04,000 --> 00:00:07,000
+agents held logs 2 long or forward them.
+

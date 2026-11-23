@@ -1,0 +1,129 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Segoe UI Black,76,&H00FFFFFF,&H00FFFFFF,&H28050710,&H64000000,-1,0,0,0,100,100,0,0,3,18,0,2,90,90,470,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.43,Cap,,0,0,0,,{\c&HF0C94C&}Twenty{\c&HFFFFFF&} AI agents worked
+Dialogue: 0,0:00:00.43,0:00:00.61,Cap,,0,0,0,,Twenty {\c&HF0C94C&}AI{\c&HFFFFFF&} agents worked
+Dialogue: 0,0:00:00.61,0:00:01.04,Cap,,0,0,0,,Twenty AI {\c&HF0C94C&}agents{\c&HFFFFFF&} worked
+Dialogue: 0,0:00:01.04,0:00:01.46,Cap,,0,0,0,,Twenty AI agents {\c&HF0C94C&}worked{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.46,0:00:01.77,Cap,,0,0,0,,{\c&HF0C94C&}like{\c&HFFFFFF&} two or three.
+Dialogue: 0,0:00:01.77,0:00:02.01,Cap,,0,0,0,,like {\c&HF0C94C&}two{\c&HFFFFFF&} or three.
+Dialogue: 0,0:00:02.01,0:00:02.19,Cap,,0,0,0,,like two {\c&HF0C94C&}or{\c&HFFFFFF&} three.
+Dialogue: 0,0:00:02.19,0:00:02.90,Cap,,0,0,0,,like two or {\c&HF0C94C&}three.{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.90,0:00:03.15,Cap,,0,0,0,,{\c&HF0C94C&}Then{\c&HFFFFFF&} a clear team
+Dialogue: 0,0:00:03.15,0:00:03.26,Cap,,0,0,0,,Then {\c&HF0C94C&}a{\c&HFFFFFF&} clear team
+Dialogue: 0,0:00:03.26,0:00:03.56,Cap,,0,0,0,,Then a {\c&HF0C94C&}clear{\c&HFFFFFF&} team
+Dialogue: 0,0:00:03.56,0:00:03.82,Cap,,0,0,0,,Then a clear {\c&HF0C94C&}team{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.82,0:00:04.32,Cap,,0,0,0,,{\c&HF0C94C&}structure{\c&HFFFFFF&} helped build
+Dialogue: 0,0:00:04.32,0:00:04.68,Cap,,0,0,0,,structure {\c&HF0C94C&}helped{\c&HFFFFFF&} build
+Dialogue: 0,0:00:04.68,0:00:04.99,Cap,,0,0,0,,structure helped {\c&HF0C94C&}build{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.99,0:00:05.09,Cap,,0,0,0,,{\c&HF0C94C&}a{\c&HFFFFFF&} browser in about
+Dialogue: 0,0:00:05.09,0:00:05.50,Cap,,0,0,0,,a {\c&HF0C94C&}browser{\c&HFFFFFF&} in about
+Dialogue: 0,0:00:05.50,0:00:05.65,Cap,,0,0,0,,a browser {\c&HF0C94C&}in{\c&HFFFFFF&} about
+Dialogue: 0,0:00:05.65,0:00:05.95,Cap,,0,0,0,,a browser in {\c&HF0C94C&}about{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.95,0:00:06.06,Cap,,0,0,0,,{\c&HF0C94C&}a{\c&HFFFFFF&} week.
+Dialogue: 0,0:00:06.06,0:00:06.50,Cap,,0,0,0,,a {\c&HF0C94C&}week.{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.50,0:00:06.88,Cap,,0,0,0,,{\c&HF0C94C&}Cursor{\c&HFFFFFF&} says it began
+Dialogue: 0,0:00:06.88,0:00:07.15,Cap,,0,0,0,,Cursor {\c&HF0C94C&}says{\c&HFFFFFF&} it began
+Dialogue: 0,0:00:07.15,0:00:07.31,Cap,,0,0,0,,Cursor says {\c&HF0C94C&}it{\c&HFFFFFF&} began
+Dialogue: 0,0:00:07.31,0:00:07.63,Cap,,0,0,0,,Cursor says it {\c&HF0C94C&}began{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.63,0:00:07.90,Cap,,0,0,0,,{\c&HF0C94C&}with{\c&HFFFFFF&} equal agents
+Dialogue: 0,0:00:07.90,0:00:08.22,Cap,,0,0,0,,with {\c&HF0C94C&}equal{\c&HFFFFFF&} agents
+Dialogue: 0,0:00:08.22,0:00:08.60,Cap,,0,0,0,,with equal {\c&HF0C94C&}agents{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.60,0:00:08.82,Cap,,0,0,0,,{\c&HF0C94C&}and{\c&HFFFFFF&} one shared lock
+Dialogue: 0,0:00:08.82,0:00:09.03,Cap,,0,0,0,,and {\c&HF0C94C&}one{\c&HFFFFFF&} shared lock
+Dialogue: 0,0:00:09.03,0:00:09.41,Cap,,0,0,0,,and one {\c&HF0C94C&}shared{\c&HFFFFFF&} lock
+Dialogue: 0,0:00:09.41,0:00:09.68,Cap,,0,0,0,,and one shared {\c&HF0C94C&}lock{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.68,0:00:09.95,Cap,,0,0,0,,{\c&HF0C94C&}file.{\c&HFFFFFF&} Agents held locks too
+Dialogue: 0,0:00:09.95,0:00:10.32,Cap,,0,0,0,,file. {\c&HF0C94C&}Agents{\c&HFFFFFF&} held locks too
+Dialogue: 0,0:00:10.32,0:00:10.59,Cap,,0,0,0,,file. Agents {\c&HF0C94C&}held{\c&HFFFFFF&} locks too
+Dialogue: 0,0:00:10.59,0:00:10.92,Cap,,0,0,0,,file. Agents held {\c&HF0C94C&}locks{\c&HFFFFFF&} too
+Dialogue: 0,0:00:10.92,0:00:11.13,Cap,,0,0,0,,file. Agents held locks {\c&HF0C94C&}too{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.13,0:00:11.40,Cap,,0,0,0,,{\c&HF0C94C&}long,{\c&HFFFFFF&} or forgot them.
+Dialogue: 0,0:00:11.40,0:00:11.56,Cap,,0,0,0,,long, {\c&HF0C94C&}or{\c&HFFFFFF&} forgot them.
+Dialogue: 0,0:00:11.56,0:00:11.94,Cap,,0,0,0,,long, or {\c&HF0C94C&}forgot{\c&HFFFFFF&} them.
+Dialogue: 0,0:00:11.94,0:00:12.57,Cap,,0,0,0,,long, or forgot {\c&HF0C94C&}them.{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.57,0:00:12.73,Cap,,0,0,0,,{\c&HF0C94C&}So{\c&HFFFFFF&} twenty agents moved
+Dialogue: 0,0:00:12.73,0:00:13.11,Cap,,0,0,0,,So {\c&HF0C94C&}twenty{\c&HFFFFFF&} agents moved
+Dialogue: 0,0:00:13.11,0:00:13.49,Cap,,0,0,0,,So twenty {\c&HF0C94C&}agents{\c&HFFFFFF&} moved
+Dialogue: 0,0:00:13.49,0:00:13.82,Cap,,0,0,0,,So twenty agents {\c&HF0C94C&}moved{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.82,0:00:14.09,Cap,,0,0,0,,{\c&HF0C94C&}like{\c&HFFFFFF&} two or three.
+Dialogue: 0,0:00:14.09,0:00:14.31,Cap,,0,0,0,,like {\c&HF0C94C&}two{\c&HFFFFFF&} or three.
+Dialogue: 0,0:00:14.31,0:00:14.47,Cap,,0,0,0,,like two {\c&HF0C94C&}or{\c&HFFFFFF&} three.
+Dialogue: 0,0:00:14.47,0:00:14.80,Cap,,0,0,0,,like two or {\c&HF0C94C&}three.{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.80,0:00:15.07,Cap,,0,0,0,,{\c&HF0C94C&}They{\c&HFFFFFF&} played it safe.
+Dialogue: 0,0:00:15.07,0:00:15.45,Cap,,0,0,0,,They {\c&HF0C94C&}played{\c&HFFFFFF&} it safe.
+Dialogue: 0,0:00:15.45,0:00:15.62,Cap,,0,0,0,,They played {\c&HF0C94C&}it{\c&HFFFFFF&} safe.
+Dialogue: 0,0:00:15.62,0:00:16.23,Cap,,0,0,0,,They played it {\c&HF0C94C&}safe.{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.23,0:00:16.92,Cap,,0,0,0,,{\c&HF0C94C&}Next:{\c&HFFFFFF&} optimistic concurrency.
+Dialogue: 0,0:00:16.92,0:00:17.67,Cap,,0,0,0,,Next: {\c&HF0C94C&}optimistic{\c&HFFFFFF&} concurrency.
+Dialogue: 0,0:00:17.67,0:00:18.48,Cap,,0,0,0,,Next: optimistic {\c&HF0C94C&}concurrency.{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.48,0:00:19.03,Cap,,0,0,0,,{\c&HF0C94C&}Simpler,{\c&HFFFFFF&} but flawed.
+Dialogue: 0,0:00:19.03,0:00:19.30,Cap,,0,0,0,,Simpler, {\c&HF0C94C&}but{\c&HFFFFFF&} flawed.
+Dialogue: 0,0:00:19.30,0:00:20.13,Cap,,0,0,0,,Simpler, but {\c&HF0C94C&}flawed.{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.13,0:00:20.39,Cap,,0,0,0,,{\c&HF0C94C&}The{\c&HFFFFFF&} fix: roles.
+Dialogue: 0,0:00:20.39,0:00:20.99,Cap,,0,0,0,,The {\c&HF0C94C&}fix:{\c&HFFFFFF&} roles.
+Dialogue: 0,0:00:20.99,0:00:21.78,Cap,,0,0,0,,The fix: {\c&HF0C94C&}roles.{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.78,0:00:22.31,Cap,,0,0,0,,{\c&HF0C94C&}Planners{\c&HFFFFFF&} create tasks.
+Dialogue: 0,0:00:22.31,0:00:22.72,Cap,,0,0,0,,Planners {\c&HF0C94C&}create{\c&HFFFFFF&} tasks.
+Dialogue: 0,0:00:22.72,0:00:23.07,Cap,,0,0,0,,Planners create {\c&HF0C94C&}tasks.{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.07,0:00:23.54,Cap,,0,0,0,,{\c&HF0C94C&}Workers{\c&HFFFFFF&} only finish
+Dialogue: 0,0:00:23.54,0:00:23.84,Cap,,0,0,0,,Workers {\c&HF0C94C&}only{\c&HFFFFFF&} finish
+Dialogue: 0,0:00:23.84,0:00:24.25,Cap,,0,0,0,,Workers only {\c&HF0C94C&}finish{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.25,0:00:24.54,Cap,,0,0,0,,{\c&HF0C94C&}them.{\c&HFFFFFF&} A judge decides each
+Dialogue: 0,0:00:24.54,0:00:24.66,Cap,,0,0,0,,them. {\c&HF0C94C&}A{\c&HFFFFFF&} judge decides each
+Dialogue: 0,0:00:24.66,0:00:25.01,Cap,,0,0,0,,them. A {\c&HF0C94C&}judge{\c&HFFFFFF&} decides each
+Dialogue: 0,0:00:25.01,0:00:25.48,Cap,,0,0,0,,them. A judge {\c&HF0C94C&}decides{\c&HFFFFFF&} each
+Dialogue: 0,0:00:25.48,0:00:25.78,Cap,,0,0,0,,them. A judge decides {\c&HF0C94C&}each{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.78,0:00:26.13,Cap,,0,0,0,,{\c&HF0C94C&}cycle{\c&HFFFFFF&} whether to continue.
+Dialogue: 0,0:00:26.13,0:00:26.60,Cap,,0,0,0,,cycle {\c&HF0C94C&}whether{\c&HFFFFFF&} to continue.
+Dialogue: 0,0:00:26.60,0:00:26.77,Cap,,0,0,0,,cycle whether {\c&HF0C94C&}to{\c&HFFFFFF&} continue.
+Dialogue: 0,0:00:26.77,0:00:27.67,Cap,,0,0,0,,cycle whether to {\c&HF0C94C&}continue.{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.67,0:00:28.02,Cap,,0,0,0,,{\c&HF0C94C&}Cursor{\c&HFFFFFF&} reports close
+Dialogue: 0,0:00:28.02,0:00:28.43,Cap,,0,0,0,,Cursor {\c&HF0C94C&}reports{\c&HFFFFFF&} close
+Dialogue: 0,0:00:28.43,0:00:28.74,Cap,,0,0,0,,Cursor reports {\c&HF0C94C&}close{\c&HFFFFFF&}
+Dialogue: 0,0:00:28.74,0:00:28.90,Cap,,0,0,0,,{\c&HF0C94C&}to{\c&HFFFFFF&} a week,
+Dialogue: 0,0:00:28.90,0:00:29.00,Cap,,0,0,0,,to {\c&HF0C94C&}a{\c&HFFFFFF&} week,
+Dialogue: 0,0:00:29.00,0:00:29.25,Cap,,0,0,0,,to a {\c&HF0C94C&}week,{\c&HFFFFFF&}
+Dialogue: 0,0:00:29.25,0:00:29.51,Cap,,0,0,0,,{\c&HF0C94C&}over{\c&HFFFFFF&} a million lines,
+Dialogue: 0,0:00:29.51,0:00:29.61,Cap,,0,0,0,,over {\c&HF0C94C&}a{\c&HFFFFFF&} million lines,
+Dialogue: 0,0:00:29.61,0:00:30.02,Cap,,0,0,0,,over a {\c&HF0C94C&}million{\c&HFFFFFF&} lines,
+Dialogue: 0,0:00:30.02,0:00:30.33,Cap,,0,0,0,,over a million {\c&HF0C94C&}lines,{\c&HFFFFFF&}
+Dialogue: 0,0:00:30.33,0:00:30.63,Cap,,0,0,0,,{\c&HF0C94C&}about{\c&HFFFFFF&} a thousand files.
+Dialogue: 0,0:00:30.63,0:00:30.74,Cap,,0,0,0,,about {\c&HF0C94C&}a{\c&HFFFFFF&} thousand files.
+Dialogue: 0,0:00:30.74,0:00:31.20,Cap,,0,0,0,,about a {\c&HF0C94C&}thousand{\c&HFFFFFF&} files.
+Dialogue: 0,0:00:31.20,0:00:31.78,Cap,,0,0,0,,about a thousand {\c&HF0C94C&}files.{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.78,0:00:31.87,Cap,,0,0,0,,{\c&HF0C94C&}A{\c&HFFFFFF&} browser from scratch.
+Dialogue: 0,0:00:31.87,0:00:32.26,Cap,,0,0,0,,A {\c&HF0C94C&}browser{\c&HFFFFFF&} from scratch.
+Dialogue: 0,0:00:32.26,0:00:32.49,Cap,,0,0,0,,A browser {\c&HF0C94C&}from{\c&HFFFFFF&} scratch.
+Dialogue: 0,0:00:32.49,0:00:33.07,Cap,,0,0,0,,A browser from {\c&HF0C94C&}scratch.{\c&HFFFFFF&}
+Dialogue: 0,0:00:33.07,0:00:33.28,Cap,,0,0,0,,{\c&HF0C94C&}It's{\c&HFFFFFF&} an experiment.
+Dialogue: 0,0:00:33.28,0:00:33.45,Cap,,0,0,0,,It's {\c&HF0C94C&}an{\c&HFFFFFF&} experiment.
+Dialogue: 0,0:00:33.45,0:00:34.05,Cap,,0,0,0,,It's an {\c&HF0C94C&}experiment.{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.05,0:00:34.48,Cap,,0,0,0,,{\c&HF0C94C&}Cursor's{\c&HFFFFFF&} CEO said
+Dialogue: 0,0:00:34.48,0:00:34.70,Cap,,0,0,0,,Cursor's {\c&HF0C94C&}CEO{\c&HFFFFFF&} said
+Dialogue: 0,0:00:34.70,0:00:34.97,Cap,,0,0,0,,Cursor's CEO {\c&HF0C94C&}said{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.97,0:00:35.14,Cap,,0,0,0,,{\c&HF0C94C&}it{\c&HFFFFFF&} kind of works.
+Dialogue: 0,0:00:35.14,0:00:35.41,Cap,,0,0,0,,it {\c&HF0C94C&}kind{\c&HFFFFFF&} of works.
+Dialogue: 0,0:00:35.41,0:00:35.57,Cap,,0,0,0,,it kind {\c&HF0C94C&}of{\c&HFFFFFF&} works.
+Dialogue: 0,0:00:35.57,0:00:36.10,Cap,,0,0,0,,it kind of {\c&HF0C94C&}works.{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.10,0:00:36.58,Cap,,0,0,0,,{\c&HF0C94C&}Lesson:{\c&HFFFFFF&} structure beats more
+Dialogue: 0,0:00:36.58,0:00:37.28,Cap,,0,0,0,,Lesson: {\c&HF0C94C&}structure{\c&HFFFFFF&} beats more
+Dialogue: 0,0:00:37.28,0:00:37.69,Cap,,0,0,0,,Lesson: structure {\c&HF0C94C&}beats{\c&HFFFFFF&} more
+Dialogue: 0,0:00:37.69,0:00:38.04,Cap,,0,0,0,,Lesson: structure beats {\c&HF0C94C&}more{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.04,0:00:38.73,Cap,,0,0,0,,{\c&HF0C94C&}agents.{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.73,0:00:38.97,Cap,,0,0,0,,{\c&HF0C94C&}For{\c&HFFFFFF&} more AI concepts
+Dialogue: 0,0:00:38.97,0:00:39.28,Cap,,0,0,0,,For {\c&HF0C94C&}more{\c&HFFFFFF&} AI concepts
+Dialogue: 0,0:00:39.28,0:00:39.46,Cap,,0,0,0,,For more {\c&HF0C94C&}AI{\c&HFFFFFF&} concepts
+Dialogue: 0,0:00:39.46,0:00:40.00,Cap,,0,0,0,,For more AI {\c&HF0C94C&}concepts{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.00,0:00:40.30,Cap,,0,0,0,,{\c&HF0C94C&}like{\c&HFFFFFF&} this, follow.
+Dialogue: 0,0:00:40.30,0:00:40.87,Cap,,0,0,0,,like {\c&HF0C94C&}this,{\c&HFFFFFF&} follow.
+Dialogue: 0,0:00:40.87,0:00:41.53,Cap,,0,0,0,,like this, {\c&HF0C94C&}follow.{\c&HFFFFFF&}

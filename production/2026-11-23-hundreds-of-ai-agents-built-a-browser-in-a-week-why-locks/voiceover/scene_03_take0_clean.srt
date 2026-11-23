@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:03,280
+Because it says it began with equal agents and one shared log file.
+
+1
+00:00:03,280 --> 00:00:05,440
+Agents had logs too long or forward them.
+

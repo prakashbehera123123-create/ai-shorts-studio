@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:03,520
+Koso says it began with equal agents and one shared log file.
+
+1
+00:00:03,520 --> 00:00:05,840
+Agents held logs too long or forgot them.
+

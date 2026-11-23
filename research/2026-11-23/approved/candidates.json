@@ -1,0 +1,107 @@
+{
+  "research_date": "2026-11-23",
+  "window_days": 7,
+  "scoring_note": "Owner-modified run (2026-11-23): the 'freshness' slot scores VIEW-VELOCITY evidence from research/2026-11-23/velocity_evidence.md (5 = niche pattern >100K views/day, 4 = 15-100K, 3 = 5-15K, 2 = <5K). relevance = audience fit (AI/agents/GenAI/ML/system design first). Weights unchanged from config/research.json. OWNER APPROVED C01 + C06 on 2026-11-23 (overrides the auto-pick C01+C03, which were near-duplicates); language switched to English by owner.",
+  "candidates": [
+    {
+      "id": "C01",
+      "title": "1 aur 1 = 11? Why AI fails simple math: tokens",
+      "summary": "LLMs read numbers as tokens, not digits. GPT-3.5/4 tokenize up to 3-digit chunks left-to-right; Singh & Strouse (2024) found forcing right-to-left grouping with commas largely improved arithmetic, and errors followed stereotyped patterns. Counting letters is hurt the same way (Zhang et al. 2024).",
+      "bucket": "llm-engineering",
+      "language": "English",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Fastest niche pattern this week (TechAkshay 'AI fails' Shorts at 77K-280K views/day) only shows the failure; we explain the mechanism every AI user and engineer should know.",
+      "visual_angle": "Robot at a desk reading a number that gets chopped into token blocks [2 0 2][4 1 1]; the same number re-chunked with commas lines up and the sum lights green.",
+      "hook": "This AI writes code. So why can't it add two numbers? It's not the brain. It's the eyes.",
+      "scores": {
+        "freshness": 5,
+        "relevance": 5,
+        "usefulness": 4,
+        "evidence": 5,
+        "visual": 5,
+        "distinctiveness": 4
+      },
+      "reject_flags": [],
+      "velocity_refs": [
+        "https://www.youtube.com/shorts/Maff7wKd0vI",
+        "https://www.youtube.com/shorts/5zxPNe74_1M",
+        "https://www.youtube.com/shorts/XRv_o1tWj8w"
+      ],
+      "cautions": [
+        "Tension: broken belief - an AI that writes code stumbles on primary-school arithmetic.",
+        "Worked example: illustrative number shown in left-to-right 3-digit chunks vs comma-separated right-to-left chunks (label as illustrative, not a real tokenizer dump unless we capture one ourselves).",
+        "Visual metaphor: reading glasses that cut text into wrong-size pieces.",
+        "Findings are on GPT-3.5/GPT-4 (2024); the paper says the gap shrinks with scale. Say 'kai models' and do not claim today's reasoning models always fail.",
+        "Do not reproduce TechAkshay's prompts or clips."
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2402.14903",
+          "publisher": "arXiv (Singh & Strouse, Google DeepMind)",
+          "published": "2024-02-22",
+          "accessed": "2026-11-23",
+          "kind": "primary",
+          "claim": "GPT-3.5/4 have tokens for 1-3 digit numbers; right-to-left tokenization via commas largely improves arithmetic; errors are stereotyped; gap shrinks with scale."
+        },
+        {
+          "url": "https://arxiv.org/abs/2410.19730",
+          "publisher": "arXiv (Zhang, Cao, You)",
+          "published": "2024-10-25",
+          "accessed": "2026-11-23",
+          "kind": "primary",
+          "claim": "BPE tokenization causes substantial variation in LLM counting ability."
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "Hundreds of AI agents built a browser in a week: why locks failed",
+      "summary": "Cursor ran hundreds of concurrent coding agents for close to a week on a from-scratch web browser: over 1M lines across 1,000 files. Equal agents sharing a lock file collapsed (20 agents worked like 2-3) and became risk-averse; splitting into planners, workers and a judge agent fixed most coordination problems.",
+      "bucket": "agentic-ai-mcp",
+      "language": "English",
+      "evergreen": true,
+      "evidence": "medium",
+      "audience_why": "'Agent built a browser in 7 days' Short at ~21K views/day with 22K likes; we add the system-design lesson (coordination, locks, hierarchy) the viral clip skipped.",
+      "visual_angle": "Robot office world: 20 robots queue at one lock (traffic jam), then a planner robot hands task cards to workers and a judge robot stamps cycles.",
+      "hook": "Twenty AI agents did the work of three. Then one change let them build a browser in a week.",
+      "scores": {
+        "freshness": 4,
+        "relevance": 5,
+        "usefulness": 4,
+        "evidence": 4,
+        "visual": 5,
+        "distinctiveness": 4
+      },
+      "reject_flags": [],
+      "velocity_refs": [
+        "https://www.youtube.com/shorts/FvnVd1g8sbE"
+      ],
+      "cautions": [
+        "Tension: before->after (flat swarm fails, hierarchy works).",
+        "Worked example: Cursor's own numbers (20 agents ~ throughput of 2-3; 1M+ LoC, 1,000 files, ~1 week).",
+        "Visual metaphor: kitchen with no head chef vs a brigade.",
+        "Vendor-reported results (Jan 2026, not fresh). Reports quote the CEO saying it 'kind of works' - say the browser is a research project, not a usable Chrome rival.",
+        "Do not repeat Cursor's model comparison (GPT-5.2 vs Opus 4.5) as fact - attribute or omit."
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/blog/scaling-agents",
+          "publisher": "Cursor (research blog, Wilson Lin)",
+          "published": "2026-01-14",
+          "accessed": "2026-11-23",
+          "kind": "primary",
+          "claim": "Hundreds of agents; lock-file coordination bottleneck (20 agents ~ 2-3); optimistic concurrency; planners/workers/judge; browser from scratch ~1 week, 1M+ LoC, 1,000 files."
+        },
+        {
+          "url": "https://fortune.com/2026/01/23/cursor-built-web-browser-with-swarm-ai-agents-powered-openai/",
+          "publisher": "Fortune",
+          "published": "2026-01-23",
+          "accessed": "2026-11-23",
+          "kind": "secondary",
+          "claim": "Project went viral; CEO said it 'kind of works'."
+        }
+      ]
+    }
+  ]
+}

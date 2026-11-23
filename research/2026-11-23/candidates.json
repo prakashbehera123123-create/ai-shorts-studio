@@ -1,0 +1,241 @@
+{
+  "research_date": "2026-11-23",
+  "window_days": 7,
+  "scoring_note": "Owner-modified run (2026-11-23): the 'freshness' slot scores VIEW-VELOCITY evidence from research/2026-11-23/velocity_evidence.md (5 = niche pattern >100K views/day, 4 = 15-100K, 3 = 5-15K, 2 = <5K). relevance = audience fit (AI/agents/GenAI/ML/system design first). Weights unchanged from config/research.json.",
+  "candidates": [
+    {
+      "id": "C01",
+      "title": "1 aur 1 = 11? Why AI fails simple math: tokens",
+      "summary": "LLMs read numbers as tokens, not digits. GPT-3.5/4 tokenize up to 3-digit chunks left-to-right; Singh & Strouse (2024) found forcing right-to-left grouping with commas largely improved arithmetic, and errors followed stereotyped patterns. Counting letters is hurt the same way (Zhang et al. 2024).",
+      "bucket": "llm-engineering",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Fastest niche pattern this week (TechAkshay 'AI fails' Shorts at 77K-280K views/day) only shows the failure; we explain the mechanism every AI user and engineer should know.",
+      "visual_angle": "Robot at a desk reading a number that gets chopped into token blocks [2 0 2][4 1 1]; the same number re-chunked with commas lines up and the sum lights green.",
+      "hook": "AI code likh leta hai… par 1 aur 1 mein confuse? Problem dimaag nahi, aankhen hain.",
+      "scores": {"freshness": 5, "relevance": 5, "usefulness": 4, "evidence": 5, "visual": 5, "distinctiveness": 4},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/Maff7wKd0vI", "https://www.youtube.com/shorts/5zxPNe74_1M", "https://www.youtube.com/shorts/XRv_o1tWj8w"],
+      "cautions": [
+        "Tension: broken belief - an AI that writes code stumbles on primary-school arithmetic.",
+        "Worked example: illustrative number shown in left-to-right 3-digit chunks vs comma-separated right-to-left chunks (label as illustrative, not a real tokenizer dump unless we capture one ourselves).",
+        "Visual metaphor: reading glasses that cut text into wrong-size pieces.",
+        "Findings are on GPT-3.5/GPT-4 (2024); the paper says the gap shrinks with scale. Say 'kai models' and do not claim today's reasoning models always fail.",
+        "Do not reproduce TechAkshay's prompts or clips."
+      ],
+      "sources": [
+        {"url": "https://arxiv.org/abs/2402.14903", "publisher": "arXiv (Singh & Strouse, Google DeepMind)", "published": "2024-02-22", "accessed": "2026-11-23", "kind": "primary", "claim": "GPT-3.5/4 have tokens for 1-3 digit numbers; right-to-left tokenization via commas largely improves arithmetic; errors are stereotyped; gap shrinks with scale."},
+        {"url": "https://arxiv.org/abs/2410.19730", "publisher": "arXiv (Zhang, Cao, You)", "published": "2024-10-25", "accessed": "2026-11-23", "kind": "primary", "claim": "BPE tokenization causes substantial variation in LLM counting ability."}
+      ]
+    },
+    {
+      "id": "C02",
+      "title": "Why AI falls for riddles: one irrelevant line, up to 65% drop",
+      "summary": "Apple's GSM-Symbolic study changed only the numbers in grade-school maths problems and all models dropped; adding one relevant-sounding but irrelevant clause (GSM-NoOp) caused drops of up to 65%. Authors hypothesise models replicate reasoning steps from training data. A later community replication disputes the size of the effect.",
+      "bucket": "llm-engineering",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "medium",
+      "audience_why": "Directly explains the 'AI vs riddle' Shorts (hotel riddle ~191K views/day) and teaches why prompts with noise break agents.",
+      "visual_angle": "A word problem on a whiteboard; one decoy sentence slides in and the robot's answer flips; split-screen original vs decoy.",
+      "hook": "Ek faltu line add karo… aur AI ka answer galat. Kyun?",
+      "scores": {"freshness": 5, "relevance": 5, "usefulness": 4, "evidence": 4, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/vXLB2ZtCNSM", "https://www.youtube.com/shorts/WxQfn2p_mZw"],
+      "cautions": [
+        "Tension: black box - the maths did not change, the answer did.",
+        "Worked example: the paper's kiwi-style example ('five of them were smaller than average'), retold, not copied.",
+        "Visual metaphor: a magician's misdirection card.",
+        "Contested: LessWrong replication argues the drop is small for 2026 frontier models. Record both; script must say 'study mein' and not resolve it.",
+        "Near-duplicate cluster with C01/C03 - pick at most one of C01-C03."
+      ],
+      "sources": [
+        {"url": "https://arxiv.org/abs/2410.05229", "publisher": "arXiv (Mirzadeh et al., Apple)", "published": "2024-10-07", "accessed": "2026-11-23", "kind": "primary", "claim": "Performance declines when only numbers change; adding a single seemingly relevant clause causes drops up to 65% across SOTA models."},
+        {"url": "https://www.lesswrong.com/posts/Ze4C99Dasj74YKCFh/revisiting-gsm-symbolic-do-2026-frontier-models-still-fail", "publisher": "LessWrong (community replication)", "published": null, "accessed": "2026-11-23", "kind": "secondary", "claim": "Self-generated distractor replication found drops statistically indistinguishable from zero for recent models (contests interpretation)."}
+      ]
+    },
+    {
+      "id": "C03",
+      "title": "Why AI lies confidently: the student who always guesses",
+      "summary": "OpenAI (Sept 2025) argues models hallucinate because training and accuracy-only evaluations reward guessing over saying 'I don't know'. A random birthday guess has a 1-in-365 chance; abstaining scores zero. On SimpleQA, gpt-5-thinking-mini abstained 52% with 26% errors, o4-mini abstained 1% with 75% errors, at similar accuracy (22% vs 24%).",
+      "bucket": "responsible-ai",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Answers the 'AI exposed' pattern with a mechanism; changes how viewers read confident AI answers.",
+      "visual_angle": "Exam hall: two robot students, one guesses every MCQ, one leaves blanks; the scoreboard ranks the guesser higher until wrong answers are penalised.",
+      "hook": "AI jhooth nahi bolta… use guess karna sikhaya gaya hai.",
+      "scores": {"freshness": 4, "relevance": 5, "usefulness": 5, "evidence": 5, "visual": 4, "distinctiveness": 3},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/5zxPNe74_1M"],
+      "cautions": [
+        "Tension: paradox - the 'more accurate' model makes three times the errors.",
+        "Worked example: SimpleQA table from OpenAI's post (vendor-reported, attribute to OpenAI).",
+        "Visual metaphor: MCQ exam with no negative marking (very relatable in India).",
+        "Vendor claims about its own models - say 'OpenAI ke according'.",
+        "Near-duplicate cluster with C01/C02."
+      ],
+      "sources": [
+        {"url": "https://openai.com/index/why-language-models-hallucinate/", "publisher": "OpenAI (research post)", "published": "2025-09-05", "accessed": "2026-11-23", "kind": "primary", "claim": "Training/eval reward guessing over acknowledging uncertainty; birthday 1-in-365 example; SimpleQA abstention/accuracy/error table."}
+      ]
+    },
+    {
+      "id": "C04",
+      "title": "Can a peace-sign selfie leak your fingerprint? The real risk",
+      "summary": "In December 2014 at the 31st Chaos Communication Congress, Jan Krissler ('Starbug') said he rebuilt German minister Ursula von der Leyen's thumbprint from press photos using commercial software. Whether it matched her real print was never verified.",
+      "bucket": "how-tech-works",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "medium",
+      "audience_why": "Selfie-gesture fear Short at ~206K views/day with 21K likes; a calm 'real vs hype' answer fits our credibility. Outside the AI core.",
+      "visual_angle": "Phone camera zooms on a fingertip; ridges extracted to a line map; a lock asks 'match?' with the verdict 'possible in a lab, rare in practice'.",
+      "hook": "Selfie mein V sign… aur fingerprint chori? Sach kitna hai?",
+      "scores": {"freshness": 5, "relevance": 3, "usefulness": 4, "evidence": 3, "visual": 4, "distinctiveness": 4},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/BBkcZR29Ke0"],
+      "cautions": [
+        "Primary (CCC talk recording on media.ccc.de) NOT yet opened - must verify before approval or evidence stays medium.",
+        "Match never verified; do not claim phones are routinely unlocked from selfies.",
+        "Owner asked for AI/ML/system design focus - this is adjacent."
+      ],
+      "sources": [
+        {"url": "https://www.theregister.com/2014/12/29/german_minister_fingered_as_hackers_steal_her_thumbprint_from_a_photo", "publisher": "The Register", "published": "2014-12-29", "accessed": "2026-11-23", "kind": "secondary", "claim": "Krissler presented thumbprint reconstruction from photos at 31C3 using VeriFinger; match unverified."}
+      ]
+    },
+    {
+      "id": "C05",
+      "title": "Free Wi-Fi is not the danger reels say: the fake site is",
+      "summary": "The FTC's current guidance says that because most websites now use encryption, connecting through public Wi-Fi is usually safe; look for https/lock. It warns scammers build fake encrypted sites - data is encrypted on the way but not safe from the site operator.",
+      "bucket": "how-tech-works",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Counter-myth to a 4.2M-view fear Short (~30K/day, 23K likes); practical for every viewer. Outside the AI core.",
+      "visual_angle": "Cafe world: data packets travel in locked boxes through the cafe router (safe); one route goes to a lookalike shop with a lock on the door but a thief inside.",
+      "hook": "Free Wi-Fi se hack? 2026 mein asli khatra kuch aur hai.",
+      "scores": {"freshness": 3, "relevance": 3, "usefulness": 5, "evidence": 5, "visual": 4, "distinctiveness": 5},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/4QeKp-vXVe8"],
+      "cautions": [
+        "Tension: broken belief.",
+        "Do not say public Wi-Fi is always safe - FTC says 'usually'; keep 2FA/updates advice.",
+        "US regulator guidance; frame as general web security, not Indian law."
+      ],
+      "sources": [
+        {"url": "https://consumer.ftc.gov/articles/are-public-wi-fi-networks-safe-what-you-need-know", "publisher": "US Federal Trade Commission (Consumer Advice)", "published": null, "accessed": "2026-11-23", "kind": "primary", "claim": "Most websites use encryption so public Wi-Fi is usually safe; check lock/https; scammers create fake encrypted websites."}
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "Hundreds of AI agents built a browser in a week: why locks failed",
+      "summary": "Cursor ran hundreds of concurrent coding agents for close to a week on a from-scratch web browser: over 1M lines across 1,000 files. Equal agents sharing a lock file collapsed (20 agents worked like 2-3) and became risk-averse; splitting into planners, workers and a judge agent fixed most coordination problems.",
+      "bucket": "agentic-ai-mcp",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "medium",
+      "audience_why": "'Agent built a browser in 7 days' Short at ~21K views/day with 22K likes; we add the system-design lesson (coordination, locks, hierarchy) the viral clip skipped.",
+      "visual_angle": "Robot office world: 20 robots queue at one lock (traffic jam), then a planner robot hands task cards to workers and a judge robot stamps cycles.",
+      "hook": "20 AI agents… kaam kiya sirf 3 jitna. Phir ek trick ne browser banwa diya.",
+      "scores": {"freshness": 4, "relevance": 5, "usefulness": 4, "evidence": 4, "visual": 5, "distinctiveness": 4},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/FvnVd1g8sbE"],
+      "cautions": [
+        "Tension: before->after (flat swarm fails, hierarchy works).",
+        "Worked example: Cursor's own numbers (20 agents ~ throughput of 2-3; 1M+ LoC, 1,000 files, ~1 week).",
+        "Visual metaphor: kitchen with no head chef vs a brigade.",
+        "Vendor-reported results (Jan 2026, not fresh). Reports quote the CEO saying it 'kind of works' - say the browser is a research project, not a usable Chrome rival.",
+        "Do not repeat Cursor's model comparison (GPT-5.2 vs Opus 4.5) as fact - attribute or omit."
+      ],
+      "sources": [
+        {"url": "https://cursor.com/blog/scaling-agents", "publisher": "Cursor (research blog, Wilson Lin)", "published": "2026-01-14", "accessed": "2026-11-23", "kind": "primary", "claim": "Hundreds of agents; lock-file coordination bottleneck (20 agents ~ 2-3); optimistic concurrency; planners/workers/judge; browser from scratch ~1 week, 1M+ LoC, 1,000 files."},
+        {"url": "https://fortune.com/2026/01/23/cursor-built-web-browser-with-swarm-ai-agents-powered-openai/", "publisher": "Fortune", "published": "2026-01-23", "accessed": "2026-11-23", "kind": "secondary", "claim": "Project went viral; CEO said it 'kind of works'."}
+      ]
+    },
+    {
+      "id": "C07",
+      "title": "Chatbot vs workflow vs agent: when NOT to build an agent",
+      "summary": "Anthropic distinguishes workflows (LLMs and tools on predefined code paths) from agents (LLMs directing their own process and tool use) and advises finding the simplest solution first, adding agentic complexity only when it demonstrably helps.",
+      "bucket": "agentic-ai-mcp",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Comparison format at ~17K views/day; useful decision rule for builders.",
+      "visual_angle": "Three desks: a chat window, a conveyor belt (workflow), a robot choosing its own route (agent); cost and risk meters rise left to right.",
+      "hook": "Har problem ko AI agent nahi chahiye. Ye 3 level samjho.",
+      "scores": {"freshness": 3, "relevance": 5, "usefulness": 5, "evidence": 5, "visual": 4, "distinctiveness": 2},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/z7NfLhFRF_g"],
+      "cautions": [
+        "Near-duplicate risk with 2026-11-22 'AI agent kaise kaam karta hai' (same Anthropic source). Only if framed strictly as the 'when not to' decision rule."
+      ],
+      "sources": [
+        {"url": "https://www.anthropic.com/engineering/building-effective-agents", "publisher": "Anthropic (engineering blog)", "published": "2024-12-19", "accessed": "2026-11-22", "kind": "primary", "claim": "Workflow vs agent definitions; start with the simplest solution; add complexity only when needed."}
+      ]
+    },
+    {
+      "id": "C08",
+      "title": "Brain surgery on an AI: how one fact gets rewritten (ROME)",
+      "summary": "Meng et al. used causal tracing to find middle-layer feed-forward modules that drive factual recall in GPT models, then edited those weights directly (Rank-One Model Editing) to change a single fact.",
+      "bucket": "llm-engineering",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Hinglish 'AI ne AI ki surgery' research Short ~4.8K views/day; deep mechanism, very distinctive.",
+      "visual_angle": "Holographic layered brain; a probe traces where 'Eiffel Tower -> Paris' lights up; a tiny surgical edit makes it say Rome.",
+      "hook": "AI ke dimaag mein ek fact kahan rehta hai? Researchers ne dhoondh ke badal diya.",
+      "scores": {"freshness": 2, "relevance": 4, "usefulness": 3, "evidence": 5, "visual": 5, "distinctiveness": 5},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/_7ET6whdFY4"],
+      "cautions": [
+        "2022 research on GPT-2 XL/GPT-J scale; don't imply production chatbots are edited this way.",
+        "Eiffel->Rome is the paper's own famous example; retell, don't copy figures."
+      ],
+      "sources": [
+        {"url": "https://arxiv.org/abs/2202.05262", "publisher": "arXiv (Meng, Bau, Andonian, Belinkov; NeurIPS 2022)", "published": "2022-02-10", "accessed": "2026-11-23", "kind": "primary", "claim": "Causal tracing localises factual recall to mid-layer MLPs; ROME edits those weights to change a fact."}
+      ]
+    },
+    {
+      "id": "C09",
+      "title": "Redis runs on one thread. Why is it so fast?",
+      "summary": "Redis executes commands on a single main thread, serving many clients through an event loop over OS I/O multiplexing; data lives in memory, and the Redis FAQ notes CPU is rarely the bottleneck.",
+      "bucket": "system-design",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "medium",
+      "audience_why": "Evergreen 'why is X so fast' format (ByteByteGo Redis 1.3M lifetime), but slow velocity now and heavily covered.",
+      "visual_angle": "One chef (thread) at a counter with a ticket rail of ready orders (epoll); no fights over knives (locks).",
+      "hook": "Ek hi thread… phir bhi lakhon requests per second?",
+      "scores": {"freshness": 2, "relevance": 4, "usefulness": 5, "evidence": 3, "visual": 4, "distinctiveness": 2},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/x8lcdDbKZto", "https://www.youtube.com/shorts/la8tzEyg-hY"],
+      "cautions": [
+        "Redis FAQ section 'How can Redis use multiple CPUs or cores?' located but its text not yet read - verify exact wording; no throughput number without a primary benchmark.",
+        "Redis 6+ uses I/O threads; command execution stays single-threaded - say so."
+      ],
+      "sources": [
+        {"url": "https://redis.io/docs/latest/develop/get-started/faq/", "publisher": "Redis (official docs FAQ)", "published": null, "accessed": "2026-11-23", "kind": "primary", "claim": "FAQ entry on Redis and multiple CPUs/cores (single-threaded execution model) - wording to verify."}
+      ]
+    },
+    {
+      "id": "C10",
+      "title": "VR goggles for mice: why neuroscientists built them",
+      "summary": "Cornell's MouseGoggles (Nature Methods, Dec 2024) is an open-source, low-cost VR headset for head-fixed mice; mice reacted to looming stimuli in the goggles that they ignored on projector screens, and showed hippocampal place-cell activity in a virtual track.",
+      "bucket": "science-space-tech",
+      "language": "Hinglish",
+      "evergreen": true,
+      "evidence": "high",
+      "audience_why": "Highest raw velocity seen (64M, ~1.49M views/day, 471K likes), but outside the owner's AI/ML/system-design focus.",
+      "visual_angle": "Tiny mouse on a treadmill ball wearing goggles; a dark disc looms and the mouse flinches; side panel shows place cells lighting up.",
+      "hook": "Chuhe ko VR headset kyun pehnaya? Wajah dimaag mein hai.",
+      "scores": {"freshness": 5, "relevance": 2, "usefulness": 2, "evidence": 5, "visual": 5, "distinctiveness": 3},
+      "reject_flags": [],
+      "velocity_refs": ["https://www.youtube.com/shorts/MQ-lOwWtlH4"],
+      "cautions": ["Off-focus per owner's 2026-11-23 instruction; only if the owner wants a science wildcard.", "Use self-made 3D mouse, never the viral clip or paper figures."],
+      "sources": [
+        {"url": "https://news.cornell.edu/stories/2024/12/mousegoggles-offer-immersive-look-neural-activity", "publisher": "Cornell Chronicle (university news)", "published": "2024-12-12", "accessed": "2026-11-23", "kind": "primary", "claim": "MouseGoggles published in Nature Methods Dec 12 2024; led by Schaffer/Ellwood labs; looming and place-cell results."},
+        {"url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11810773/", "publisher": "Nature Methods via PMC (Isaacson et al.)", "published": "2024-12-12", "accessed": "2026-11-23", "kind": "primary", "claim": "Open-source headset, ~230 degree horizontal FOV, behavioural and neural validation."}
+      ]
+    }
+  ]
+}

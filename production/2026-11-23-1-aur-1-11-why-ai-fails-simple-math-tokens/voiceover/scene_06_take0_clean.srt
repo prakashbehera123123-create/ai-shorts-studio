@@ -1,0 +1,8 @@
+0
+00:00:00,000 --> 00:00:03,480
+researchers tested GPT 3.5 and GPT 4.
+
+1
+00:00:03,480 --> 00:00:07,480
+Grouping digits lie to left with commas largely improved accuracy.
+

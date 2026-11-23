@@ -1,0 +1,123 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Segoe UI Black,76,&H00FFFFFF,&H00FFFFFF,&H28050710,&H64000000,-1,0,0,0,100,100,0,0,3,18,0,2,90,90,470,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.22,Cap,,0,0,0,,{\c&HF0C94C&}AI{\c&HFFFFFF&} writes code...
+Dialogue: 0,0:00:00.22,0:00:00.73,Cap,,0,0,0,,AI {\c&HF0C94C&}writes{\c&HFFFFFF&} code...
+Dialogue: 0,0:00:00.73,0:00:01.10,Cap,,0,0,0,,AI writes {\c&HF0C94C&}code...{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.10,0:00:01.40,Cap,,0,0,0,,{\c&HF0C94C&}but{\c&HFFFFFF&} long sums?
+Dialogue: 0,0:00:01.40,0:00:01.76,Cap,,0,0,0,,but {\c&HF0C94C&}long{\c&HFFFFFF&} sums?
+Dialogue: 0,0:00:01.76,0:00:02.47,Cap,,0,0,0,,but long {\c&HF0C94C&}sums?{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.47,0:00:02.79,Cap,,0,0,0,,{\c&HF0C94C&}They{\c&HFFFFFF&} can still trip
+Dialogue: 0,0:00:02.79,0:00:03.05,Cap,,0,0,0,,They {\c&HF0C94C&}can{\c&HFFFFFF&} still trip
+Dialogue: 0,0:00:03.05,0:00:03.44,Cap,,0,0,0,,They can {\c&HF0C94C&}still{\c&HFFFFFF&} trip
+Dialogue: 0,0:00:03.44,0:00:03.76,Cap,,0,0,0,,They can still {\c&HF0C94C&}trip{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.76,0:00:03.96,Cap,,0,0,0,,{\c&HF0C94C&}it{\c&HFFFFFF&} up. Not the brain.
+Dialogue: 0,0:00:03.96,0:00:04.15,Cap,,0,0,0,,it {\c&HF0C94C&}up.{\c&HFFFFFF&} Not the brain.
+Dialogue: 0,0:00:04.15,0:00:04.41,Cap,,0,0,0,,it up. {\c&HF0C94C&}Not{\c&HFFFFFF&} the brain.
+Dialogue: 0,0:00:04.41,0:00:04.67,Cap,,0,0,0,,it up. Not {\c&HF0C94C&}the{\c&HFFFFFF&} brain.
+Dialogue: 0,0:00:04.67,0:00:05.06,Cap,,0,0,0,,it up. Not the {\c&HF0C94C&}brain.{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.06,0:00:05.32,Cap,,0,0,0,,{\c&HF0C94C&}The{\c&HFFFFFF&} eyes.
+Dialogue: 0,0:00:05.32,0:00:06.00,Cap,,0,0,0,,The {\c&HF0C94C&}eyes.{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.00,0:00:06.39,Cap,,0,0,0,,{\c&HF0C94C&}Models{\c&HFFFFFF&} don't read
+Dialogue: 0,0:00:06.39,0:00:06.67,Cap,,0,0,0,,Models {\c&HF0C94C&}don't{\c&HFFFFFF&} read
+Dialogue: 0,0:00:06.67,0:00:06.95,Cap,,0,0,0,,Models don't {\c&HF0C94C&}read{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.95,0:00:07.35,Cap,,0,0,0,,{\c&HF0C94C&}digits.{\c&HFFFFFF&} They read tokens,
+Dialogue: 0,0:00:07.35,0:00:07.63,Cap,,0,0,0,,digits. {\c&HF0C94C&}They{\c&HFFFFFF&} read tokens,
+Dialogue: 0,0:00:07.63,0:00:07.91,Cap,,0,0,0,,digits. They {\c&HF0C94C&}read{\c&HFFFFFF&} tokens,
+Dialogue: 0,0:00:07.91,0:00:08.30,Cap,,0,0,0,,digits. They read {\c&HF0C94C&}tokens,{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.30,0:00:08.64,Cap,,0,0,0,,{\c&HF0C94C&}small{\c&HFFFFFF&} chunks of text.
+Dialogue: 0,0:00:08.64,0:00:09.03,Cap,,0,0,0,,small {\c&HF0C94C&}chunks{\c&HFFFFFF&} of text.
+Dialogue: 0,0:00:09.03,0:00:09.20,Cap,,0,0,0,,small chunks {\c&HF0C94C&}of{\c&HFFFFFF&} text.
+Dialogue: 0,0:00:09.20,0:00:09.77,Cap,,0,0,0,,small chunks of {\c&HF0C94C&}text.{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.77,0:00:10.22,Cap,,0,0,0,,{\c&HF0C94C&}Picture{\c&HFFFFFF&} a long number.
+Dialogue: 0,0:00:10.22,0:00:10.33,Cap,,0,0,0,,Picture {\c&HF0C94C&}a{\c&HFFFFFF&} long number.
+Dialogue: 0,0:00:10.33,0:00:10.61,Cap,,0,0,0,,Picture a {\c&HF0C94C&}long{\c&HFFFFFF&} number.
+Dialogue: 0,0:00:10.61,0:00:11.01,Cap,,0,0,0,,Picture a long {\c&HF0C94C&}number.{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.01,0:00:11.29,Cap,,0,0,0,,{\c&HF0C94C&}Some{\c&HFFFFFF&} models cut
+Dialogue: 0,0:00:11.29,0:00:11.68,Cap,,0,0,0,,Some {\c&HF0C94C&}models{\c&HFFFFFF&} cut
+Dialogue: 0,0:00:11.68,0:00:11.91,Cap,,0,0,0,,Some models {\c&HF0C94C&}cut{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.91,0:00:12.08,Cap,,0,0,0,,{\c&HF0C94C&}it{\c&HFFFFFF&} left to right,
+Dialogue: 0,0:00:12.08,0:00:12.36,Cap,,0,0,0,,it {\c&HF0C94C&}left{\c&HFFFFFF&} to right,
+Dialogue: 0,0:00:12.36,0:00:12.53,Cap,,0,0,0,,it left {\c&HF0C94C&}to{\c&HFFFFFF&} right,
+Dialogue: 0,0:00:12.53,0:00:12.86,Cap,,0,0,0,,it left to {\c&HF0C94C&}right,{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.86,0:00:13.03,Cap,,0,0,0,,{\c&HF0C94C&}up{\c&HFFFFFF&} to three digits
+Dialogue: 0,0:00:13.03,0:00:13.20,Cap,,0,0,0,,up {\c&HF0C94C&}to{\c&HFFFFFF&} three digits
+Dialogue: 0,0:00:13.20,0:00:13.54,Cap,,0,0,0,,up to {\c&HF0C94C&}three{\c&HFFFFFF&} digits
+Dialogue: 0,0:00:13.54,0:00:13.93,Cap,,0,0,0,,up to three {\c&HF0C94C&}digits{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.93,0:00:14.10,Cap,,0,0,0,,{\c&HF0C94C&}at{\c&HFFFFFF&} a time.
+Dialogue: 0,0:00:14.10,0:00:14.22,Cap,,0,0,0,,at {\c&HF0C94C&}a{\c&HFFFFFF&} time.
+Dialogue: 0,0:00:14.22,0:00:14.80,Cap,,0,0,0,,at a {\c&HF0C94C&}time.{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.80,0:00:15.18,Cap,,0,0,0,,{\c&HF0C94C&}Those{\c&HFFFFFF&} chunks ignore
+Dialogue: 0,0:00:15.18,0:00:15.61,Cap,,0,0,0,,Those {\c&HF0C94C&}chunks{\c&HFFFFFF&} ignore
+Dialogue: 0,0:00:15.61,0:00:16.05,Cap,,0,0,0,,Those chunks {\c&HF0C94C&}ignore{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.05,0:00:16.42,Cap,,0,0,0,,{\c&HF0C94C&}place{\c&HFFFFFF&} value. Add commas,
+Dialogue: 0,0:00:16.42,0:00:16.80,Cap,,0,0,0,,place {\c&HF0C94C&}value.{\c&HFFFFFF&} Add commas,
+Dialogue: 0,0:00:16.80,0:00:17.05,Cap,,0,0,0,,place value. {\c&HF0C94C&}Add{\c&HFFFFFF&} commas,
+Dialogue: 0,0:00:17.05,0:00:17.68,Cap,,0,0,0,,place value. Add {\c&HF0C94C&}commas,{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.68,0:00:17.85,Cap,,0,0,0,,{\c&HF0C94C&}and{\c&HFFFFFF&} the cut moves
+Dialogue: 0,0:00:17.85,0:00:18.02,Cap,,0,0,0,,and {\c&HF0C94C&}the{\c&HFFFFFF&} cut moves
+Dialogue: 0,0:00:18.02,0:00:18.18,Cap,,0,0,0,,and the {\c&HF0C94C&}cut{\c&HFFFFFF&} moves
+Dialogue: 0,0:00:18.18,0:00:18.43,Cap,,0,0,0,,and the cut {\c&HF0C94C&}moves{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.43,0:00:18.68,Cap,,0,0,0,,{\c&HF0C94C&}right{\c&HFFFFFF&} to left.
+Dialogue: 0,0:00:18.68,0:00:18.80,Cap,,0,0,0,,right {\c&HF0C94C&}to{\c&HFFFFFF&} left.
+Dialogue: 0,0:00:18.80,0:00:19.30,Cap,,0,0,0,,right to {\c&HF0C94C&}left.{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.30,0:00:20.37,Cap,,0,0,0,,{\c&HF0C94C&}Researchers{\c&HFFFFFF&} tested
+Dialogue: 0,0:00:20.37,0:00:21.00,Cap,,0,0,0,,Researchers {\c&HF0C94C&}tested{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.00,0:00:21.54,Cap,,0,0,0,,{\c&HF0C94C&}GPT-3.5{\c&HFFFFFF&} and GPT-4.
+Dialogue: 0,0:00:21.54,0:00:21.90,Cap,,0,0,0,,GPT-3.5 {\c&HF0C94C&}and{\c&HFFFFFF&} GPT-4.
+Dialogue: 0,0:00:21.90,0:00:22.65,Cap,,0,0,0,,GPT-3.5 and {\c&HF0C94C&}GPT-4.{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.65,0:00:23.18,Cap,,0,0,0,,{\c&HF0C94C&}Grouping{\c&HFFFFFF&} digits right
+Dialogue: 0,0:00:23.18,0:00:23.60,Cap,,0,0,0,,Grouping {\c&HF0C94C&}digits{\c&HFFFFFF&} right
+Dialogue: 0,0:00:23.60,0:00:23.95,Cap,,0,0,0,,Grouping digits {\c&HF0C94C&}right{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.95,0:00:24.12,Cap,,0,0,0,,{\c&HF0C94C&}to{\c&HFFFFFF&} left with commas
+Dialogue: 0,0:00:24.12,0:00:24.42,Cap,,0,0,0,,to {\c&HF0C94C&}left{\c&HFFFFFF&} with commas
+Dialogue: 0,0:00:24.42,0:00:24.72,Cap,,0,0,0,,to left {\c&HF0C94C&}with{\c&HFFFFFF&} commas
+Dialogue: 0,0:00:24.72,0:00:25.13,Cap,,0,0,0,,to left with {\c&HF0C94C&}commas{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.13,0:00:25.60,Cap,,0,0,0,,{\c&HF0C94C&}largely{\c&HFFFFFF&} improved accuracy.
+Dialogue: 0,0:00:25.60,0:00:26.13,Cap,,0,0,0,,largely {\c&HF0C94C&}improved{\c&HFFFFFF&} accuracy.
+Dialogue: 0,0:00:26.13,0:00:26.97,Cap,,0,0,0,,largely improved {\c&HF0C94C&}accuracy.{\c&HFFFFFF&}
+Dialogue: 0,0:00:29.10,0:00:29.62,Cap,,0,0,0,,{\c&HF0C94C&}Counting{\c&HFFFFFF&} can suffer too,
+Dialogue: 0,0:00:29.62,0:00:29.85,Cap,,0,0,0,,Counting {\c&HF0C94C&}can{\c&HFFFFFF&} suffer too,
+Dialogue: 0,0:00:29.85,0:00:30.25,Cap,,0,0,0,,Counting can {\c&HF0C94C&}suffer{\c&HFFFFFF&} too,
+Dialogue: 0,0:00:30.25,0:00:30.48,Cap,,0,0,0,,Counting can suffer {\c&HF0C94C&}too,{\c&HFFFFFF&}
+Dialogue: 0,0:00:30.48,0:00:30.83,Cap,,0,0,0,,{\c&HF0C94C&}since{\c&HFFFFFF&} tokenization
+Dialogue: 0,0:00:30.83,0:00:31.58,Cap,,0,0,0,,since {\c&HF0C94C&}tokenization{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.58,0:00:32.04,Cap,,0,0,0,,{\c&HF0C94C&}changes{\c&HFFFFFF&} how well models count.
+Dialogue: 0,0:00:32.04,0:00:32.27,Cap,,0,0,0,,changes {\c&HF0C94C&}how{\c&HFFFFFF&} well models count.
+Dialogue: 0,0:00:32.27,0:00:32.56,Cap,,0,0,0,,changes how {\c&HF0C94C&}well{\c&HFFFFFF&} models count.
+Dialogue: 0,0:00:32.56,0:00:32.96,Cap,,0,0,0,,changes how well {\c&HF0C94C&}models{\c&HFFFFFF&} count.
+Dialogue: 0,0:00:32.96,0:00:33.60,Cap,,0,0,0,,changes how well models {\c&HF0C94C&}count.{\c&HFFFFFF&}
+Dialogue: 0,0:00:33.60,0:00:33.77,Cap,,0,0,0,,{\c&HF0C94C&}So{\c&HFFFFFF&} for exact math,
+Dialogue: 0,0:00:33.77,0:00:34.01,Cap,,0,0,0,,So {\c&HF0C94C&}for{\c&HFFFFFF&} exact math,
+Dialogue: 0,0:00:34.01,0:00:34.36,Cap,,0,0,0,,So for {\c&HF0C94C&}exact{\c&HFFFFFF&} math,
+Dialogue: 0,0:00:34.36,0:00:34.65,Cap,,0,0,0,,So for exact {\c&HF0C94C&}math,{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.65,0:00:35.00,Cap,,0,0,0,,{\c&HF0C94C&}write{\c&HFFFFFF&} numbers
+Dialogue: 0,0:00:35.00,0:00:35.46,Cap,,0,0,0,,write {\c&HF0C94C&}numbers{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.46,0:00:35.75,Cap,,0,0,0,,{\c&HF0C94C&}with{\c&HFFFFFF&} commas. Or ask
+Dialogue: 0,0:00:35.75,0:00:36.16,Cap,,0,0,0,,with {\c&HF0C94C&}commas.{\c&HFFFFFF&} Or ask
+Dialogue: 0,0:00:36.16,0:00:36.33,Cap,,0,0,0,,with commas. {\c&HF0C94C&}Or{\c&HFFFFFF&} ask
+Dialogue: 0,0:00:36.33,0:00:36.57,Cap,,0,0,0,,with commas. Or {\c&HF0C94C&}ask{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.57,0:00:36.74,Cap,,0,0,0,,{\c&HF0C94C&}it{\c&HFFFFFF&} to use
+Dialogue: 0,0:00:36.74,0:00:36.92,Cap,,0,0,0,,it {\c&HF0C94C&}to{\c&HFFFFFF&} use
+Dialogue: 0,0:00:36.92,0:00:37.15,Cap,,0,0,0,,it to {\c&HF0C94C&}use{\c&HFFFFFF&}
+Dialogue: 0,0:00:37.15,0:00:37.26,Cap,,0,0,0,,{\c&HF0C94C&}a{\c&HFFFFFF&} calculator or code tool.
+Dialogue: 0,0:00:37.26,0:00:37.90,Cap,,0,0,0,,a {\c&HF0C94C&}calculator{\c&HFFFFFF&} or code tool.
+Dialogue: 0,0:00:37.90,0:00:38.08,Cap,,0,0,0,,a calculator {\c&HF0C94C&}or{\c&HFFFFFF&} code tool.
+Dialogue: 0,0:00:38.08,0:00:38.37,Cap,,0,0,0,,a calculator or {\c&HF0C94C&}code{\c&HFFFFFF&} tool.
+Dialogue: 0,0:00:38.37,0:00:38.97,Cap,,0,0,0,,a calculator or code {\c&HF0C94C&}tool.{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.97,0:00:39.21,Cap,,0,0,0,,{\c&HF0C94C&}For{\c&HFFFFFF&} more AI concepts
+Dialogue: 0,0:00:39.21,0:00:39.51,Cap,,0,0,0,,For {\c&HF0C94C&}more{\c&HFFFFFF&} AI concepts
+Dialogue: 0,0:00:39.51,0:00:39.69,Cap,,0,0,0,,For more {\c&HF0C94C&}AI{\c&HFFFFFF&} concepts
+Dialogue: 0,0:00:39.69,0:00:40.24,Cap,,0,0,0,,For more AI {\c&HF0C94C&}concepts{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.24,0:00:40.54,Cap,,0,0,0,,{\c&HF0C94C&}like{\c&HFFFFFF&} this, follow.
+Dialogue: 0,0:00:40.54,0:00:41.11,Cap,,0,0,0,,like {\c&HF0C94C&}this,{\c&HFFFFFF&} follow.
+Dialogue: 0,0:00:41.11,0:00:41.87,Cap,,0,0,0,,like this, {\c&HF0C94C&}follow.{\c&HFFFFFF&}

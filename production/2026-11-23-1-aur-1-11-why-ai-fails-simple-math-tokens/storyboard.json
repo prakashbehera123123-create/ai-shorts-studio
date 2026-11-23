@@ -1,0 +1,386 @@
+{
+  "schema_version": 2,
+  "video_id": "2026-11-23-1-aur-1-11-why-ai-fails-simple-math-tokens",
+  "language": "English",
+  "language_id": "en",
+  "target_duration_seconds": 45,
+  "format": "9:16",
+  "creative": {
+    "central_question": "Why does AI that writes code stumble on simple sums?",
+    "payoff": "Models read tokens, not digits; commas (right-to-left grouping) largely improved GPT-3.5/GPT-4 arithmetic, so use commas or a calculator/code tool.",
+    "visual_motif": "A number cut into token tiles: left-to-right chunks that ignore place value versus comma chunks that line up.",
+    "music": "soft self-made pad only under hook, intro, payoff and outro; no music under the explanation; no SFX",
+    "palette": "chalkboard green-slate, chalk white, warm wood desk, amber and mint accents",
+    "visual_world": "Metaphor: a classroom where the robot student reads through glasses that cut text into wrong-size pieces. Hero objects: chalkboard and the robot student at a school desk with wooden token tiles. Camera path: frame 0 board '8302447 + 2 = ?' with a puzzled robot -> push to robot glasses -> icon B-roll text/tokens/model -> desk tiles cut left to right -> commas re-cut tiles right to left -> paper and green sum -> proof card -> letter B-roll -> callback to the same board rewritten 8,302,447 + 2 = 8,302,449 with a green tick -> wave. Opening image: puzzled robot under '8302447 + 2 = ?'. Callback: same board, commas added, green tick. Differs from the 11-22 night office desk: daylight classroom, chalk texture, wooden tiles."
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0.0,
+      "end_seconds": 2.9,
+      "beat": "hook",
+      "narration": "AI writes code... but long sums?",
+      "on_screen_text": "AI can code. Why can't it add?",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "cut",
+      "motion": "Cold open: chalkboard already reads 8302447 + 2 = ? in chalk; robot student at its desk scratches its head, then raises a hand; slow push-in on the board",
+      "visual_description": "Classroom, frame 0 shows the board '8302447 + 2 = ?' and the robot student, puzzled.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "code",
+          "long sums"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_01",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "code",
+          "fumble"
+        ],
+        "world_shot": 1
+      },
+      "music": true
+    },
+    {
+      "id": 2,
+      "start_seconds": 2.9,
+      "end_seconds": 6.6,
+      "beat": "context",
+      "narration": "They can still trip it up. Not the brain. The eyes.",
+      "on_screen_text": "Not the brain. The eyes.",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "cut",
+      "motion": "Camera glides from the board to the robot; thick reading glasses drop onto its face and the lenses slice a chalk line into pieces",
+      "visual_description": "Robot student close-up wearing glasses that cut a chalk line into wrong-size pieces (visual metaphor).",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "trip",
+          "brain",
+          "eyes"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_02",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "brain",
+          "eyes"
+        ],
+        "world_shot": 2
+      },
+      "music": true
+    },
+    {
+      "id": 3,
+      "start_seconds": 6.6,
+      "end_seconds": 11.0,
+      "beat": "explanation",
+      "narration": "Models don't read digits. They read tokens, small chunks of text.",
+      "on_screen_text": "text -> tokens -> model",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "cut",
+      "motion": "Motion-text B-roll: Lucide type, scissors and cpu icons pop in left to right as named, a signal dot travels the arrows and token tiles drop out",
+      "visual_description": "Three icon nodes TEXT (type), TOKENS (scissors), MODEL (cpu) joined by arrows, chalkboard colours.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "tokens",
+          "chunks"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual_justification": "Motion-text B-roll with Lucide icons: the mechanism is drawn as icons and a travelling signal so it is readable.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_03",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "tokens",
+          "chunks"
+        ],
+        "broll": "tokens",
+        "world_shot": 0
+      },
+      "music": false
+    },
+    {
+      "id": 4,
+      "start_seconds": 11.0,
+      "end_seconds": 17.22,
+      "beat": "example",
+      "narration": "Picture a long number. Some models cut it left to right, up to three digits at a time.",
+      "on_screen_text": "8302447 -> [830][244][7]",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "cut",
+      "motion": "Chalk writes 8302447 on the board; tiles [830][244][7] slide onto the robot's desk one by one as the cut moves left to right; ILLUSTRATIVE stamp",
+      "visual_description": "Board with the long number, three wooden token tiles on the desk, label ILLUSTRATIVE.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "left",
+          "three"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_04",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "left",
+          "three"
+        ],
+        "world_shot": 3
+      },
+      "music": false
+    },
+    {
+      "id": 5,
+      "start_seconds": 17.22,
+      "end_seconds": 22.71,
+      "beat": "example",
+      "narration": "Those chunks ignore place value. Add commas, and the cut moves right to left.",
+      "on_screen_text": "8,302,447 -> [8][302][447]",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "match_cut",
+      "motion": "Tiles shake out of line, a chalk hand drops commas into the number, tiles regroup right to left as [8][302][447] and align under ones, thousands, millions",
+      "visual_description": "Same board, commas added, tiles re-cut and aligned with place-value columns; ILLUSTRATIVE stamp.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "place",
+          "commas"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_05",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "place",
+          "commas"
+        ],
+        "world_shot": 4
+      },
+      "music": false
+    },
+    {
+      "id": 6,
+      "start_seconds": 22.71,
+      "end_seconds": 29.29,
+      "beat": "reveal",
+      "narration": "Researchers tested GPT-3.5 and GPT-4. Grouping digits right to left with commas largely improved accuracy.",
+      "on_screen_text": "Commas largely improved accuracy",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "cut",
+      "motion": "Camera pulls back along the desk; the robot's sum lights green on the board, a paper stack lands on the desk with a source chip Singh and Strouse 2024",
+      "visual_description": "Board with a sum lit green, a paper on the desk, name plates GPT-3.5 and GPT-4 on two robot desks.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "improved",
+          "accuracy"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_06",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "improved",
+          "accuracy"
+        ],
+        "world_shot": 5
+      },
+      "music": false
+    },
+    {
+      "id": 7,
+      "start_seconds": 29.29,
+      "end_seconds": 31.87,
+      "beat": "reveal",
+      "narration": "In bigger models, the gap shrinks.",
+      "on_screen_text": "The gap shrinks in bigger models",
+      "visual_type": "generated_graphic",
+      "visual_form": "title_card",
+      "transition_in": "cut",
+      "motion": "Chalk text types on; two chalk lines labelled small model and big model move closer together, no numbers shown",
+      "visual_description": "Chalk-textured proof card: two lines converging, caption only (proof insert).",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "bigger",
+          "shrinks"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "title",
+        "text": "The gap shrinks in bigger models",
+        "sub": "Findings are from 2024 models (S1)",
+        "cues": [
+          "shrinks",
+          "bigger"
+        ]
+      },
+      "music": false
+    },
+    {
+      "id": 8,
+      "start_seconds": 31.87,
+      "end_seconds": 35.91,
+      "beat": "example",
+      "narration": "Counting can suffer too, since tokenization changes how well models count.",
+      "on_screen_text": "Counting suffers too",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "cut",
+      "motion": "Motion-text B-roll: a word is cut into tiles by the scissors icon, an eye-off icon covers the letters inside, a counter stumbles; ILLUSTRATIVE label",
+      "visual_description": "Lucide type, scissors and eye-off icons around a chalk word cut into tiles (illustrative).",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "letters",
+          "hide"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S2"
+      ],
+      "visual_justification": "Motion-text B-roll with Lucide icons: the mechanism is drawn as icons and a travelling signal so it is readable.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_08",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "letters",
+          "hide"
+        ],
+        "broll": "letters",
+        "world_shot": 0
+      },
+      "music": false
+    },
+    {
+      "id": 9,
+      "start_seconds": 35.91,
+      "end_seconds": 42.86,
+      "beat": "payoff",
+      "narration": "So for exact math, write numbers with commas. Or ask it to use a calculator or code tool.",
+      "on_screen_text": "Use commas, or a calculator",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "match_cut",
+      "motion": "Callback to the opening board: chalk rewrites the sum with commas, 8,302,447 + 2 = 8,302,449, and a green tick; robot straightens its glasses; calculator and code icons appear on the desk",
+      "visual_description": "Opening classroom framing resolved: commas on the board, green tick, calculator and code icons beside the robot.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "commas",
+          "calculator"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_09",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "commas",
+          "calculator"
+        ],
+        "world_shot": 6
+      },
+      "music": true
+    },
+    {
+      "id": 10,
+      "start_seconds": 42.86,
+      "end_seconds": 45.81,
+      "beat": "cta",
+      "narration": "For more AI concepts like this, follow.",
+      "on_screen_text": "Follow for more AI concepts",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "transition_in": "crossfade",
+      "motion": "Slow pull back to the opening framing (board now shows the comma sum with a tick); robot waves; chalk underline under follow",
+      "visual_description": "Opening board framing with the robot waving; end text in chalk.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "follow"
+        ],
+        "pause_after_ms": 100
+      },
+      "source_ids": [],
+      "visual_justification": "World-first: a literal classroom with a robot student, chalkboard and token tiles lets the viewer see the number being cut into chunks.",
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_10",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "follow"
+        ],
+        "world_shot": 7
+      },
+      "music": true
+    }
+  ]
+}

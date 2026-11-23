@@ -1,0 +1,12 @@
+0
+00:00:00,000 --> 00:00:01,680
+the fixed roles.
+
+1
+00:00:01,680 --> 00:00:04,960
+Planners, create tasks, workers only finish them.
+
+2
+00:00:04,960 --> 00:00:07,280
+Judge decides each cycle whether to continue.
+

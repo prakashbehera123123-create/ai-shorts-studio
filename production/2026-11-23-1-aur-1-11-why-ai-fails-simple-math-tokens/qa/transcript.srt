@@ -1,0 +1,52 @@
+0
+00:00:00,000 --> 00:00:06,760
+AI writes code but long sums they can still trip it up not the brain the eyes models don't
+
+1
+00:00:06,760 --> 00:00:09,920
+read digits they read tokens small chunks of text.
+
+2
+00:00:09,983 --> 00:00:15,503
+a long number. Some models cut it left to right after 3 digits every time. Those chunks
+
+3
+00:00:15,503 --> 00:00:19,343
+ignore place value. Add commas and the cut moves right to left.
+
+4
+00:00:19,343 --> 00:00:19,983
+Reset a test.
+
+5
+00:00:19,967 --> 00:00:22,767
+GPT 3.5 and GPT 4.
+
+6
+00:00:22,767 --> 00:00:27,167
+Grouping digits lie to left with commas largely improved accuracy.
+
+7
+00:00:27,167 --> 00:00:29,167
+The gap shrinks in bigger models.
+
+8
+00:00:29,167 --> 00:00:29,967
+Counting can suffer.
+
+9
+00:00:29,951 --> 00:00:33,871
+2 since tokenization changes how when models come.
+
+10
+00:00:33,871 --> 00:00:39,111
+So for exact math write numbers with commas or ask it to use a calculator or code tool.
+
+11
+00:00:39,111 --> 00:00:41,111
+For more AI-configures,
+
+12
+00:00:39,968 --> 00:00:41,488
+of like this, follow.
+

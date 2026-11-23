@@ -1,0 +1,397 @@
+{
+  "schema_version": 2,
+  "video_id": "2026-11-23-hundreds-of-ai-agents-built-a-browser-in-a-week-why-locks",
+  "language": "English",
+  "target_duration_seconds": 41,
+  "format": "9:16",
+  "creative": {
+    "central_question": "How do hundreds of AI agents build one thing together?",
+    "payoff": "Structure beats more agents: planners create tasks, workers finish them, a judge decides each cycle.",
+    "visual_motif": "The LOCK door: jammed by 20 robots at frame 0, standing open at the end.",
+    "music": "soft self-made pad only under hook, intro, lesson and outro; no music under explanation; no SFX",
+    "palette": "warm hard-hat amber and safety orange on deep slate; mint for the working state, coral for locks and churn (distinct from the teal office of 11-22)",
+    "visual_world": "Robot construction site building a giant browser window on scaffolding; many small hard-hat robots. Opening image: 20 robots jammed at one door marked LOCK. Camera path: jam -> pull back to scaffolded window -> queue -> idle sidelines -> churn -> org-chart B-roll (Planner/map, Workers/hammer, Judge/gavel) -> orderly site with task cards and judge stamp -> window lights up with RESEARCH PROJECT sign -> lesson B-roll -> back at the door, now open. Metaphor: kitchen with no head chef vs brigade, as a worksite with and without a foreman.",
+    "hero_objects": [
+      "LOCK door",
+      "giant browser window frame",
+      "planner/worker/judge robots"
+    ]
+  },
+  "language_id": "en",
+  "scenes": [
+    {
+      "id": 1,
+      "start_seconds": 0,
+      "end_seconds": 2.96,
+      "beat": "hook",
+      "narration": "Twenty AI agents worked like two or three.",
+      "on_screen_text": "20 agents ~ 2-3",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "cut",
+      "motion": "slow push-in on the jam; robots shuffle, one door sign pulses",
+      "visual_description": "Frame 0: twenty small robots jammed at one door marked LOCK on a construction site; camera pushes in, hard hat bobbing.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "three"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_01",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "three"
+        ],
+        "world_shot": 1,
+        "tag": "jam"
+      },
+      "music": true
+    },
+    {
+      "id": 2,
+      "start_seconds": 2.96,
+      "end_seconds": 7.17,
+      "beat": "context",
+      "narration": "Then a clear team structure helped build a browser in about a week.",
+      "on_screen_text": "Structure. ~1 week.",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "cut",
+      "motion": "pull back and rise to reveal scaffolded browser window; question mark pops above the door",
+      "visual_description": "Camera pulls back: the same site, but behind the door a giant half-built browser window frame stands on scaffolding.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "structure",
+          "week"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_02",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "one change"
+        ],
+        "world_shot": 2,
+        "tag": "reveal"
+      },
+      "music": true
+    },
+    {
+      "id": 3,
+      "start_seconds": 7.17,
+      "end_seconds": 14.41,
+      "beat": "explanation",
+      "narration": "Cursor says it began with equal agents and one shared lock file. Agents held locks too long, or forgot them.",
+      "on_screen_text": "Equal agents + lock file",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "cut",
+      "motion": "queue shuffles forward; held key glows amber; forgotten key blinks coral",
+      "visual_description": "Robots queue at the LOCK door; one robot sits holding the key tag while others wait; a forgotten key lies on the floor.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "lock file",
+          "forgot"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_03",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "lock file",
+          "forgot"
+        ],
+        "world_shot": 3,
+        "tag": "lock"
+      },
+      "music": false
+    },
+    {
+      "id": 4,
+      "start_seconds": 14.41,
+      "end_seconds": 18.08,
+      "beat": "explanation",
+      "narration": "So twenty agents moved like two or three. They played it safe.",
+      "on_screen_text": "20 agents ~ 2-3",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "cut",
+      "motion": "idle robots dim to grey; 3 working robots stay lit; counter 20 to 3 ticks on a sign",
+      "visual_description": "Only 2-3 robots work at the browser frame while 17 stand idle, tool belts untouched, hugging the sidelines.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "two or three",
+          "safe"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_04",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "two or three",
+          "safe"
+        ],
+        "world_shot": 4,
+        "tag": "idle"
+      },
+      "music": false
+    },
+    {
+      "id": 5,
+      "start_seconds": 18.08,
+      "end_seconds": 20.32,
+      "beat": "explanation",
+      "narration": "Next: optimistic concurrency. Simpler, but flawed.",
+      "on_screen_text": "Attempt 2: simpler, deeper problems",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "push",
+      "motion": "bricks placed then knocked off and redone, loop of rework; faint dust puffs",
+      "visual_description": "Robots grab bricks at the same time and bump; some bricks get placed, knocked off, placed again.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "churn"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_05",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "churn"
+        ],
+        "world_shot": 5,
+        "tag": "churn"
+      },
+      "music": false
+    },
+    {
+      "id": 6,
+      "start_seconds": 20.32,
+      "end_seconds": 25.78,
+      "beat": "explanation",
+      "narration": "The fix: roles. Planners create tasks. Workers only finish them. A judge decides each cycle whether to continue.",
+      "on_screen_text": "Planner > Workers > Judge",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "Motion-text B-roll in the same robot-site world: Lucide icons (map, hammer, gavel) on a signboard show the Planner/Workers/Judge hierarchy; short proof/lesson insert.",
+      "transition_in": "push",
+      "motion": "icons pop in on each role word; signal dot travels Planner to Workers to Judge; judge icon pulses at cycle end",
+      "visual_description": "Motion-text org chart on dark board: Planner (map icon) -> Workers (hammer icon) -> Judge (gavel icon), arrows draw on in narration order.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "roles",
+          "only finish",
+          "judge"
+        ],
+        "pause_after_ms": 150
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_06",
+        "full_frame": true,
+        "illustrative": false,
+        "cues": [
+          "roles",
+          "only finish",
+          "judge"
+        ],
+        "world_shot": 6,
+        "broll": "orgchart",
+        "tag": "orgchart"
+      },
+      "music": false
+    },
+    {
+      "id": 7,
+      "start_seconds": 25.78,
+      "end_seconds": 32.31,
+      "beat": "example",
+      "narration": "Cursor reports close to a week, over a million lines, about a thousand files. A browser from scratch.",
+      "on_screen_text": "~1 week · 1M+ lines · ~1,000 files",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "cut",
+      "motion": "camera orbits the busy site; task cards fly planner to workers; stamp thumps; counters tick up (reported by Cursor)",
+      "visual_description": "Orderly site: planner robot hands task cards to workers, judge robot stamps a clipboard each cycle; browser window rises with lines of code scrolling.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "a million",
+          "thousand"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_07",
+        "full_frame": true,
+        "illustrative": false,
+        "cues": [
+          "a million",
+          "thousand"
+        ],
+        "world_shot": 7,
+        "tag": "build"
+      },
+      "music": false
+    },
+    {
+      "id": 8,
+      "start_seconds": 32.31,
+      "end_seconds": 37.77,
+      "beat": "reveal",
+      "narration": "It's an experiment. Cursor's CEO said it kind of works.",
+      "on_screen_text": "An experiment that \"kind of works\"",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "crossfade",
+      "motion": "browser window lights up unevenly, caption sign lowers; robots lean back, hard hats tilted",
+      "visual_description": "Window flickers on with a few cracks and a patched corner; sign beside it: RESEARCH PROJECT.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "kind of works",
+          "Not"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_08",
+        "full_frame": true,
+        "illustrative": false,
+        "cues": [
+          "kind of works",
+          "Not"
+        ],
+        "world_shot": 8,
+        "tag": "callback"
+      },
+      "music": false
+    },
+    {
+      "id": 9,
+      "start_seconds": 37.77,
+      "end_seconds": 39.66,
+      "beat": "payoff",
+      "narration": "Lesson: structure beats more agents.",
+      "on_screen_text": "Structure > more agents",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "Motion-text B-roll in the same robot-site world: Lucide icons (map, hammer, gavel) on a signboard show the Planner/Workers/Judge hierarchy; short proof/lesson insert.",
+      "transition_in": "push",
+      "motion": "crowd icon fades, org-chart icon scales up with accent glow",
+      "visual_description": "Motion-text card with Lucide icons: crowd of robots icon crossed out vs org chart icon highlighted.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "structure"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_09",
+        "full_frame": true,
+        "illustrative": false,
+        "cues": [
+          "structure"
+        ],
+        "world_shot": 9,
+        "broll": "lesson",
+        "tag": "lesson"
+      },
+      "music": true
+    },
+    {
+      "id": 10,
+      "start_seconds": 39.66,
+      "end_seconds": 42.26,
+      "beat": "cta",
+      "narration": "For more AI concepts like this, follow.",
+      "on_screen_text": "Follow for more AI concepts",
+      "visual_type": "generated_graphic",
+      "visual_form": "scene_3d",
+      "visual_justification": "World-first: a robot construction site makes the lock jam, idle workers and role-based build physically visible.",
+      "transition_in": "crossfade",
+      "motion": "slow pull back; door sign LOCK swaps to OPEN; robots wave",
+      "visual_description": "Return to the opening door: it now stands open, robots stream through to the finished browser window; follow cue lower third.",
+      "sfx": [],
+      "voice": {
+        "emphasis": [
+          "follow"
+        ],
+        "pause_after_ms": 0
+      },
+      "source_ids": [],
+      "visual": {
+        "template": "scene3d",
+        "project": "assets/3d/scene_10",
+        "full_frame": true,
+        "illustrative": true,
+        "cues": [
+          "follow"
+        ],
+        "world_shot": 10,
+        "tag": "outro"
+      },
+      "music": true
+    }
+  ]
+}
